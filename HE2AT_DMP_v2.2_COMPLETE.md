@@ -247,7 +247,7 @@ In all activities involving health data, the HE²AT Center Consortium contractua
 
 This category includes original, unprocessed health data collected directly through the various previously completed cohort studies and clinical trials that fulfil the study eligibility criteria. Ownership of this data is retained by the Data Provider who conducted or commissioned the studies and/or clinical trial. The Original Study Data is acquired on the basis of a Data Transfer Agreement, and is retained for a period of five years after the completion of the HE²AT Center Project for the purposes of concluding and correcting any analysis and publications resulting from the Data. Any retention of Data after this five-year period will be further agreed with the Data Provider. The Data provider may elect to terminate the Data Transfer Agreement and data retention will then be dealt with in a manner requested by the Data Provider.
 
-The Original Study Data is held under strong access control on servers hosted at UCT **[***TRACKED CHANGE***] and WHC-managed cloud infrastructure with AES-256 encryption, providing enhanced scalability and disaster recovery capabilities whilst maintaining POPIA compliance**. Access to this data is restricted to a small team of data managers within the Core Data Team (see roles and responsibilities section for more detail). The Original Study Data has all direct identifiers removed prior to transfer to the remainder of the HE²AT Center Consortium (e.g., names and contact numbers), but may still contain indirect identifiers such as dates and geolocation information.
+The Original Study Data is held under strong access control on servers hosted at UCT <span style="color: red">**[TRACKED CHANGE] and WHC-managed cloud infrastructure with AES-256 encryption, providing enhanced scalability and disaster recovery capabilities whilst maintaining POPIA compliance**</span>. Access to this data is restricted to a small team of data managers within the Core Data Team (see roles and responsibilities section for more detail). The Original Study Data has all direct identifiers removed prior to transfer to the remainder of the HE²AT Center Consortium (e.g., names and contact numbers), but may still contain indirect identifiers such as dates and geolocation information.
 
 #### 4.1.3. Consortium-shared data
 
@@ -285,7 +285,7 @@ Climate and weather data are critical components of the HE²AT Center's research
 
 Each of these data types provides unique insights into the climate variables relevant to the HE²AT Center's research. Together, they allow for comprehensive analyses of heat exposure and its effects on health outcomes in urban environments.
 
-All climate related-data will be accessed through open data repositories, such as the Copernicus Climate Data Store (CDS), Earth System Grid Federation and Sentinel data systems. The data will be stored on IBM Research Africa and CSAG/UCT systems **[***TRACKED CHANGE***] and WHC-managed cloud services with auto-scaling capabilities for handling variable seasonal data volumes and improved accessibility for authorised researchers**, with CSAG/UCT responsible for managing and updating the relevant data indexes. These datasets also follow open data policies, typically requiring citation when used for non-commercial research.
+All climate related-data will be accessed through open data repositories, such as the Copernicus Climate Data Store (CDS), Earth System Grid Federation and Sentinel data systems. The data will be stored on IBM Research Africa and CSAG/UCT systems <span style="color: red">**[TRACKED CHANGE] and WHC-managed cloud services with auto-scaling capabilities for handling variable seasonal data volumes and improved accessibility for authorised researchers**</span>, with CSAG/UCT responsible for managing and updating the relevant data indexes. These datasets also follow open data policies, typically requiring citation when used for non-commercial research.
 
 ### 4.3. Areal/geospatial socio-economic data
 
@@ -329,7 +329,7 @@ Data harmonisation is critical for integrating diverse health datasets into a un
 
 ### 6.1. Pre-processing
 
-The Core Data Team, a small group of named personnel responsible for the initial handling of the Original Study Data, manages the pre-processing stage. This team has exclusive authorisation to access incoming data securely stored on UCT data servers **[***TRACKED CHANGE***] and WHC-managed cloud infrastructure with enhanced security and automated backup systems**. The Core Data Team is responsible for preparing the data for further analysis by other HE²AT Center Consortium members. First, they reformat the Original Study Data into standardised formats, such as CSV or JSON, ensuring compatibility with various tools and systems. This step follows established guidelines like Open Data Standards or the OMOP Common Data Model, which help to promote consistency and interoperability across datasets.
+The Core Data Team, a small group of named personnel responsible for the initial handling of the Original Study Data, manages the pre-processing stage. This team has exclusive authorisation to access incoming data securely stored on UCT data servers <span style="color: red">**[TRACKED CHANGE] and WHC-managed cloud infrastructure with enhanced security and automated backup systems**</span>. The Core Data Team is responsible for preparing the data for further analysis by other HE²AT Center Consortium members. First, they reformat the Original Study Data into standardised formats, such as CSV or JSON, ensuring compatibility with various tools and systems. This step follows established guidelines like Open Data Standards or the OMOP Common Data Model, which help to promote consistency and interoperability across datasets.
 
 Once the data is in a standardised format, the Core Data Team extracts and labels key variables, ensuring each variable is named and described consistently. They align these variables with ontology frameworks like NCIT, SNOMED CT, or ICD-10, making the metadata easier to integrate with other datasets during the harmonisation process led by the Harmonisation Team Members.
 
@@ -361,7 +361,7 @@ To maintain transparency, all versions of mappings and data transformations are 
 
 Once mapping and validation are complete, the Core Data Team takes responsibility for transforming the validated data into a harmonised format, ready for broader use by the HE²AT Center Consortium. This stage involves the population of the final database, where the Core Data Team applies the validated mappings and transformations to the Original Study Data, turning it into Consortium Shared Data.
 
-**[***TRACKED CHANGE***] Database population utilises both existing UCT infrastructure and cloud-native database services, providing automated backup and recovery systems with enhanced data integrity and disaster recovery capabilities.**
+<span style="color: red">**[TRACKED CHANGE] Database population utilises both existing UCT infrastructure and cloud-native database services, providing automated backup and recovery systems with enhanced data integrity and disaster recovery capabilities.**</span>
 
 At this point, additional de-identification steps are taken by the Core Data Team to further anonymise the dataset. Any residual personal identifiers are removed or generalised, with location data being aggregated to broader geographic levels to reduce the risk of re-identification. These steps ensure that the data can be shared safely among consortium members without compromising participant confidentiality.
 
@@ -405,7 +405,7 @@ Finally, the integrated dataset is prepared for analysis, with the climate and s
 
 ## 8. Data analysis platform
 
-Data analysis involving the Consortium Shared Data and RP1/RP2 de-identified data will be facilitated through the CSAG/UCT Jupyter Hub platform **[***TRACKED CHANGE***] and cloud-based computational resources with GPU acceleration for complex analyses, improved processing times, and enhanced analytical capabilities**, providing robust and scalable environments for processing and analysing the HE²AT Center datasets.
+Data analysis involving the Consortium Shared Data and RP1/RP2 de-identified data will be facilitated through the CSAG/UCT Jupyter Hub platform <span style="color: red">**[TRACKED CHANGE] and cloud-based computational resources with GPU acceleration for complex analyses, improved processing times, and enhanced analytical capabilities**</span>, providing robust and scalable environments for processing and analysing the HE²AT Center datasets.
 
 Jupyter Hub is a collaborative, web-based Python coding environment that allows analysts to develop and execute analysis code using a browser interface. Whilst web based, access is controlled through username and password. Key technical details include:
 
@@ -621,13 +621,13 @@ To safeguard personal information, the HE²AT Center implements robust encryptio
 
 ### 14.1. Data transfer, storage and encryption
 
-Data is transferred using Transport Layer Security (TLS) protocols are employed during transmission to maintain encryption and prevent interception. We use WeTransfer modality, which is encrypted. Once transferred to UCT **[***TRACKED CHANGE***] and WHC-managed cloud infrastructure**, any data identified as containing Personal Identifiers or specified by the DTA is encrypted for storage using **[***TRACKED CHANGE***] AES-256 encryption standard for both UCT servers and cloud storage**. The AES-256 encryption standard is applied, with encryption key access restricted to authorised personnel by Clause 2.10 of the Data Transfer Agreement, ensuring that the Data Recipient does not attempt to re-identify any Data Subjects. This complies with privacy and data protection legislation, including the Protection of Personal Information Act (POPIA). Metadata, however, is stored separately to facilitate indexing and software development whilst maintaining security.
+Data is transferred using Transport Layer Security (TLS) protocols are employed during transmission to maintain encryption and prevent interception. We use WeTransfer modality, which is encrypted. Once transferred to UCT <span style="color: red">**[TRACKED CHANGE] and WHC-managed cloud infrastructure**</span>, any data identified as containing Personal Identifiers or specified by the DTA is encrypted for storage using <span style="color: red">**[TRACKED CHANGE] AES-256 encryption standard for both UCT servers and cloud storage**</span>. The AES-256 encryption standard is applied, with encryption key access restricted to authorised personnel by Clause 2.10 of the Data Transfer Agreement, ensuring that the Data Recipient does not attempt to re-identify any Data Subjects. This complies with privacy and data protection legislation, including the Protection of Personal Information Act (POPIA). Metadata, however, is stored separately to facilitate indexing and software development whilst maintaining security.
 
 ### 14.2. Network security
 
-The CSAG compute infrastructure benefits from UCT's comprehensive security policies **[***TRACKED CHANGE***] and WHC-managed cloud security architecture with 24/7 Security Operations Centre (SOC) monitoring and advanced threat detection systems for improved security posture and compliance**. Key measures include:
+The CSAG compute infrastructure benefits from UCT's comprehensive security policies <span style="color: red">**[TRACKED CHANGE] and WHC-managed cloud security architecture with 24/7 Security Operations Centre (SOC) monitoring and advanced threat detection systems for improved security posture and compliance**</span>. Key measures include:
 
-• **Firewall Protection**: UCT's Cisco firewall **[***TRACKED CHANGE***] and cloud-native firewall services** safeguard against external threats, ensuring only authorised access is permitted.
+• **Firewall Protection**: UCT's Cisco firewall <span style="color: red">**[TRACKED CHANGE] and cloud-native firewall services**</span> safeguard against external threats, ensuring only authorised access is permitted.
 
 • **VPN Access**: A Cisco VPN service encrypts all traffic, enabling secure remote access to the UCT intranet and maintaining confidentiality.
 
@@ -635,7 +635,7 @@ The CSAG compute infrastructure benefits from UCT's comprehensive security polic
 
 ### 14.3. Local authentication and authorisation
 
-Beyond UCT's broader security measures, the CSAG/UCT platform employs additional authentication and authorisation protocols **[***TRACKED CHANGE***] alongside cloud-specific access controls and automated compliance reporting for streamlined governance oversight**. User identities are verified through a Linux filesystem and Lightweight Directory Access Protocol (LDAP), with access to restricted datasets managed through UCT's authentication protocols and internal CSAG Data Management Plan mechanisms. All activities comply with UCT's information security policies, ensuring adherence to institutional standards.
+Beyond UCT's broader security measures, the CSAG/UCT platform employs additional authentication and authorisation protocols <span style="color: red">**[TRACKED CHANGE] alongside cloud-specific access controls and automated compliance reporting for streamlined governance oversight**</span>. User identities are verified through a Linux filesystem and Lightweight Directory Access Protocol (LDAP), with access to restricted datasets managed through UCT's authentication protocols and internal CSAG Data Management Plan mechanisms. All activities comply with UCT's information security policies, ensuring adherence to institutional standards.
 
 By implementing these comprehensive encryption modalities, network security and authentication measures, the HE²AT Center ensures the protection and confidentiality of sensitive data throughout its lifecycle, maintaining compliance with ethical and legal standards.
 
@@ -707,7 +707,7 @@ By conducting regular assessments and making necessary revisions, the HE²AT Cen
 
 ## 17. Cloud Migration Implementation
 
-**[***TRACKED CHANGE - NEW SECTION***]**
+<span style="color: red">**[TRACKED CHANGE - NEW SECTION]**</span>
 
 The HE²AT Center is implementing a structured cloud migration strategy to enhance data management capabilities whilst maintaining operational continuity and improving security, scalability, and operational efficiency.
 
@@ -780,6 +780,670 @@ A comprehensive 5-phase approach ensures minimal disruption to research activiti
 - Quarterly reviews of migration progress and outcomes
 
 The migration to WHC-managed cloud infrastructure represents a significant enhancement to the HE²AT Center's data management capabilities, ensuring improved security, scalability, and operational efficiency whilst maintaining full compliance with regulatory requirements and research best practices.
+
+---
+
+## Annexes
+
+### Annex 1: Key data sources
+
+| **Data type** | **Dataset** | **Data owner/provider** | **Variables** | **Spatial coverage** | **Temporal coverage** | **Intended use** |
+|---------------|-------------|-------------------------|---------------|---------------------|---------------------|------------------|
+| **Climate data** | ERA5 Reanalysis | ECMWF/Copernicus Climate Data Store | Temperature, precipitation, humidity, wind, pressure | Global, 0.25° resolution | 1940-present | Historical climate analysis, exposure assessment |
+| | CORDEX Africa Simulations | CORDEX/WCRP | Temperature, precipitation projections | Africa, 0.44° resolution | Historical + future scenarios | Climate change projections |
+| | MODIS Land Surface Temperature | NASA/USGS | Day/night land surface temperature | Global, 1km resolution | 2000-present | Urban heat island analysis |
+| | Sentinel 2 Imagery | ESA/Copernicus | Multispectral imagery, NDVI | Global, 10-60m resolution | 2015-present | Land use/land cover analysis |
+| | Weather Station Data | National meteorological services | Temperature, precipitation, humidity | Point observations | Variable by location | Ground truth validation |
+| **Socio-economic data** | GCRO Quality of Life Survey | Gauteng City-Region Observatory | Household income, access to services, dwelling type | Gauteng Province, SA | 2009, 2011, 2013, 2015, 2017 | Urban vulnerability assessment |
+| | Statistics South Africa Census | Statistics South Africa | Demographics, housing, employment | South Africa, ward level | 2001, 2011, 2016 community survey | Population characteristics |
+| | WorldPop Population Density | WorldPop/University of Southampton | Population counts and density | Global, 100m resolution | 2000-2020 | Population exposure analysis |
+| | OpenStreetMap | OpenStreetMap Foundation | Road networks, building footprints | Global, variable resolution | Continuously updated | Urban infrastructure analysis |
+| **Health data** | Study-specific datasets | Various research institutions | Maternal health, child health, morbidity | Study-specific locations | Variable by study | Heat-health impact analysis |
+| | Hospital admission records | Healthcare facilities | Diagnoses, admission dates, demographics | Urban areas in study cities | Variable by facility | Health outcome validation |
+
+### Annex 2: Personal information processing agreement
+
+**PERSONAL INFORMATION PROCESSING AGREEMENT FOR HE²AT CENTER OPERATORS**
+
+This agreement must be signed by all individuals who will have access to personal information as part of the HE²AT Center Data Management activities, in compliance with the Protection of Personal Information Act (POPIA) of South Africa.
+
+**OPERATOR INFORMATION:**
+- Name: ________________________________
+- Institution: ___________________________
+- Role in HE²AT Center: ___________________
+- Date: ________________________________
+
+**AGREEMENT TERMS:**
+
+**1. SCOPE OF ACCESS**
+I acknowledge that I will have access to personal information as defined under POPIA, including but not limited to health data, demographic information, and potentially identifiable information collected as part of HE²AT Center research activities.
+
+**2. PROCESSING OBLIGATIONS**
+I agree to:
+- Process personal information only for the specified research purposes of the HE²AT Center
+- Implement appropriate security measures to protect personal information
+- Not attempt to re-identify any de-identified data
+- Report any suspected unauthorized access immediately to the responsible party
+- Maintain confidentiality of all personal information
+
+**3. SECURITY MEASURES**
+I commit to:
+- Using secure passwords and authentication methods
+- Accessing data only from authorized systems and locations
+- Not sharing access credentials with unauthorized persons
+- Following all technical and organizational security protocols established by the HE²AT Center
+
+**4. DATA SHARING RESTRICTIONS**
+I understand that:
+- Personal information may not be shared with unauthorized parties
+- Any data sharing must be approved through the Data Access Committee
+- Cross-border data transfers must comply with applicable regulations
+- Data must be used only for approved research purposes
+
+**5. RETENTION AND DISPOSAL**
+I agree to:
+- Retain personal information only for the authorized period
+- Securely delete or return data as instructed by the responsible party
+- Not retain copies of data beyond the authorized period
+
+**6. COMPLIANCE MONITORING**
+I acknowledge that:
+- My access and use of data may be monitored and audited
+- I must cooperate with compliance reviews and investigations
+- Violations may result in access termination and legal consequences
+
+**7. NOTIFICATION OBLIGATIONS**
+I will immediately notify the HE²AT Center Data Management team of:
+- Any suspected data breaches or unauthorized access
+- Changes in my employment or role that affect data access needs
+- Any concerns about data security or compliance
+
+**SIGNATURE:**
+Operator Signature: ___________________________ Date: ___________
+Print Name: ___________________________
+
+**RESPONSIBLE PARTY APPROVAL:**
+Authorized Representative: ___________________________ Date: ___________
+Print Name and Title: ___________________________
+
+### Annex 3: Ethics notification letter template
+
+**UNIVERSITY OF THE WITWATERSRAND HUMAN RESEARCH ETHICS COMMITTEE (MEDICAL)**
+
+**NOTIFICATION OF NEW STUDY DATA CONTRIBUTION TO HE²AT CENTER**
+
+**Date:** [Insert Date]
+
+**To:** Wits Human Research Ethics Committee (Medical)
+
+**From:** HE²AT Center Data Management Team
+
+**Re:** Notification of New Study Contributing Data to HE²AT Center Research
+
+---
+
+**STUDY DETAILS:**
+
+**Study Name:** [Full study name]
+
+**Study Acronym:** [If applicable]
+
+**Principal Investigator:** [Name and affiliation]
+
+**Contact Information:** 
+- Email: [PI email address]
+- Phone: [PI phone number]
+- Institution: [Institution name and address]
+
+**Data Owner/Provider:** [Name and institution of data owner]
+
+---
+
+**ETHICS APPROVAL INFORMATION:**
+
+**Original Ethics Committee:** [Name of ethics committee that approved the study]
+
+**Ethics Reference Number:** [Original ethics approval number]
+
+**Approval Date:** [Date of original ethics approval]
+
+**Study Population:** [Description of study participants]
+
+**Data Collection Period:** [Start date - End date]
+
+---
+
+**CONSENT PARAMETERS:**
+
+**Consent Type:** [Description of consent obtained from participants]
+
+**Consent for Secondary Use:** [Yes/No - details of consent for data sharing/secondary analysis]
+
+**Geographical Scope of Consent:** [Local/National/International data sharing permissions]
+
+**Data Sharing Provisions:** [Specific provisions in original consent regarding data sharing]
+
+---
+
+**HE²AT CENTER INTEGRATION:**
+
+**Planned Use in HE²AT Center:** [Brief description of how data will be used in RP1/RP2]
+
+**De-identification Level:** [Description of de-identification procedures to be applied]
+
+**Data Categories:** [Original Study Data/Consortium Shared Data/De-identified Data]
+
+**Integration Timeline:** [Expected timeline for data processing and integration]
+
+---
+
+**COMPLIANCE MEASURES:**
+
+**Data Transfer Agreement Status:** [Signed/In Progress/Pending]
+
+**POPIA Compliance:** [Description of compliance measures]
+
+**Security Measures:** [Brief description of data security protocols]
+
+**Access Restrictions:** [Description of who will have access to the data]
+
+---
+
+**CONCERNS OR ISSUES:**
+
+[Any specific concerns, limitations, or issues identified with the study data or ethics approvals]
+
+---
+
+**ATTACHMENTS:**
+
+□ Copy of original ethics approval letter
+□ Copy of study protocol (if available)
+□ Copy of informed consent form
+□ Data Transfer Agreement
+□ Other: [Specify]
+
+---
+
+**CONTACT FOR QUERIES:**
+
+**HE²AT Center Data Management Lead:**
+- Name: [Contact name]
+- Email: [Contact email]
+- Phone: [Contact phone]
+
+**Signature:**
+
+_________________________
+[Name and Title]
+HE²AT Center Data Management Team
+
+Date: ___________
+
+---
+
+*This notification is submitted in accordance with HE²AT Center ethics procedures and the ongoing monitoring requirements of the Wits Human Research Ethics Committee (Medical).*
+
+### Annex 4: Data Access Committee Terms of Reference
+
+**HE²AT CENTER DATA ACCESS COMMITTEE**
+**TERMS OF REFERENCE**
+
+---
+
+**1. PURPOSE AND SCOPE**
+
+**1.1 Purpose**
+The HE²AT Center Data Access Committee (DAC) is established to provide independent oversight of data access requests for de-identified datasets produced by the HE²AT Center. The DAC ensures that data sharing complies with ethical, legal, and scientific standards whilst facilitating legitimate research that advances knowledge in heat-health relationships and climate change impacts on health.
+
+**1.2 Scope of Authority**
+The DAC has authority to:
+- Review and approve/deny requests for access to RP1/RP2 de-identified datasets
+- Establish criteria and procedures for data access evaluation
+- Monitor compliance with data transfer agreements
+- Recommend modifications to data sharing policies and procedures
+- Oversee the ethical and scientific standards of data sharing activities
+
+---
+
+**2. MEMBERSHIP**
+
+**2.1 Composition**
+The DAC shall comprise 5-7 members including:
+- Chair (independent expert in data ethics or health research ethics)
+- At least one member with expertise in data science and health informatics
+- At least one member with legal expertise in data protection and privacy law
+- At least one member from the DS-I Africa ELSI team or eLwazi platform
+- At least one member with expertise in climate-health research
+- At least one member representing community or public interest perspectives
+- Ex-officio: HE²AT Center DMAC representative (non-voting)
+
+**2.2 Selection Process**
+- DAC members are appointed by the HE²AT Center Steering Committee in consultation with the Scientific Advisory Board
+- Members serve staggered terms of 3 years, renewable once
+- The Chair is elected by DAC members for a 2-year term
+- Members must declare any conflicts of interest and recuse themselves from relevant decisions
+
+**2.3 Independence**
+- DAC operates independently from the HE²AT Center research activities
+- Members are not directly involved in HE²AT Center data collection or analysis
+- Decisions are made by majority vote of voting members
+- Appeal processes are available for disputed decisions
+
+---
+
+**3. RESPONSIBILITIES AND PROCEDURES**
+
+**3.1 Data Access Review Process**
+
+**Step 1: Application Receipt and Screening**
+- Applications received through standardized Data Request Form (Annex 5)
+- Preliminary screening by HE²AT Center Steering Committee for completeness
+- Distribution to DAC members within 5 working days of complete submission
+
+**Step 2: Initial Review**
+- Each application assigned to primary and secondary reviewers
+- Initial review period: 15 working days
+- Reviewers assess against established criteria (Section 3.2)
+- Reviewers may request additional information from applicants
+
+**Step 3: DAC Meeting and Decision**
+- Monthly DAC meetings (or as needed for urgent requests)
+- Discussion of applications with reviewer recommendations
+- Decision options: Approve, Conditional Approval, Deny, Request Revision
+- Written decision with rationale provided within 5 working days of meeting
+
+**Step 4: Implementation**
+- Approved applications proceed to data transfer agreement execution
+- Conditional approvals specify requirements to be met before data access
+- Denied applications receive detailed explanation and appeal options
+
+**3.2 Evaluation Criteria**
+
+Applications are evaluated based on:
+
+**Scientific Merit**
+- Research question significance and innovation
+- Methodological soundness and feasibility
+- Potential contribution to heat-health knowledge
+- Complementarity with existing research (avoid duplication)
+
+**Researcher Qualifications**
+- Evidence of bona fide researcher status
+- Relevant expertise and track record
+- Institutional affiliation and support
+- Previous compliance with data sharing agreements
+
+**Ethical and Legal Compliance**
+- Institutional ethics approval for proposed research
+- Compliance with applicable data protection regulations
+- Appropriate consent and authorization frameworks
+- Data security and confidentiality measures at receiving institution
+
+**Technical Feasibility**
+- Available resources in HE²AT Center for data preparation
+- Technical compatibility and data processing capabilities
+- Timeline feasibility and resource requirements
+
+**Public Benefit**
+- Potential public health impact and knowledge advancement
+- Alignment with HE²AT Center objectives and DS-I Africa goals
+- Contribution to capacity building in African research institutions
+
+---
+
+**4. GOVERNANCE AND OPERATIONS**
+
+**4.1 Meeting Schedule**
+- Regular monthly meetings (virtual or in-person)
+- Special meetings convened as needed for urgent requests
+- Annual face-to-face meeting for strategic planning and policy review
+- Quorum: At least 60% of voting members
+
+**4.2 Documentation and Reporting**
+- Meeting minutes maintained for all DAC meetings
+- Decision register tracking all applications and outcomes
+- Annual report to HE²AT Center Steering Committee and Scientific Advisory Board
+- Regular review of decision patterns and policy effectiveness
+
+**4.3 Confidentiality**
+- All DAC members bound by confidentiality agreements
+- Application details and deliberations remain confidential
+- Public reporting focuses on aggregate statistics and policy matters
+
+**4.4 Appeals Process**
+- Applicants may appeal denied or conditional decisions
+- Appeals reviewed by independent panel (not involved in original decision)
+- Appeal process completed within 30 working days
+- Final appeal decisions are binding
+
+---
+
+**5. MONITORING AND COMPLIANCE**
+
+**5.1 Ongoing Monitoring**
+- Regular review of data transfer agreement compliance
+- Annual surveys of data recipients regarding data use and outcomes
+- Monitoring of publications and outputs using HE²AT Center data
+- Investigation of reported compliance violations
+
+**5.2 Compliance Enforcement**
+- Warning notices for minor violations
+- Suspension of data access for serious violations
+- Termination of data access for severe or repeated violations
+- Referral to institutional authorities for misconduct
+
+**5.3 Policy Review and Updates**
+- Annual review of DAC procedures and criteria
+- Regular consultation with HE²AT Center stakeholders
+- Updates to reflect changes in regulations, technology, and best practices
+- Coordination with DS-I Africa data sharing guidelines
+
+---
+
+**6. RESOURCES AND SUPPORT**
+
+**6.1 Administrative Support**
+- Secretariat support provided by HE²AT Center DMAC
+- Technical support for data preparation and transfer
+- Legal support for data transfer agreement development
+
+**6.2 Training and Development**
+- Regular training on data protection regulations and ethical frameworks
+- Updates on technological developments and best practices
+- Networking with other data access committees and oversight bodies
+
+---
+
+**APPROVAL AND IMPLEMENTATION**
+
+These Terms of Reference are approved by the HE²AT Center Steering Committee and come into effect immediately. They will be reviewed annually and updated as necessary to ensure effective governance of data access activities.
+
+**Date of Approval:** [Insert Date]
+
+**Approved by:**
+- HE²AT Center Steering Committee Chair: _______________
+- Scientific Advisory Board Representative: _______________
+- DMAC Co-Principal Investigators: _______________
+
+### Annex 5: Data Request Form
+
+**HE²AT CENTER DATA ACCESS REQUEST FORM**
+
+**Instructions:** Please complete all sections of this form. Incomplete applications will not be reviewed. Submit this form electronically to the HE²AT Center Data Access Committee at [email address].
+
+---
+
+**SECTION A: APPLICANT INFORMATION**
+
+**A1. Primary Applicant Details**
+- Full Name: ________________________________
+- Title/Position: ____________________________
+- Institution/Organization: ___________________
+- Department: _______________________________
+- Complete Address: __________________________
+  _________________________________________
+- Email: ___________________________________
+- Phone: ___________________________________
+- ORCID ID: _________________________________
+
+**A2. Co-Applicants/Collaborators**
+[For each co-applicant, provide name, institution, and role in the project]
+
+Co-Applicant 1:
+- Name: ____________________________________
+- Institution: ______________________________
+- Role: ____________________________________
+
+Co-Applicant 2:
+- Name: ____________________________________
+- Institution: ______________________________
+- Role: ____________________________________
+
+[Add additional co-applicants as needed]
+
+**A3. DS-I Africa Consortium Membership**
+Are you or your institution members of the DS-I Africa Consortium?
+□ Yes - Please specify which DS-I Africa project: ________________
+□ No
+
+If No, please provide detailed information about your institutional affiliation and research credentials.
+
+---
+
+**SECTION B: INSTITUTIONAL INFORMATION**
+
+**B1. Institution Accreditation**
+- Type of Institution: □ University □ Research Institute □ Government Agency □ NGO □ Other: _______
+- Institutional Website: ________________________
+- Research Office Contact: ______________________
+- Institutional Ethics Committee Name: _____________
+
+**B2. Data Management Capabilities**
+Describe your institution's data management infrastructure:
+- Secure storage capabilities: ____________________
+- Data protection policies: _______________________
+- IT security measures: __________________________
+- Previous experience with health data: ______________
+
+---
+
+**SECTION C: DATA REQUEST SPECIFICATION**
+
+**C1. Dataset(s) Requested**
+Please specify which datasets you are requesting access to:
+
+□ RP1 De-identified Dataset (Maternal and Child Health)
+  - Specific variables needed: ______________________
+  - Geographical scope: ____________________________
+  - Temporal scope: _______________________________
+
+□ RP2 De-identified Dataset (Urban Heat-Health)
+  - Specific variables needed: ______________________
+  - Geographical scope: ____________________________
+  - Temporal scope: _______________________________
+
+□ Integrated Climate-Health Dataset
+  - Specific variables needed: ______________________
+  - Geographical scope: ____________________________
+  - Temporal scope: _______________________________
+
+□ Other (please specify): ____________________________
+
+**C2. Data Sharing Modality Preference**
+□ Data Download (with justification): ___________________
+□ Analysis within HE²AT Center platform (preferred for sensitive data)
+
+**Justification for Download Request:**
+_______________________________________________________
+_______________________________________________________
+
+---
+
+**SECTION D: RESEARCH PROJECT DETAILS**
+
+**D1. Project Title**
+_______________________________________________________
+
+**D2. Research Objectives**
+Provide a detailed description of your research objectives (max 500 words):
+_______________________________________________________
+_______________________________________________________
+_______________________________________________________
+
+**D3. Scientific Rationale**
+Explain the scientific rationale and significance of your research (max 500 words):
+_______________________________________________________
+_______________________________________________________
+_______________________________________________________
+
+**D4. Methodology**
+Describe your analytical approach and methods (max 500 words):
+_______________________________________________________
+_______________________________________________________
+_______________________________________________________
+
+**D5. Expected Outcomes and Impact**
+Describe the expected outcomes and potential public health impact (max 300 words):
+_______________________________________________________
+_______________________________________________________
+
+**D6. Timeline**
+- Project Start Date: ____________________________
+- Expected Completion Date: ______________________
+- Data Access Period Needed: _____________________
+
+**D7. Funding**
+- Funding Source: _______________________________
+- Funding Status: □ Secured □ Applied □ Not applicable
+- Grant Reference (if applicable): __________________
+
+---
+
+**SECTION E: ETHICS AND COMPLIANCE**
+
+**E1. Ethics Approval**
+□ Ethics approval obtained - Reference Number: ____________
+□ Ethics approval pending - Expected date: _______________
+□ Ethics approval not required - Justification: ____________
+
+**Attach:** Copy of ethics approval letter or application
+
+**E2. Regulatory Compliance**
+Confirm compliance with applicable regulations:
+□ GDPR (if applicable)
+□ HIPAA (if applicable)  
+□ Local data protection laws
+□ Other: ___________________________________________
+
+**E3. Consent and Authorization**
+Describe how your research complies with consent requirements:
+_______________________________________________________
+_______________________________________________________
+
+---
+
+**SECTION F: DATA PROTECTION AND SECURITY**
+
+**F1. Technical Safeguards**
+Describe technical measures for data protection:
+
+**Storage Security:**
+- Encryption standards: _____________________________
+- Access controls: __________________________________
+- Backup procedures: _______________________________
+
+**Network Security:**
+- Firewall protection: ______________________________
+- VPN requirements: ________________________________
+- Data transmission security: _______________________
+
+**F2. Organizational Safeguards**
+Describe organizational measures:
+
+**Personnel:**
+- Who will have access to the data: ___________________
+- Training on data protection: _______________________
+- Confidentiality agreements: _______________________
+
+**Policies:**
+- Institutional data protection policy: ________________
+- Data sharing procedures: ___________________________
+- Incident response procedures: ______________________
+
+**F3. Data Handling Procedures**
+- Data processing location: ___________________________
+- Data retention period: _____________________________
+- Data disposal procedures: __________________________
+- Data sharing restrictions: __________________________
+
+---
+
+**SECTION G: COLLABORATION AND OUTPUT**
+
+**G1. Collaboration with HE²AT Center**
+Are you interested in collaborating with HE²AT Center researchers?
+□ Yes - Please specify areas of interest: ________________
+□ No
+
+**G2. Expected Outputs**
+□ Peer-reviewed publications
+□ Conference presentations  
+□ Policy reports
+□ Other: ___________________________________________
+
+**G3. Data Citation and Acknowledgment**
+Do you agree to appropriately cite and acknowledge the HE²AT Center in all outputs?
+□ Yes
+□ No
+
+**G4. Results Sharing**
+Do you agree to share research results with the HE²AT Center?
+□ Yes - Summary reports
+□ Yes - Full results sharing
+□ No
+
+---
+
+**SECTION H: DECLARATIONS AND AGREEMENTS**
+
+**H1. Accuracy Declaration**
+I declare that the information provided in this application is accurate and complete to the best of my knowledge.
+
+**H2. Compliance Agreement**
+I agree to comply with:
+□ HE²AT Center Data Management Plan requirements
+□ Data Transfer Agreement terms and conditions
+□ Applicable data protection and privacy regulations
+□ Ethical guidelines for health research
+
+**H3. Non-Disclosure Agreement**
+I agree not to attempt to re-identify any individuals in the dataset or share data with unauthorized parties.
+
+**H4. Reporting Agreement**
+I agree to:
+□ Report any data security incidents immediately
+□ Provide annual progress reports on data use
+□ Notify the DAC of any changes to the research project
+□ Submit copies of publications using the data
+
+---
+
+**SECTION I: SIGNATURES**
+
+**Primary Applicant:**
+Signature: _________________________ Date: __________
+Print Name: _______________________________________
+
+**Institutional Representative (Head of Department/Research Office):**
+Signature: _________________________ Date: __________
+Print Name: _______________________________________
+Title: ___________________________________________
+
+---
+
+**FOR OFFICE USE ONLY**
+
+**Application Received:** Date: _______ By: _____________
+**Initial Screening:** Date: _______ Outcome: ___________
+**DAC Review:** Date: _______ Decision: _______________
+**Data Transfer:** Date: _______ Completed: ____________
+
+---
+
+**ATTACHMENTS REQUIRED:**
+□ Ethics approval letter or application
+□ Institutional data protection policy
+□ CV of primary applicant
+□ Institutional letter of support
+□ Data management plan
+□ Other: _________________________________________
+
+**SUBMISSION:**
+Submit completed form and attachments to:
+HE²AT Center Data Access Committee
+Email: [data-access@he2at.org]
+Subject: "Data Access Request - [Your Name] - [Date]"
 
 ---
 
