@@ -11,18 +11,18 @@ Attention# HE²AT Center Data Management Plan v2.2 - Cloud Migration Changes Sum
 
 ## Summary of Changes Table
 
-| Section | Change Type | Description | Rationale |
-|---------|-------------|-------------|-----------|
-| **4.1.2 Data Storage Infrastructure** | Addition | Added cloud storage infrastructure alongside existing UCT servers | Dual capability during transition period |
-| **4.2 Data Security** | Enhancement | Enhanced security measures including zero-trust architecture and SOC monitoring | Cloud-specific security requirements |
-| **6.1 Data Access and Sharing** | Update | Updated access protocols to include cloud-based authentication systems | Maintain security in cloud environment |
-| **6.4 Data Transfer Protocols** | Addition | New protocols for secure cloud data transfer using AES-256 encryption | Ensure secure migration process |
-| **8 Data Preservation** | Enhancement | Added cloud-based preservation strategies with geographic redundancy | Improved data resilience and availability |
-| **14.1 Data Management Roles** | Update | Clarified roles for cloud infrastructure management | Clear accountability in new environment |
-| **14.2 Training Requirements** | Addition | Added cloud platform training requirements for staff | Ensure competency in new systems |
-| **14.3 Compliance Monitoring** | Enhancement | Enhanced monitoring for cloud compliance with POPIA and international standards | Maintain regulatory compliance |
-| **17 Cloud Migration Implementation** | New Section | Comprehensive cloud migration implementation plan | Document migration strategy and timeline |
-| **Ethics and HREC Compliance** | Update | Updated procedures for ongoing HREC notification during cloud migration | Ensure continued ethics compliance during infrastructure changes |
+| Section | Change Type | Specific Change | Ethics Relevance |
+|---------|-------------|----------------|------------------|
+| **4.1.2 Original Study Data Storage** | Enhancement | Added WHC-managed cloud infrastructure with AES-256 encryption alongside UCT servers | Enhanced data security and POPIA compliance |
+| **4.2 Climate Data Storage** | Addition | WHC-managed cloud services with auto-scaling capabilities | Improved data accessibility for researchers |
+| **6.1 Data Pre-processing Infrastructure** | Enhancement | WHC-managed cloud infrastructure with enhanced security and automated backup systems | Strengthened data protection measures |
+| **6.4 Database Population** | Enhancement | Cloud-native database services with automated backup and enhanced data integrity | Improved data reliability and disaster recovery |
+| **8 Data Analysis Platform** | Addition | Cloud-based computational resources with GPU acceleration | Enhanced analytical capabilities while maintaining security |
+| **14.1 Data Transfer and Storage** | Enhancement | AES-256 encryption standard for both UCT servers and cloud storage | Strengthened encryption for participant data protection |
+| **14.2 Network Security** | Enhancement | WHC-managed cloud security with 24/7 SOC monitoring and advanced threat detection | Proactive security monitoring and incident response |
+| **14.2 Firewall Protection** | Addition | Cloud-native firewall services alongside UCT's Cisco firewall | Dual-layer security protection |
+| **14.3 Authentication and Authorization** | Enhancement | Cloud-specific access controls and automated compliance reporting | Improved access control and audit capabilities |
+| **17 Cloud Migration Implementation** | New Section | Complete 5-phase cloud migration strategy with risk mitigation | Systematic approach ensuring ethical compliance throughout migration |
 
 ## Key Infrastructure Changes
 
