@@ -225,6 +225,15 @@ Specifically, the DMP seeks to:
 
 The HE²AT Center's data management process is structured around several critical stages, from data acquisition to sharing and open access. The following diagram (Figure 1) provides an overview of this comprehensive workflow, illustrating the relationships between data types, processing steps, and access levels.
 
+**[FIGURE 1 PLACEHOLDER: HE²AT Center Data Management Workflow]**
+*Insert comprehensive workflow diagram showing:*
+- *Data flow from acquisition through processing stages*
+- *Relationships between data types and access levels*
+- *Stakeholders involved at each stage*
+- *Pre-processing, harmonisation, integration, and de-identification phases*
+- *Transition from restricted data to open access*
+- *Updated to include cloud infrastructure components*
+
 This diagram not only serves as a guide to understanding the flow of data through various phases—such as pre-processing, harmonisation, integration, de-identification, and the transition from restricted data to open access—but also highlights the stakeholders involved at each stage. The diagram presents the framework that will be unpacked and elaborated upon throughout the rest of this document.
 
 Each of the sections that follow addresses one part of this framework in detail, especially concerning the processes around ethical and legal standards to follow and steps to promote data accessibility and reuse. This diagram, therefore, acts as a roadmap for navigating the complexities of data management within the HE²AT Center.
@@ -240,6 +249,14 @@ Data acquisition is a foundational step in the HE²AT Center's research efforts,
 #### 4.1.1. Summary of data categories
 
 The categorisation of health data within the HE²AT Center ensures that the HE²AT Center adheres to ethical and legal standards whilst facilitating collaborative research among the HE²AT Center Consortium and External Researchers with controlled access. Health data is classified into four distinct forms, ranging from original, individual-level data, aggregated to inferential data. This structured approach aims to maintain data privacy and protection throughout the HE²AT Center Project lifecycle.
+
+**[FIGURE 2 PLACEHOLDER: HE²AT Center Data Management Data Categories]**
+*Insert visual representation showing:*
+- *Original Study Data → Consortium Shared Data → RP1/RP2 De-identified Data → Inferential Data*
+- *Data flow and transformation between categories*
+- *Processing stages and security levels*
+- *Access restrictions and stakeholder permissions at each level*
+- *Updated to reflect cloud storage and processing capabilities*
 
 In all activities involving health data, the HE²AT Center Consortium contractually undertakes not to use the data to attempt to re-identify any Data Subjects.
 
@@ -446,6 +463,15 @@ Larger geographical areas will be used in the aggregation process if an area has
 ### 9.3. Location jittering
 
 Latitude/longitude coordinates may be "jittered" by adding random values to each coordinate to obscure the exact location whilst retaining sufficient geographical information to support analysis. As detailed by Zandbergen (2014), jittering can involve various methods:
+
+**[FIGURE 3 PLACEHOLDER: Geographic Masking Techniques]**
+*Insert technical diagrams showing the five masking approaches:*
+- *(a) Random Direction and Fixed Radius*
+- *(b) Random Perturbation within a Circle*
+- *(c) Gaussian Displacement*
+- *(d) Donut Masking*
+- *(e) Bimodal Gaussian Displacement*
+*Each diagram should show the original location point and the masked area/displacement pattern*
 
 One method is Random Direction and Fixed Radius, where points are displaced randomly within a fixed radius around the original location. Another method, Random Perturbation within a Circle, places locations within a circular area with displacement following a uniform or normal distribution. Gaussian Displacement involves random direction but with distances following a Gaussian distribution, adjusted based on local population density. Donut Masking sets minimum and maximum displacement levels, ensuring locations are neither too close nor too far from the original points. Finally, Bimodal Gaussian Displacement is a variation of Gaussian masking, achieving effects similar to donut masking but with less uniform placement probability.
 
