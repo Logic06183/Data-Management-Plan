@@ -1,0 +1,36 @@
+Subject: Please Review: Updated Data Management Plan v2.2 - Comments by Friday Jan 17th
+
+Hi everyone,
+
+Hope you're all doing well. We need your help reviewing the updated Data Management Plan (version 2.2) that includes our cloud migration plans.
+
+What's changed:
+- Moving some of our data storage to WHC-managed cloud services (keeping UCT servers too)
+- Better security with stronger encryption and 24/7 monitoring
+- Enhanced backup and disaster recovery
+- Improved data access for researchers
+
+Documents to review (in our Box folder):
+1. HE2AT_DMP_v2.2_COMPLETE_with_figures.docx - main document with figures
+2. DMP_v2.2_Changes_Summary_Table.md - summary of what changed
+3. HE2AT_DMP_v2.2_COMPLETE.md - text version if you prefer
+
+What we need from you:
+- Check if everything looks accurate for your area
+- Let us know if anything seems unclear
+- Flag any concerns about procedures or compliance
+
+Please send comments by Friday, January 17th to:
+Craig Parker (Craig.parker@witsphr.org) or 
+Christopher Jack (cjack@csag.uct.ac.za)
+
+After we get your feedback, we'll submit to HREC and start the migration process.
+
+Questions? Just give us a call or shoot us an email.
+
+Thanks for taking the time to review this!
+
+Best,
+Craig
+
+P.S. All files are in: Box/HEAT Center/DMAC/Data Management Plan/
