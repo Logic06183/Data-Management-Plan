@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
+  <!-- Title -->
+  <text x="700" y="40" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    HE²AT Center Data Management Architecture v2.2
+  </text>
+  
+  <!-- Stakeholders Layer -->
+  <rect x="50" y="80" width="1300" height="120" fill="#f8f9fa" stroke="#6c757d" stroke-width="2" rx="10"/>
+  <text x="700" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#495057">
+    Stakeholders &amp; Governance
+  </text>
+  
+  <!-- Stakeholder Groups -->
+  <rect x="80" y="130" width="180" height="60" fill="#ffffff" stroke="#17a2b8" stroke-width="2" rx="5"/>
+  <text x="170" y="150" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Data Providers</text>
+  <text x="170" y="170" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Health, Climate, Socio-economic</text>
+  <text x="170" y="185" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Remote Sensing Data</text>
+  
+  <rect x="280" y="130" width="180" height="60" fill="#ffffff" stroke="#28a745" stroke-width="2" rx="5"/>
+  <text x="370" y="150" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Data Access Committee</text>
+  <text x="370" y="170" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Review &amp; Approve Access</text>
+  <text x="370" y="185" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Ethical &amp; Scientific Standards</text>
+  
+  <rect x="480" y="130" width="180" height="60" fill="#ffffff" stroke="#dc3545" stroke-width="2" rx="5"/>
+  <text x="570" y="150" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Core Data Team</text>
+  <text x="570" y="170" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">UCT &amp; Wits PHR</text>
+  <text x="570" y="185" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Initial Processing &amp; De-ID</text>
+  
+  <rect x="680" y="130" width="180" height="60" fill="#ffffff" stroke="#6f42c1" stroke-width="2" rx="5"/>
+  <text x="770" y="150" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">HE²AT Consortium</text>
+  <text x="770" y="170" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">UCT, IBM, Wits PHR</text>
+  <text x="770" y="185" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">CeSHHAR, UPGC</text>
+  
+  <rect x="880" y="130" width="180" height="60" fill="#ffffff" stroke="#fd7e14" stroke-width="2" rx="5"/>
+  <text x="970" y="150" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">External Researchers</text>
+  <text x="970" y="170" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Bona Fide Researchers</text>
+  <text x="970" y="185" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">DAC-Approved Access</text>
+  
+  <rect x="1080" y="130" width="180" height="60" fill="#ffffff" stroke="#20c997" stroke-width="2" rx="5"/>
+  <text x="1170" y="150" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Ethics Committees</text>
+  <text x="1170" y="170" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Wits HREC</text>
+  <text x="1170" y="185" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">RP1-220605, RP2-220606</text>
+  
+  <!-- Infrastructure Layer -->
+  <rect x="50" y="220" width="1300" height="200" fill="#e8f4f8" stroke="#2196F3" stroke-width="2" rx="10"/>
+  <text x="700" y="250" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565C0">
+    Technical Infrastructure (Hybrid Cloud Architecture)
+  </text>
+  
+  <!-- UCT Infrastructure -->
+  <rect x="100" y="270" width="380" height="130" fill="#ffffff" stroke="#1976d2" stroke-width="2" rx="8"/>
+  <text x="290" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1976d2">
+    UCT Infrastructure
+  </text>
+  
+  <rect x="120" y="310" width="160" height="80" fill="#f5f5f5" stroke="#1976d2" stroke-width="1" rx="5"/>
+  <text x="200" y="330" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">CSAG Servers</text>
+  <text x="200" y="350" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• On-premise storage</text>
+  <text x="200" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• Climate data processing</text>
+  <text x="200" y="380" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• Research continuity</text>
+  
+  <rect x="300" y="310" width="160" height="80" fill="#f5f5f5" stroke="#1976d2" stroke-width="1" rx="5"/>
+  <text x="380" y="330" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Jupyter Hub</text>
+  <text x="380" y="350" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• Analysis platform</text>
+  <text x="380" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• GPU acceleration</text>
+  <text x="380" y="380" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• Cloud integration</text>
+  
+  <!-- WHC Cloud Infrastructure -->
+  <rect x="520" y="270" width="380" height="130" fill="#ffffff" stroke="#4caf50" stroke-width="2" rx="8"/>
+  <text x="710" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2e7d32">
+    WHC Cloud Infrastructure
+  </text>
+  
+  <rect x="540" y="310" width="110" height="80" fill="#f5f5f5" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="595" y="325" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Storage</text>
+  <text x="595" y="340" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• AES-256</text>
+  <text x="595" y="352" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Auto-backup</text>
+  <text x="595" y="364" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Disaster Recovery</text>
+  <text x="595" y="376" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Scalability</text>
+  
+  <rect x="665" y="310" width="110" height="80" fill="#f5f5f5" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="720" y="325" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Security</text>
+  <text x="720" y="340" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• 24/7 SOC</text>
+  <text x="720" y="352" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Threat Detection</text>
+  <text x="720" y="364" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Cloud Firewall</text>
+  <text x="720" y="376" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Compliance</text>
+  
+  <rect x="790" y="310" width="110" height="80" fill="#f5f5f5" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="845" y="325" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Computing</text>
+  <text x="845" y="340" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• GPU Resources</text>
+  <text x="845" y="352" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Auto-scaling</text>
+  <text x="845" y="364" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Load Balancing</text>
+  <text x="845" y="376" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Analytics</text>
+  
+  <!-- External Systems -->
+  <rect x="920" y="270" width="380" height="130" fill="#ffffff" stroke="#ff9800" stroke-width="2" rx="8"/>
+  <text x="1110" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#e65100">
+    External Systems &amp; Integration
+  </text>
+  
+  <rect x="940" y="310" width="110" height="80" fill="#f5f5f5" stroke="#ff9800" stroke-width="1" rx="5"/>
+  <text x="995" y="330" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">eLwazi</text>
+  <text x="995" y="350" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• Data Indexing</text>
+  <text x="995" y="370" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• FAIR Principles</text>
+  
+  <rect x="1065" y="310" width="110" height="80" fill="#f5f5f5" stroke="#ff9800" stroke-width="1" rx="5"/>
+  <text x="1120" y="330" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">CSAG GitLab</text>
+  <text x="1120" y="350" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• Version Control</text>
+  <text x="1120" y="370" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• DRS Documentation</text>
+  
+  <rect x="1190" y="310" width="110" height="80" fill="#f5f5f5" stroke="#ff9800" stroke-width="1" rx="5"/>
+  <text x="1245" y="325" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">DS-I Africa</text>
+  <text x="1245" y="345" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• Data Sharing</text>
+  <text x="1245" y="360" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• Collaboration</text>
+  <text x="1245" y="375" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">• NIH Integration</text>
+  
+  <!-- Data Processing Workflow -->
+  <rect x="50" y="440" width="1300" height="250" fill="#fff3e0" stroke="#FF9800" stroke-width="2" rx="10"/>
+  <text x="700" y="470" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#E65100">
+    Data Processing &amp; Management Workflow
+  </text>
+  
+  <!-- Processing Stages -->
+  <rect x="80" y="490" width="220" height="180" fill="#ffffff" stroke="#f57c00" stroke-width="2" rx="8"/>
+  <text x="190" y="515" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Data Acquisition</text>
+  <text x="190" y="540" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Health data collection</text>
+  <text x="190" y="555" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Climate data ingestion</text>
+  <text x="190" y="570" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Socio-economic data</text>
+  <text x="190" y="585" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Remote sensing data</text>
+  <text x="190" y="605" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Transfer Agreements</text>
+  <text x="190" y="625" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• DTAs with Data Providers</text>
+  <text x="190" y="640" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• POPIA compliance</text>
+  <text x="190" y="655" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Ethics approvals</text>
+  
+  <rect x="320" y="490" width="220" height="180" fill="#ffffff" stroke="#f57c00" stroke-width="2" rx="8"/>
+  <text x="430" y="515" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Pre-Processing</text>
+  <text x="430" y="540" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Core Data Team</text>
+  <text x="430" y="555" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Initial data validation</text>
+  <text x="430" y="570" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Quality checks</text>
+  <text x="430" y="585" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Secure storage setup</text>
+  <text x="430" y="605" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Storage Security</text>
+  <text x="430" y="625" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• UCT &amp; WHC infrastructure</text>
+  <text x="430" y="640" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Enhanced backup systems</text>
+  <text x="430" y="655" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• AES-256 encryption</text>
+  
+  <rect x="560" y="490" width="220" height="180" fill="#ffffff" stroke="#f57c00" stroke-width="2" rx="8"/>
+  <text x="670" y="515" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Harmonisation</text>
+  <text x="670" y="540" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Variable standardization</text>
+  <text x="670" y="555" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Common codebook</text>
+  <text x="670" y="570" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Unit alignment</text>
+  <text x="670" y="585" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Format consistency</text>
+  <text x="670" y="605" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Integration</text>
+  <text x="670" y="625" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Dataset alignment</text>
+  <text x="670" y="640" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Spatial-temporal matching</text>
+  <text x="670" y="655" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Cross-study harmonization</text>
+  
+  <rect x="800" y="490" width="220" height="180" fill="#ffffff" stroke="#f57c00" stroke-width="2" rx="8"/>
+  <text x="910" y="515" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">De-identification</text>
+  <text x="910" y="540" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Remove direct identifiers</text>
+  <text x="910" y="555" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Protect participant privacy</text>
+  <text x="910" y="570" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• POPIA compliance</text>
+  <text x="910" y="585" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Risk assessment</text>
+  <text x="910" y="605" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Access Control</text>
+  <text x="910" y="625" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Role-based permissions</text>
+  <text x="910" y="640" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• LDAP authentication</text>
+  <text x="910" y="655" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Audit logging</text>
+  
+  <rect x="1040" y="490" width="220" height="180" fill="#ffffff" stroke="#f57c00" stroke-width="2" rx="8"/>
+  <text x="1150" y="515" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Data Sharing</text>
+  <text x="1150" y="540" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• DAC review process</text>
+  <text x="1150" y="555" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Access request evaluation</text>
+  <text x="1150" y="570" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• DTA execution</text>
+  <text x="1150" y="585" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Ongoing monitoring</text>
+  <text x="1150" y="605" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Output Generation</text>
+  <text x="1150" y="625" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Analysis results</text>
+  <text x="1150" y="640" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Publications</text>
+  <text x="1150" y="655" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Open access data</text>
+  
+  <!-- Compliance and Governance -->
+  <rect x="50" y="710" width="1300" height="150" fill="#f3e5f5" stroke="#9C27B0" stroke-width="2" rx="10"/>
+  <text x="700" y="740" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#6A1B9A">
+    Compliance &amp; Governance Framework
+  </text>
+  
+  <rect x="100" y="760" width="200" height="80" fill="#ffffff" stroke="#9c27b0" stroke-width="2" rx="8"/>
+  <text x="200" y="785" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">POPIA Compliance</text>
+  <text x="200" y="805" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Data protection framework</text>
+  <text x="200" y="820" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Participant rights protection</text>
+  <text x="200" y="835" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Processing agreements</text>
+  
+  <rect x="320" y="760" width="200" height="80" fill="#ffffff" stroke="#9c27b0" stroke-width="2" rx="8"/>
+  <text x="420" y="780" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Human Subjects Study</text>
+  <text x="420" y="795" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Classification</text>
+  <text x="420" y="815" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Enhanced consent procedures</text>
+  <text x="420" y="830" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Additional ethical oversight</text>
+  
+  <rect x="540" y="760" width="200" height="80" fill="#ffffff" stroke="#9c27b0" stroke-width="2" rx="8"/>
+  <text x="640" y="785" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Ethics Oversight</text>
+  <text x="640" y="805" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Wits HREC approvals</text>
+  <text x="640" y="820" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Ongoing monitoring</text>
+  <text x="640" y="835" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Compliance audits</text>
+  
+  <rect x="760" y="760" width="200" height="80" fill="#ffffff" stroke="#9c27b0" stroke-width="2" rx="8"/>
+  <text x="860" y="785" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Data Transition</text>
+  <text x="860" y="805" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• UCT → WHC recipient role</text>
+  <text x="860" y="820" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Tripartite agreements</text>
+  <text x="860" y="835" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Legal continuity</text>
+  
+  <rect x="980" y="760" width="200" height="80" fill="#ffffff" stroke="#9c27b0" stroke-width="2" rx="8"/>
+  <text x="1080" y="785" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Risk Management</text>
+  <text x="1080" y="805" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Security assessments</text>
+  <text x="1080" y="820" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Incident response</text>
+  <text x="1080" y="835" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">• Mitigation strategies</text>
+  
+  <!-- Research Outputs -->
+  <rect x="50" y="880" width="1300" height="100" fill="#e8f5e9" stroke="#4CAF50" stroke-width="2" rx="10"/>
+  <text x="700" y="910" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2E7D32">
+    Research Outputs &amp; Impact
+  </text>
+  
+  <rect x="100" y="930" width="160" height="40" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="180" y="955" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Heat-Health Models</text>
+  
+  <rect x="280" y="930" width="160" height="40" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="360" y="955" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Early Warning Systems</text>
+  
+  <rect x="460" y="930" width="160" height="40" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="540" y="955" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Policy Recommendations</text>
+  
+  <rect x="640" y="930" width="160" height="40" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="720" y="955" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Capacity Building</text>
+  
+  <rect x="820" y="930" width="160" height="40" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="900" y="955" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Publications</text>
+  
+  <rect x="1000" y="930" width="160" height="40" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="1080" y="955" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Open Access Data</text>
+  
+  <!-- Connection Lines -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- Stakeholder to Infrastructure connections -->
+  <path d="M 370 190 L 290 265" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <path d="M 570 190 L 430 265" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <path d="M 770 190 L 710 265" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  
+  <!-- Infrastructure to Processing connections -->
+  <path d="M 700 420 L 700 485" stroke="#666" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Processing to Compliance connections -->
+  <path d="M 700 690 L 700 755" stroke="#666" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Compliance to Outputs connections -->
+  <path d="M 700 860 L 700 925" stroke="#666" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+</svg>
