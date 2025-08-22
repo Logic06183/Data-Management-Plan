@@ -1,0 +1,174 @@
+WITS HUMAN RESEARCH ETHICS COMMITTEE (MEDICAL) 
+
+AMENDMENT NOTIFICATION 
+
+HE²AT CENTRE DATA MANAGEMENT PLAN VERSION 2.2 
+
+Document Title: NIH HE²AT Centre Data Management Plan - Infrastructure Transition Amendment 
+
+Version: 2.2 (Revised) 
+
+Previous Version: 2.1 (September 2024) 
+
+Amendment Date: August 2025 
+
+HREC Reference Numbers: RP1 (220605), RP2 (220606) 
+
+Principal Investigators: Matthew Chersich (Wits PHR) 
+
+Contact: Craig Parker (Craig.parker@witsphr.org) 
+
+NATURE OF AMENDMENT: Temporary infrastructure transition during Year 5 to enhance data management capabilities through cloud infrastructure migration. This amendment documents a transition period where dual infrastructure capability (UCT on-premise and WHC-managed cloud) is maintained, with complete migration to cloud by end of Year 5. All existing ethical safeguards are maintained and enhanced. 
+
+PARTICIPANT IMPACT: No direct impact on participants. Enhanced data protection and security measures only. 
+
+RISK ASSESSMENT: Risk reduced through enhanced security, 24/7 monitoring, and automated backup capabilities. 
+
+SUMMARY OF CHANGES 
+
+DMP Section 
+
+Specific Changes Made 
+
+Rationale and Ethical Considerations 
+
+Section 3.4 
+Overview of Data Management Workflow 
+
+Added new subsection clarifying Year 5 as a transition period with temporary dual infrastructure capability, ending with complete cloud migration 
+
+Provides transparent timeline for infrastructure changes. Ensures stakeholder understanding that this is a temporary transition, not permanent hybrid model. No impact on participant data protection. 
+
+Section 4.1.2 
+Original Study Data 
+
+Added "during the transition period to WHC-managed cloud infrastructure" and specified dual capability as temporary measure 
+
+Clarifies temporary nature of dual infrastructure. Maintains all existing data protections while enhancing security during transition. 
+
+Section 4.2 
+Climate/Weather Data 
+
+Added "during the transition period from WHC-managed cloud services" with emphasis on enhanced auto-scaling and accessibility 
+
+Improves research efficiency and data accessibility during transition whilst maintaining all access controls and authentication requirements. 
+
+Section 5.1 
+Data Transfer Agreement 
+
+Simplified contractual language, removed detailed DTA requirements, focused on compliance and data management procedures 
+
+Streamlines document for ethics review while maintaining all essential compliance requirements. Reduces complexity without compromising participant protection. 
+
+Section 6.1 
+Pre-processing 
+
+Added "during the transition period to WHC-managed cloud infrastructure with enhanced security and automated backup systems" 
+
+Strengthens data integrity during processing with automated systems. Provides additional safeguards during transition period. 
+
+Section 6.4 
+Database Population 
+
+Added reference to cloud-native database services during transition with automated backup and enhanced disaster recovery 
+
+Improves data preservation and recovery capabilities, reducing risk of data loss during critical transition period. 
+
+Section 8 
+Data Analysis Platform 
+
+Added "cloud-based computational resources with GPU acceleration" available during transition period 
+
+Enhances analytical capabilities for researchers during transition while maintaining all existing access controls and security protocols. 
+
+Section 10.4 
+Data Sharing Procedures 
+
+NEW CRITICAL CHANGE: "All projects, regardless of whether they involve internal HE²AT Center Consortium members or external researchers, must go through the DAC for data access approval" 
+
+Ensures equitable data sharing and comprehensive tracking of all projects. Strengthens governance by applying consistent standards to all data access requests. Enhances transparency and accountability. 
+
+Section 12.3 
+Data Access Committee 
+
+Updated to emphasize DAC evaluates ALL data access requests (consortium and external) with consistent ethical and scientific standards 
+
+Removes any perception of preferential access. Ensures uniform application of ethical standards. Strengthens governance framework. 
+
+Section 14.1 
+Data Transfer, Storage and Encryption 
+
+Added "during the transition period to WHC-managed cloud infrastructure" and specified "AES-256 encryption standard for both UCT servers and cloud storage" 
+
+Upgrades encryption standards across all infrastructure. Provides superior data protection during transition with industry-standard encryption. 
+
+Section 14.2 
+Network Security 
+
+Added "during the transition period from WHC-managed cloud security architecture with 24/7 Security Operations Centre (SOC) monitoring and advanced threat detection systems" 
+
+Significantly enhances security oversight with professional 24/7 monitoring. Provides superior threat detection compared to standard academic infrastructure. 
+
+Section 14.3 
+Local Authentication and Authorisation 
+
+Added "alongside cloud-specific access controls and automated compliance reporting for streamlined governance oversight during the transition period" 
+
+Enhances access control and provides automated compliance monitoring. Improves audit capabilities and regulatory oversight. 
+
+Section 15 
+Roles and Responsibilities 
+
+Removed individual names and contact details from main table, generalized to institutional roles with key functions 
+
+Facilitates document maintenance without requiring amendments for personnel changes. Contact information maintained separately for easy updates. 
+
+Section 17 
+Cloud Migration 
+
+REMOVED from main document and restructured as Annex 1: Transition Implementation Details 
+
+Streamlines main document for ethics review while preserving detailed implementation information in annex format. 
+
+NEW Annex 1 
+Transition Implementation Details 
+
+NEW SECTION: Comprehensive 4-phase transition strategy with timeline, data provider communication framework, and generic email template 
+
+Provides transparent implementation roadmap. Ensures proper stakeholder communication. Documents systematic approach to minimize disruption. 
+
+All other sections 
+
+Document structure simplified from 17 to 16 sections. Removed complex contractual language throughout. Maintained all ethical frameworks and participant protections. 
+
+Improves readability for ethics review. Focuses on data management procedures rather than legal complexity. No reduction in participant protections. 
+
+ETHICAL IMPACT ASSESSMENT 
+
+Participant Rights: All existing participant rights maintained and enhanced through improved security infrastructure during transition period. 
+
+Data Protection: Significant enhancement through: 
+
+• AES-256 encryption across all infrastructure 
+• 24/7 professional security monitoring during transition 
+• Automated backup and disaster recovery systems 
+• Advanced threat detection capabilities 
+• Dual infrastructure redundancy during transition 
+
+Consent and Transparency: Clear communication framework for data providers about transition. Emphasis on temporary nature of changes with defined endpoint. 
+
+Governance Enhancement: Universal DAC review requirement strengthens oversight. Consistent application of ethical standards to all data access requests. 
+
+Risk Mitigation: Transition period approach minimizes operational risks through: 
+• Phased implementation over 12 months 
+• Dual system operation for continuity 
+• Enhanced security throughout transition 
+• Professional monitoring and support 
+
+CONFIRMATION 
+
+These amendments document a temporary infrastructure transition during Year 5 that enhances data protection and research capabilities. The transition will be complete by end of Year 5 with full migration to secure cloud infrastructure. All existing ethical safeguards are maintained and enhanced. No changes to research methodology, participant recruitment, or data collection procedures. 
+
+The universal DAC review requirement ensures equitable and transparent data governance for all users. 
+
+All changes maintain full POPIA compliance and enhance alignment with international data protection standards.
