@@ -9,7 +9,8 @@ This repository contains the Data Management Plan (DMP) and related documentatio
 ## Current Working Files
 
 ### Primary Documents (Current Version 2.2)
-- `HE2AT_DMP_v2.2_COMPLETE_with_figures.docx` - Main Data Management Plan with embedded diagrams
+- `HE2AT_DMP_v2.2_COMPLETE_with_figures_22082025.docx` - Main Data Management Plan with embedded diagrams
+- `HE2AT_DMP_v2.2_COMPLETE_with_figures_22082025.pdf` - PDF version for distribution
 - `DMP_v2.2_Changes_Summary_HREC_FINAL.docx` - Summary of changes for HREC review
 - `Data Types.xlsx` - Data classification and type definitions
 - `Personal Information Processing Agreements/` - Signed POPIA compliance agreements
