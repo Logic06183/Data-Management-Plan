@@ -1,4 +1,53 @@
-# HE²AT Center Data Management Plan v2.2
+# HE²AT Center Data Management Plan
+
+**Document version number 2.2**  
+**Developed by C Jack, C Parker**  
+**Updated: August 2024**
+
+---
+
+*Document version 2.2 | August 2024*
+
+## Contents
+
+1. Contents ............................................................................................................................................2
+2. Stakeholders and target audience ............................................................................................... 12
+3. Background and overview of Data Management Plan.............................................................. 14
+   3.1. Background to the HE²AT Center ......................................................................................... 14
+   3.2. Scope of Data Management Plan .......................................................................................... 15
+   3.3. Purpose.................................................................................................................................... 15
+   3.4. Overview of the Data Management Workflow .................................................................... 16
+4. Data types........................................................................................................................................ 18
+   4.1. Health-related data ................................................................................................................. 18
+   4.1.1. Summary of data categories ............................................................................................. 18
+   4.1.2. Original Study Data........................................................................................................... 18
+   4.1.3. Consortium-shared data................................................................................................... 18
+   4.1.4. RP1/RP2 De-identified data ............................................................................................ 20
+   4.1.5. Inferential data.................................................................................................................. 20
+   4.2. Climate/weather data ............................................................................................................. 21
+   4.3. Areal/geospatial socio-economic data ................................................................................. 22
+5. Data transfer, and ethics approvals and notification ................................................................ 23
+   5.1. Data Transfer Agreement: ..................................................................................................... 23
+   5.2. Ethics committee notification for new studies: .................................................................. 23
+6. Pre-processing and harmonisation of health data .................................................................... 24
+   6.1. Pre-processing ........................................................................................................................ 24
+   6.2. Variable mapping .................................................................................................................... 24
+   6.3. Mapping validation ................................................................................................................. 25
+   6.4. Database population .............................................................................................................. 25
+   6.5. RP1/RP2 De-Identified Dataset Creation ............................................................................. 26
+7. Integration and analysis interfaces ............................................................................................... 26
+8. Data analysis platform ................................................................................................................... 27
+9. De-identification.............................................................................................................................. 28
+10. Data sharing.................................................................................................................................. 32
+11. POPIA compliance and protection of personal information ................................................... 35
+12. Governance and compliance ...................................................................................................... 37
+13. Data retention .............................................................................................................................. 38
+14. Restricted data access................................................................................................................. 40
+15. Roles and responsibilities ........................................................................................................... 42
+16. Assessment and revision of the Data Management Plan ....................................................... 44
+17. Cloud Migration Implementation ............................................................................................... 46
+
+---
 
 ## Acronyms
 
@@ -40,6 +89,8 @@
 | WHC | Wits Health Consortium Pty (Ltd) |
 | Wits PHR | Wits Planetary Health Research a division of Wits Health Consortium (Pty) Ltd |
 | UPGC | University Peleforo Gon Coulibaly Korhogo Côte d'Ivoire |
+
+---
 
 ## Definitions
 
@@ -98,6 +149,8 @@
 | US National Institute of Health (NIH) | The primary agency of the United States government responsible for biomedical and public health research. |
 | sub-Saharan Africa (sSA) | A geographical region of Africa located south of the Sahara Desert. |
 
+---
+
 ## 2. Stakeholders and target audience
 
 • **CSAG/UCT Data Management Team**: The Climate System Analysis Group (CSAG) in the Faculty of Science at the University of Cape Town (UCT) manages data storage, harmonisation, and integration processes within the HE²AT Center.
@@ -129,6 +182,8 @@
 • **External Bona Fide Researchers**: collaborate with the HE²AT Center and utilise the integrated datasets for various research projects and analyses. They follow the data access procedures outlined in this DMP and comply with data transfer agreements, ethical guidelines, and any conditions set by the Data Access Committee.
 
 • **Socio-Economic Data Providers**: Organisations that provide data on socio-economic conditions, such as national census bureaus, household survey agencies, and specialised observatories like the Gauteng City-Region Observatory (GCRO).
+
+---
 
 ## 3. Background and overview of Data Management Plan
 
@@ -182,6 +237,8 @@ The HE²AT Center's data management process is structured around several critica
 This diagram not only serves as a guide to understanding the flow of data through various phases—such as pre-processing, harmonisation, integration, de-identification, and the transition from restricted data to open access—but also highlights the stakeholders involved at each stage. The diagram presents the framework that will be unpacked and elaborated upon throughout the rest of this document.
 
 Each of the sections that follow addresses one part of this framework in detail, especially concerning the processes around ethical and legal standards to follow and steps to promote data accessibility and reuse. This diagram, therefore, acts as a roadmap for navigating the complexities of data management within the HE²AT Center.
+
+---
 
 ## 4. Data types
 
@@ -257,6 +314,8 @@ South African census data is already available through the UCT DataFirst data re
 
 South African census data is aggregated into small areas and does not constitute personally identifiable data. Likewise, GCRO Quality of Life survey data is aggregated to small areas and does not constitute personally identifiable sensitive data.
 
+---
+
 ## 5. Data transfer, and ethics approvals and notification
 
 In alignment with the HE²AT Center's commitment to ethical conduct across all research activities, the ethics approval and notification process, and Data Transfer Agreement (DTA) are essential for securing and maintaining oversight of studies that contribute data to the HE²AT Center Project.
@@ -266,11 +325,6 @@ The RP1 and RP2 study activities have been reviewed and approved by the Wits Hum
 ### 5.1. Data Transfer Agreement:
 
 The DTA between each Data Provider and UCT or WHC will outline the terms for transferring and processing health data. Where WHC is the Data Recipient, the Original Study Data is transferred and received from the Data Provider directly by the Core Data Team on UCT Data servers. The DTA must align with applicable national or international health data-sharing legislation. The DTA aims primarily to ensure that the handling, storage, and transfer of data adhere to relevant legislation and ethical standards and protects the rights of study participants and Data Providers.
-
-<span style="color: red">**[TRACKED CHANGE] Data Recipient Role Transition:** As part of the cloud migration implementation, the data recipient role will transition from UCT to WHC during Year 5 of the project. This transition requires:
-- **Tripartite Agreement Execution**: A special tripartite agreement must be signed between UCT, WHC, and each Data Provider to formally transfer data recipient responsibilities. This agreement ensures continuity of data protection obligations and maintains compliance with existing DTAs.
-- **Data Provider Notification and Consent**: All Data Providers will be formally notified of the recipient role transition and must provide explicit consent for the change in data custodianship before any data transfer to WHC-managed infrastructure occurs.  
-- **Legal Continuity**: The tripartite agreement ensures that all existing DTA terms, conditions, and data protection obligations remain in full effect under WHC's custodianship, with no reduction in protection levels. **[END TRACKED CHANGE]**</span>
 
 The Wits Human Research Ethics Committee (HREC) (Medical) is notified of each new study that contributes health data. The HE²AT Center team reviews the consent and ethic approvals of each of the studies that agree to share data. This section below outlines the steps and considerations relating to ethical procedures and these notifications.
 
@@ -283,6 +337,8 @@ Taken together, all the study procedures around ethics ensure that the research 
 For every new study that contributes data to the HE²AT Center, the Wits Human Research Ethics Committee (HREC) (Medical) will be notified in writing. Notifications detail the study's name, acronym, contact details of the data owners, and relevant ethics approval information, including consent parameters.
 
 Notifications occur on a six-monthly basis in RP1, and in real-time with RP2 given that the studies in RP2 were done at WHC, and all studies had already received approval from the University ethics committee who also serve as the ethics committee for the HE²AT Center (notification template can be found in Annex 2).
+
+---
 
 ## 6. Pre-processing and harmonisation of health data
 
@@ -332,6 +388,8 @@ Once the database is fully populated and de-identified, it is made available to 
 
 The final stage involves creating a de-identified dataset that can be shared with External Bona Fide Researchers. The Core Data Team continues with the de-identification process, ensuring that the dataset meets the highest privacy standards. The Safe Harbour method is supplemented by expert determination, supervised by the Data Access Committee, to ensure that the dataset complies with the HE²AT Center's ethical and legal guidelines. Once these steps are complete, the dataset can be shared under the terms outlined in Section 10.
 
+---
+
 ## 7. Integration and analysis interfaces
 
 ### 7.1. Integration of climate and socio-economic variables
@@ -360,6 +418,8 @@ The CSAG team at UCT plays a crucial role in managing and updating the climate d
 
 Finally, the integrated dataset is prepared for analysis, with the climate and socio-economic variables aligned to match the study's objectives. This step ensures the data is ready for statistical and modelling exercises exploring the relationships between climate, socio-economic conditions, and health outcomes.
 
+---
+
 ## 8. Data analysis platform
 
 Data analysis involving the Consortium Shared Data and RP1/RP2 de-identified data will be facilitated through the CSAG/UCT Jupyter Hub platform <span style="color: red">**[TRACKED CHANGE] and cloud-based computational resources with GPU acceleration for complex analyses, improved processing times, and enhanced analytical capabilities**</span>, providing robust and scalable environments for processing and analysing the HE²AT Center datasets.
@@ -375,6 +435,8 @@ Jupyter Hub is a collaborative, web-based Python coding environment that allows 
 • **Data Accessibility**: Consortium Shared Data, RP1/RP2 de-identified data, climate, and socio-economic datasets stored on CSAG storage servers are directly accessible within the Jupyter Hub environment, allowing seamless data retrieval and manipulation.
 
 • **Collaboration**: Jupyter Hub supports collaborative work, enabling multiple analysts to share and work on the same notebooks, fostering teamwork and knowledge sharing.
+
+---
 
 ## 9. De-identification
 
@@ -424,6 +486,8 @@ The risk of re-identification will be quantified using spatial k-anonymity metri
 Geo-location masking/jittering and aggregation techniques will be reviewed through expert determination involving UCT, IBM, and NIH experts. This process will involve assessing the risk of re-identification and ensuring that the applied techniques sufficiently protect participant confidentiality whilst maintaining the integrity of spatial analyses.
 
 In summary, by incorporating these enhanced de-identification techniques, we aim to ensure compliance with POPIA, protect participant privacy, and maintain the data's utility for research purposes.
+
+---
 
 ## 10. Data sharing
 
@@ -482,6 +546,8 @@ Detailed governance and oversight of these procedures, including DAC responsibil
 
 6. **Ongoing Monitoring**: The DAC will continue to monitor compliance with the terms of the Data Transfer Agreement, including periodic reviews and audits, if necessary.
 
+---
+
 ## 11. POPIA compliance and protection of personal information
 
 The use of health datasets requires careful consideration of data security and confidentiality, guided by relevant legislation specific to each dataset, including country-specific laws on personal/sensitive data and cross-border data transfer. The DMAC manages the development and negotiation of these DTAs in conjunction with research projects, as they are the primary interfaces with the data sources.
@@ -512,27 +578,7 @@ POPIA's Section 6 states that the Act does not apply if personal information has
 
 • **Section 21 (Operator Contracts)**: Requires a written contract between the responsible party and operators implementing processing. This contract mandates that operators inform the responsible party if unauthorised access to personal information is suspected.
 
-<span style="color: red">**[TRACKED CHANGE] Human Subjects Study Classification:** The HE²AT Center project has been reclassified as a "human subjects study" by the NIH. This reclassification introduces additional legal and ethical requirements that supplement existing POPIA compliance measures:
-
-**Additional Legal Requirements:**
-- Enhanced informed consent procedures for data reuse and secondary analysis
-- Strengthened participant rights protection including rights to data access and correction
-- Additional documentation requirements for data processing and storage activities
-- Expanded data subject notification obligations for certain types of data processing
-
-**Ethical Implications:**
-- Heightened ethical oversight requirements for all data processing activities
-- Enhanced Data Access Committee review procedures for external data sharing requests
-- Additional safeguards for vulnerable populations included in health datasets
-- Strengthened procedures for handling data subject complaints and inquiries
-
-**Implementation Impact:**
-- All existing data processing procedures will be reviewed and updated to ensure compliance with human subjects research standards
-- Enhanced training requirements for all personnel with access to health data
-- Additional audit and monitoring requirements for data management activities
-- Strengthened incident response procedures for data breaches or compliance violations
-
-The transition to human subjects study classification ensures the highest levels of participant protection whilst maintaining the research integrity and scientific value of the HE²AT Center project. **[END TRACKED CHANGE]**</span>
+---
 
 ## 12. Governance and compliance
 
@@ -573,6 +619,8 @@ The DAC will comprise of independent experts who may include Ethics Committee me
 
 For a more detailed description of the roles, responsibilities and specific procedures relating to the DAC, refer to Annex 4: Terms of Reference for the DAC.
 
+---
+
 ## 13. Data retention
 
 Participant data will be retained according to the following guidelines, ensuring compliance with the Protection of Personal Information Act (POPIA) and maximising its utility for future research:
@@ -590,6 +638,8 @@ Participant data will be retained according to the following guidelines, ensurin
 ### 13.2. Ongoing Monitoring of Data Transfer Agreements
 
 After executing a Data Transfer Agreement (DTA), ongoing monitoring, including periodic reviews and audits if necessary, ensures compliance with the agreement's terms.
+
+---
 
 ## 14. Restricted data access
 
@@ -615,6 +665,8 @@ Beyond UCT's broader security measures, the CSAG/UCT platform employs additional
 
 By implementing these comprehensive encryption modalities, network security and authentication measures, the HE²AT Center ensures the protection and confidentiality of sensitive data throughout its lifecycle, maintaining compliance with ethical and legal standards.
 
+---
+
 ## 15. Roles and responsibilities
 
 The table below details the various roles and responsibilities associated with the data management plan and who is currently associated with each, their institution, and contact details. Personnel may change over time.
@@ -637,6 +689,8 @@ The table below details the various roles and responsibilities associated with t
 | Access to metadata and synthetic health datasets for mapping on JupyterHub only. | | |
 | **Managing Access to the UCT Data Analysis Platform** | Rodger Duffett (UCT) | rodger@csag.uct.ac.za |
 | **Managing Access to the IBM Platform** | Sibusisiwe Makhanya (IBM) | sibusisiwe.makhanya@ibm.com |
+
+---
 
 ## 16. Assessment and revision of the Data Management Plan
 
@@ -668,13 +722,14 @@ Based on the findings from the assessment, the DMAC co-PIs will propose revision
 2. **Review and Approval**:
    - The proposed revisions will be presented to the HE²AT Center Steering Committee (SC).
    - The SC, including the RP1 and RP2 leads, will evaluate the proposed changes and provide their approval or request further modifications as needed.
-   - <span style="color: red">**[TRACKED CHANGE]** Additional legal and compliance review will be conducted by Jessica Senekal (UCT legal counsel) and Este's replacement (WHC legal representative) to ensure all changes maintain legal compliance and align with institutional obligations before final approval. **[END TRACKED CHANGE]**</span>
 
 3. **Implementation**:
    - Upon approval, the DMAC team will implement the revised Data Management Plan.
    - All relevant stakeholders will be informed of the changes, and any necessary training or guidance will be provided to ensure smooth implementation.
 
 By conducting regular assessments and making necessary revisions, the HE²AT Center ensures that the Data Management Plan remains robust, effective, and aligned with best data management and analysis practices.
+
+---
 
 ## 17. Cloud Migration Implementation
 
@@ -740,7 +795,6 @@ A comprehensive 5-phase approach ensures minimal disruption to research activiti
 
 **Continuity Measures:**
 - Dual capability maintained during transition period
-- <span style="color: red">**[TRACKED CHANGE]** Explicit migration deadline of June 2026 for complete transfer of all health data from UCT systems to WHC-managed cloud infrastructure, ensuring Year 5 transitional period completion **[END TRACKED CHANGE]**</span>
 - Comprehensive backup and recovery procedures for both UCT and cloud systems
 - Regular security assessments and penetration testing
 - Staff training on new cloud-based procedures
@@ -753,282 +807,7 @@ A comprehensive 5-phase approach ensures minimal disruption to research activiti
 
 The migration to WHC-managed cloud infrastructure represents a significant enhancement to the HE²AT Center's data management capabilities, ensuring improved security, scalability, and operational efficiency whilst maintaining full compliance with regulatory requirements and research best practices.
 
-## 18. Data Sharing Agreement Alignment
-
-<span style="color: red">**[TRACKED CHANGE - NEW SECTION]**</span>
-
-<span style="color: red">**[TRACKED CHANGE]** The HE²AT Center maintains a complex ecosystem of data sharing agreements that must remain aligned and consistent throughout the project lifecycle. This section outlines the coordination requirements and procedures for maintaining agreement coherence.
-
-### 18.1. Agreement Ecosystem
-
-**Primary Agreements:**
-- **Consortium Data Sharing Agreement**: Governs data sharing amongst HE²AT Center Consortium partners
-- **Individual Data Transfer Agreements (DTAs)**: Bilateral agreements between each Data Provider and UCT/WHC
-- **External Data Sharing Agreements**: Agreements with External Researchers accessing de-identified data
-- **Tripartite Data Custodianship Agreements**: Agreements facilitating the transfer of data custodianship from UCT to WHC
-
-### 18.2. Alignment Requirements
-
-**Consistency Principles:**
-- All agreements must maintain consistent data protection standards and participant rights
-- Privacy and security requirements must be harmonised across all agreement types
-- Data retention and destruction procedures must align with consortium-wide policies
-- Access control and monitoring requirements must be standardised
-
-**Coordination Procedures:**
-- Any changes to the Consortium Data Sharing Agreement trigger mandatory review of all related DTAs
-- New Data Provider agreements must align with existing consortium standards and procedures
-- External data sharing terms must not contradict or weaken protections established in primary agreements
-
-### 18.3. Update and Maintenance Process
-
-**Regular Review Cycle:**
-- Quarterly review of agreement alignment and consistency
-- Annual comprehensive assessment of all data sharing agreements
-- Immediate review triggered by regulatory changes or institutional policy updates
-
-**Stakeholder Coordination:**
-- DMAC co-PIs coordinate all agreement updates and ensure consistent implementation
-- Legal counsel (Jessica Senekal and WHC legal representative) provide oversight for all agreement modifications
-- Data Providers are notified of any changes that may affect their agreements and given opportunity to review and consent
-
-The coordinated management of all data sharing agreements ensures legal consistency, participant protection, and operational efficiency throughout the HE²AT Center project lifecycle. **[END TRACKED CHANGE]**</span>
-
-## 19. Data Custodian Transition
-
-<span style="color: red">**[TRACKED CHANGE - NEW SECTION]**</span>
-
-<span style="color: red">**[TRACKED CHANGE]** As part of the cloud migration strategy, the data custodian role will transition from UCT to WHC during Year 5 of the project. This section outlines the procedures, requirements, and contingency measures for this critical transition.
-
-### 19.1. Transition Overview
-
-**Custodianship Transfer Process:**
-- Formal transfer of data custodian responsibilities from UCT to WHC
-- Comprehensive legal and compliance review of custodianship requirements
-- Data Provider notification and consent procedures
-- Technical migration of data to WHC-managed cloud infrastructure
-
-**Legal Framework:**
-- Execution of tripartite agreements between UCT, WHC, and each Data Provider
-- Transfer of all legal obligations and responsibilities related to data protection
-- Maintenance of existing participant rights and data protection standards
-- Continuity of all ethical and regulatory compliance obligations
-
-### 19.2. Data Provider Consent Process
-
-**Notification Requirements:**
-- Formal written notification to all Data Providers regarding custodian role transition
-- Detailed explanation of changes to data storage, processing, and security arrangements
-- Clear communication about maintained protection levels and participant rights
-- 90-day advance notice period for Data Provider review and response
-
-**Consent Procedures:**
-- Explicit written consent required from each Data Provider before data transfer to WHC custody
-- Detailed consent documentation including technical and security specifications
-- Option for Data Providers to specify additional protection requirements
-- Clear procedures for handling consent conditions or restrictions
-
-### 19.3. Non-Responsive and Refusing Data Providers
-
-**Non-Responsive Data Providers:**
-- Initial contact followed by two formal reminder notifications at 30-day intervals
-- Final notification with 60-day deadline for response
-- If no response received, data remains under UCT custodianship with continued POPIA compliance
-- Regular re-engagement attempts every six months until project completion
-
-**Refusing Data Providers:**
-- Respect for Data Provider decisions regarding cloud migration
-- Maintenance of existing UCT-based storage and processing arrangements for refusing Data Providers
-- Dual infrastructure operation to accommodate both consenting and refusing Data Providers
-- No penalties or limitations imposed on refusing Data Providers regarding project participation
-
-**Data Segregation Procedures:**
-- Clear technical segregation between cloud-migrated and UCT-retained data
-- Separate access controls and monitoring systems for each data custody arrangement
-- Maintained integration capabilities for research analysis while respecting custody boundaries
-- Regular auditing of segregation effectiveness and compliance
-
-### 19.4. Contingency and Risk Mitigation
-
-**Risk Assessment:**
-- Technical risks related to data migration and integration
-- Legal risks from partial consent or complex custodianship arrangements
-- Operational risks from managing dual infrastructure systems
-- Compliance risks from maintaining multiple data governance frameworks
-
-**Mitigation Strategies:**
-- Comprehensive backup and recovery procedures throughout transition period
-- Legal review and approval of all custodianship arrangements
-- Technical testing and validation of all data migration procedures
-- Staff training on dual custodianship management requirements
-
-**Success Criteria:**
-- 100% of consenting Data Provider data successfully migrated to WHC custody
-- Maintained or enhanced security and compliance standards for all data
-- Zero data loss or compromise incidents during transition
-- Continued research accessibility and analytical capabilities for all datasets
-
-The data custodian transition ensures enhanced data management capabilities while maintaining the highest standards of data protection, legal compliance, and respect for Data Provider preferences. **[END TRACKED CHANGE]**</span>
-
-## 20. Post-Project Data Management
-
-<span style="color: red">**[TRACKED CHANGE - NEW SECTION]**</span>
-
-<span style="color: red">**[TRACKED CHANGE]** This section outlines data management procedures and responsibilities following the completion of the HE²AT Center project in 2026, addressing both project continuation and termination scenarios.
-
-### 20.1. Project Continuation Scenarios
-
-**Grant Renewal:**
-- If the HE²AT Center receives continued NIH funding beyond 2026, all existing data management procedures and agreements remain in effect
-- Data Transfer Agreements with Data Providers are reviewed and renewed as necessary
-- Enhanced data sharing and access procedures may be implemented based on project evolution
-- Continued compliance with all regulatory and ethical requirements maintained
-
-**Institutional Continuation:**
-- If the project continues under different funding sources, all data protection and participant rights obligations remain binding
-- New funding arrangements must maintain or exceed existing data protection standards
-- Data Provider consent required for any changes to data management or custody arrangements
-- Continued operation of Data Access Committee and governance structures
-
-### 20.2. Project Termination Scenarios
-
-**Planned Project Completion:**
-- Five-year data retention period begins from project completion date (June 2026)
-- All Original Study Data maintained for five years post-completion for analysis verification and publication purposes
-- Consortium Shared Data and De-identified Data may be retained indefinitely pending Data Provider agreement terms
-- Inferential Data remains available for open access indefinitely
-
-**Unplanned Termination:**
-- Emergency data preservation procedures activated to protect all datasets
-- Data Provider notification within 30 days of termination decision
-- Options provided to Data Providers for data return, transfer to approved institutions, or secure destruction
-- Continued compliance with all data protection obligations during termination process
-
-### 20.3. Long-Term Data Stewardship
-
-**Custodianship Arrangements:**
-- WHC assumes primary responsibility for long-term data stewardship post-2026
-- UCT maintains co-custodianship responsibilities for data retained under their custody
-- Data Access Committee continues operation for minimum five years post-project completion
-- Clear succession planning for institutional changes or personnel transitions
-
-**Technical Infrastructure:**
-- Cloud-based infrastructure maintained for minimum retention periods
-- Regular data integrity checks and migration to updated storage technologies as needed
-- Continued security monitoring and compliance reporting
-- Archive-grade storage implementation for long-term preservation
-
-### 20.4. Data Provider Rights and Options
-
-**Data Return Options:**
-- Data Providers may request return of all Original Study Data at any time
-- Secure transfer procedures available for data return to Data Providers
-- Data destruction certificates provided upon request
-- No financial obligations for Data Providers regarding data return procedures
-
-**Ongoing Access Rights:**
-- Data Providers maintain perpetual access to their contributed datasets
-- Priority access provided for Data Providers seeking to use their data in new research
-- Collaborative opportunities maintained between Data Providers and successor institutions
-- Regular communication regarding data status and any proposed changes
-
-### 20.5. Publication and Dissemination
-
-**Ongoing Publication Rights:**
-- Consortium researchers maintain rights to complete ongoing analyses and publications
-- Publication timeline coordination to ensure Data Provider attribution and collaboration opportunities
-- Open access requirements maintained for publications using retained datasets
-- Data availability statements reflect post-project access procedures
-
-**Knowledge Transfer:**
-- Comprehensive documentation of data management procedures and lessons learned
-- Training materials and best practices shared with broader research community
-- Succession planning documents prepared for institutional knowledge transfer
-- Regular reporting on data management outcomes and long-term sustainability
-
-The post-project data management framework ensures continuity of data protection, research value, and stakeholder rights regardless of project continuation or completion scenarios. **[END TRACKED CHANGE]**</span>
-
-## 21. Interim Data Access Restrictions
-
-<span style="color: red">**[TRACKED CHANGE - NEW SECTION]**</span>
-
-<span style="color: red">**[TRACKED CHANGE]** During the transition to human subjects study classification and cloud migration implementation, certain interim restrictions on health data access are required to ensure compliance and participant protection.
-
-### 21.1. CHEAQI Data Access Restrictions
-
-**Current Status:**
-- CHEAQI (Centre for Health Economics and Quality Assessment) has been requested to suspend health data analysis activities during the human subjects study transition
-- This restriction ensures compliance with NIH guidelines for human subjects research classification
-- Suspension applies specifically to health datasets containing personally identifiable information
-
-**Scope of Restrictions:**
-- CHEAQI access to Original Study Data and Consortium Shared Data temporarily suspended
-- Access to climate/weather data and socio-economic datasets remains unrestricted
-- Previously completed analyses and publications are not affected by these restrictions
-- CHEAQI collaboration on non-health data components continues without limitation
-
-### 21.2. HE²AT Center Health Data Status
-
-**NIH Guidance Compliance:**
-- Similar restrictions apply to HE²AT Center health data access during transition period
-- All consortium partners must comply with human subjects research requirements before resuming health data activities
-- Transition timeline coordinated with NIH project officer and institutional compliance offices
-
-**Operational Impact:**
-- Suspension of new health data analysis projects until transition completion
-- Continued data processing and harmonisation activities under existing approved protocols
-- Preparation and planning activities for post-transition research continue without restriction
-- Regular progress reporting to NIH and institutional oversight bodies maintained
-
-### 21.3. Data Provider Communication
-
-**Notification Strategy:**
-- Comprehensive communication sent to all Data Providers explaining temporary access restrictions
-- Clear timeline provided for transition completion and resumption of normal operations
-- Regular updates provided on transition progress and any changes to projected timelines
-- Direct contact person designated for Data Provider questions and concerns
-
-**Communication Content:**
-- Explanation of human subjects study classification requirements and benefits
-- Assurance that all data remains secure and protected during transition period
-- Clarification that restrictions are precautionary and temporary in nature
-- Information about enhanced protection measures being implemented
-
-### 21.4. Transition Timeline and Resolution
-
-**Estimated Timeline:**
-- Transition period expected to last 3-6 months depending on NIH approval processes
-- Regular milestone reviews conducted monthly during transition period
-- Expedited resolution procedures implemented to minimise disruption to research activities
-- Clear criteria established for lifting restrictions and resuming normal operations
-
-**Resolution Criteria:**
-- Completion of human subjects research classification process
-- NIH approval of updated data management procedures
-- Institutional compliance certification for all consortium partners
-- Updated ethics approvals and data transfer agreements as required
-
-**Resumption Procedures:**
-- Formal notification to all stakeholders when restrictions are lifted
-- Gradual resumption of health data activities under enhanced protection protocols
-- Additional training provided to all personnel on updated procedures
-- Comprehensive review and validation of all data access and analysis activities
-
-### 21.5. Mitigation and Support Measures
-
-**Research Continuity:**
-- Alternative research activities identified to maintain project momentum during transition
-- Focus on climate data analysis, methodology development, and infrastructure preparation
-- Collaborative planning for accelerated research activities once restrictions are lifted
-- Regular consortium meetings to maintain engagement and coordination
-
-**Stakeholder Support:**
-- Regular communication with Data Providers regarding transition status
-- Technical support maintained for all non-restricted data activities
-- Planning assistance provided for post-transition research resumption
-- Documentation and training materials prepared for transition completion
-
-The interim data access restrictions ensure full compliance with regulatory requirements whilst minimising disruption to research objectives and maintaining stakeholder confidence in data protection measures. **[END TRACKED CHANGE]**</span>
+---
 
 ## Annexes
 
@@ -1691,3 +1470,7 @@ Submit completed form and attachments to:
 HE²AT Center Data Access Committee
 Email: [data-access@he2at.org]
 Subject: "Data Access Request - [Your Name] - [Date]"
+
+---
+
+*Document version 2.2 | August 2024*

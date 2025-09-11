@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    HE²AT Centre Cloud-Based Data Flow with Long-Term Data Retention
+  </text>
+  
+  <!-- Data Providers Section -->
+  <g id="data-providers">
+    <rect x="50" y="70" width="250" height="120" fill="#e8f4fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+    <text x="175" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Data Providers
+    </text>
+    <text x="60" y="115" font-family="Arial, sans-serif" font-size="11" fill="#555">• Original Study Data ownership</text>
+    <text x="60" y="130" font-family="Arial, sans-serif" font-size="11" fill="#555">• Secure data transfer protocols</text>
+    <text x="60" y="145" font-family="Arial, sans-serif" font-size="11" fill="#555">• In-region data storage</text>
+    <text x="60" y="160" font-family="Arial, sans-serif" font-size="11" fill="#555">• Data Transfer Agreements</text>
+  </g>
+  
+  <!-- Core Data Team Section -->
+  <g id="core-data-team">
+    <rect x="50" y="220" width="250" height="140" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
+    <text x="175" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Core Data Team (Cloud-based)
+    </text>
+    <text x="60" y="265" font-family="Arial, sans-serif" font-size="11" fill="#555">• Pre-processing &amp; harmonisation</text>
+    <text x="60" y="280" font-family="Arial, sans-serif" font-size="11" fill="#555">• Data validation &amp; transformation</text>
+    <text x="60" y="295" font-family="Arial, sans-serif" font-size="11" fill="#555">• De-identification processes</text>
+    <text x="60" y="310" font-family="Arial, sans-serif" font-size="11" fill="#555">• Geographic masking techniques</text>
+    <text x="60" y="325" font-family="Arial, sans-serif" font-size="11" fill="#555">• Audit logs &amp; transformation records</text>
+    <text x="60" y="340" font-family="Arial, sans-serif" font-size="11" fill="#555">• Metadata management</text>
+  </g>
+  
+  <!-- Azure Cloud Platform Section -->
+  <g id="azure-platform">
+    <rect x="400" y="70" width="400" height="500" fill="#f0f7ff" stroke="#1976d2" stroke-width="3" rx="8"/>
+    <text x="600" y="95" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1976d2">
+      Azure Cloud Platform (HE²AT Centre Primary Repository)
+    </text>
+    <text x="600" y="115" font-family="Arial, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#555">
+      Geo-Distributed Storage Architecture
+    </text>
+    
+    <!-- Level 0 -->
+    <rect x="420" y="140" width="360" height="60" fill="#ffebee" stroke="#f44336" stroke-width="2" rx="5"/>
+    <text x="600" y="160" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#c62828">
+      Level 0: Original Study Data
+    </text>
+    <text x="600" y="180" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">
+      (Core Data Team only)
+    </text>
+    
+    <!-- Level 1 -->
+    <rect x="420" y="220" width="360" height="60" fill="#fff8e1" stroke="#ffc107" stroke-width="2" rx="5"/>
+    <text x="600" y="240" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#f57c00">
+      Level 1: Consortium Shared Data
+    </text>
+    <text x="600" y="260" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">
+      (for RP1 or RP2 analysis)
+    </text>
+    
+    <!-- Level 2 -->
+    <rect x="420" y="300" width="360" height="60" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="5"/>
+    <text x="600" y="320" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#2e7d32">
+      Level 2: RP1/RP2 De-identified Data
+    </text>
+    <text x="600" y="340" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">
+      (DAC-approved research projects)
+    </text>
+    
+    <!-- Level 3 -->
+    <rect x="420" y="380" width="360" height="60" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+    <text x="600" y="400" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1565c0">
+      Level 3: Inferential Data
+    </text>
+    <text x="600" y="420" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">
+      (Open, non-identifiable aggregates)
+    </text>
+    
+    <!-- Security Features -->
+    <rect x="420" y="460" width="360" height="95" fill="#fafafa" stroke="#9e9e9e" stroke-width="1" rx="3"/>
+    <text x="600" y="478" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#424242">
+      Security &amp; Compliance Features:
+    </text>
+    <text x="430" y="495" font-family="Arial, sans-serif" font-size="9" fill="#666">• AES-256 encryption (at rest &amp; in transit)</text>
+    <text x="430" y="508" font-family="Arial, sans-serif" font-size="9" fill="#666">• Azure Active Directory RBAC</text>
+    <text x="430" y="521" font-family="Arial, sans-serif" font-size="9" fill="#666">• Conditional Access Controls</text>
+    <text x="430" y="534" font-family="Arial, sans-serif" font-size="9" fill="#666">• Continuous Monitoring &amp; Audit Logging</text>
+    <text x="430" y="547" font-family="Arial, sans-serif" font-size="9" fill="#666">• Threat Detection (Azure Sentinel)</text>
+  </g>
+  
+  <!-- HE²AT Consortium Access (Level 1 Colors) -->
+  <g id="consortium-access">
+    <rect x="850" y="220" width="300" height="60" fill="#fff8e1" stroke="#ffc107" stroke-width="2" rx="5"/>
+    <text x="1000" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#f57c00">
+      HE²AT Consortium
+    </text>
+    <text x="1000" y="258" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555">
+      via Role-Based Access Control
+    </text>
+  </g>
+  
+  <!-- External Researchers with Projects (Level 2 Colors) -->
+  <g id="external-researchers">
+    <rect x="850" y="300" width="300" height="80" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="5"/>
+    <text x="1000" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2e7d32">
+      External Researchers
+    </text>
+    <text x="1000" y="338" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">
+      DAC &amp; Ethics Approved
+    </text>
+    <text x="1000" y="355" font-family="Arial, sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#777">
+      (e.g., CHEAQI, GHAP projects)
+    </text>
+  </g>
+  
+  <!-- Data Access Committee -->
+  <g id="dac">
+    <rect x="850" y="410" width="300" height="80" fill="#ffecb3" stroke="#ff6f00" stroke-width="2" rx="5"/>
+    <text x="1000" y="435" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#e65100">
+      Data Access Committee (DAC)
+    </text>
+    <text x="1000" y="455" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">
+      &amp; Ethics Review
+    </text>
+    <text x="860" y="475" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      Reviews ALL requests (internal &amp; external)
+    </text>
+  </g>
+  
+  <!-- Data Security Methods Box -->
+  <g id="security-methods">
+    <rect x="50" y="600" width="350" height="180" fill="#f5f5f5" stroke="#757575" stroke-width="2" rx="5"/>
+    <text x="225" y="625" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#424242">
+      Data Security Methods
+    </text>
+    <text x="60" y="645" font-family="Arial, sans-serif" font-size="10" fill="#555">• Geographic aggregation to census areas</text>
+    <text x="60" y="660" font-family="Arial, sans-serif" font-size="10" fill="#555">• Location jittering with Gaussian displacement</text>
+    <text x="60" y="675" font-family="Arial, sans-serif" font-size="10" fill="#555">• Population density-aware spatial k-anonymity</text>
+    <text x="60" y="690" font-family="Arial, sans-serif" font-size="10" fill="#555">• Safe Harbour approach for identifiers</text>
+    <text x="60" y="705" font-family="Arial, sans-serif" font-size="10" fill="#555">• Expert determination review process</text>
+    <text x="60" y="720" font-family="Arial, sans-serif" font-size="10" fill="#555">• POPIA and GDPR compliant storage regions</text>
+    <text x="60" y="735" font-family="Arial, sans-serif" font-size="10" fill="#555">• Role-Based Access Control enforced</text>
+    <text x="60" y="750" font-family="Arial, sans-serif" font-size="10" fill="#555">• Audit trails for all data access events</text>
+  </g>
+  
+  <!-- Data Transfer Agreement Framework -->
+  <g id="dta-framework">
+    <rect x="450" y="600" width="350" height="180" fill="#f5f5f5" stroke="#757575" stroke-width="2" rx="5"/>
+    <text x="625" y="625" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#424242">
+      Data Transfer Agreement Framework
+    </text>
+    <text x="460" y="645" font-family="Arial, sans-serif" font-size="10" fill="#555">• Dataset scope and project affiliation</text>
+    <text x="460" y="660" font-family="Arial, sans-serif" font-size="10" fill="#555">• Region of storage and compliance standards</text>
+    <text x="460" y="675" font-family="Arial, sans-serif" font-size="10" fill="#555">• Permitted duration and modality of access</text>
+    <text x="460" y="690" font-family="Arial, sans-serif" font-size="10" fill="#555">• Non-transfer clauses and audit rights</text>
+    <text x="460" y="705" font-family="Arial, sans-serif" font-size="10" fill="#555">• Data ownership terms and revocability</text>
+  </g>
+  
+  <!-- Implementation Notes -->
+  <g id="implementation-notes">
+    <rect x="850" y="600" width="300" height="180" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+    <text x="1000" y="625" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#f57f17">
+      Implementation Notes
+    </text>
+    <text x="860" y="645" font-family="Arial, sans-serif" font-size="10" fill="#555">1. Data ownership remains with providers</text>
+    <text x="860" y="660" font-family="Arial, sans-serif" font-size="10" fill="#555">2. Cloud migration by end of Year 5</text>
+    <text x="860" y="675" font-family="Arial, sans-serif" font-size="10" fill="#555">3. Regional isolation prevents unlawful transfer</text>
+    <text x="860" y="690" font-family="Arial, sans-serif" font-size="10" fill="#555">4. Azure RBAC implements tiered access</text>
+    <text x="860" y="705" font-family="Arial, sans-serif" font-size="10" fill="#555">5. Higher levels (2-3) retained by HE²AT Centre</text>
+    <text x="860" y="720" font-family="Arial, sans-serif" font-size="10" fill="#555">6. Future projects require ethics approval</text>
+    <text x="860" y="735" font-family="Arial, sans-serif" font-size="10" fill="#555">7. All data usage governed by ethical approvals</text>
+  </g>
+  
+  <!-- Arrows and Flow Indicators -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- Flow arrows -->
+  <path d="M 300 130 L 400 170" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
+  <path d="M 300 290 L 400 250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
+  <path d="M 780 250 L 850 250" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
+  <path d="M 780 330 L 850 340" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
+  <path d="M 1000 380 L 1000 410" stroke="#ff6f00" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
+  
+  <!-- Color-Coded Legend -->
+  <g id="legend">
+    <text x="50" y="810" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#424242">
+      Data Access Levels - Colour Key:
+    </text>
+    
+    <!-- Level 0 Legend Item -->
+    <rect x="50" y="825" width="20" height="15" fill="#ffebee" stroke="#f44336" stroke-width="1" rx="2"/>
+    <text x="80" y="837" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#c62828">Level 0:</text>
+    <text x="140" y="837" font-family="Arial, sans-serif" font-size="11" fill="#666">Original Study Data - Raw data with restricted Core Data Team access</text>
+    
+    <!-- Level 1 Legend Item -->
+    <rect x="50" y="845" width="20" height="15" fill="#fff8e1" stroke="#ffc107" stroke-width="1" rx="2"/>
+    <text x="80" y="857" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f57c00">Level 1:</text>
+    <text x="140" y="857" font-family="Arial, sans-serif" font-size="11" fill="#666">Consortium Shared Data - Processed data for RP1/RP2 analysis by HE²AT Consortium</text>
+    
+    <!-- Level 2 Legend Item -->
+    <rect x="50" y="865" width="20" height="15" fill="#e8f5e9" stroke="#4caf50" stroke-width="1" rx="2"/>
+    <text x="80" y="877" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">Level 2:</text>
+    <text x="140" y="877" font-family="Arial, sans-serif" font-size="11" fill="#666">RP1/RP2 De-identified Data - Available for DAC-approved research projects (including CHEAQI, GHAP)</text>
+    
+    <!-- Level 3 Legend Item -->
+    <rect x="50" y="885" width="20" height="15" fill="#e3f2fd" stroke="#2196f3" stroke-width="1" rx="2"/>
+    <text x="80" y="897" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Level 3:</text>
+    <text x="140" y="897" font-family="Arial, sans-serif" font-size="11" fill="#666">Inferential Data - Aggregated/anonymised data for open access</text>
+  </g>
+</svg>

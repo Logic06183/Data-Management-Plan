@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HE²AT Center DMP v2.2 - Implementation Summary Report</title>
+    <style>
+        body {
+            font-family: Calibri, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            color: #1f4e79;
+            border-bottom: 3px solid #1f4e79;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2e75b6;
+            border-bottom: 1px solid #2e75b6;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: #548dd4;
+            margin-top: 25px;
+        }
+        
+        .header-info {
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-left: 5px solid #1f4e79;
+            margin-bottom: 30px;
+        }
+        
+        .status-completed {
+            color: #2d7d32;
+            font-weight: bold;
+        }
+        
+        .status-implemented {
+            color: #1976d2;
+            font-weight: bold;
+        }
+        
+        .status-removed {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .change-summary {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #1f4e79;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .alternate-row {
+            background-color: #f9f9f9;
+        }
+        
+        .implementation-note {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        ul li {
+            margin-bottom: 8px;
+        }
+        
+        .section-divider {
+            height: 2px;
+            background-color: #1f4e79;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>HE²AT Center Data Management Plan v2.2<br>Implementation Summary Report</h1>
+
+<div class="header-info">
+    <strong>Document Title:</strong> NIH HE²AT Centre Data Management Plan - Final Implementation Summary<br>
+    <strong>Version:</strong> 2.2 (Final Implementation)<br>
+    <strong>Implementation Date:</strong> September 2025<br>
+    <strong>HREC Reference Numbers:</strong> RP1 (220605), RP2 (220606)<br>
+    <strong>Principal Investigators:</strong> Matthew Chersich (Wits PHR)<br>
+    <strong>Contact:</strong> HE²AT Data Management Team (data.management@he2at.org)<br>
+    <strong>Previous Summary Version:</strong> HREC_FINAL (August 2025)
+</div>
+
+<h2>Executive Summary</h2>
+
+<div class="highlight-box">
+    <p><strong>Implementation Status:</strong> All tracked changes from the original instruction document have been successfully implemented in the final DMP v2.2. The cloud infrastructure transition has been completed, removing all transitional language and establishing WHC-managed cloud infrastructure as the primary data management platform.</p>
+    
+    <p><strong>Key Achievement:</strong> The document now reflects the completed migration from UCT on-premise infrastructure to WHC-managed cloud infrastructure, with enhanced security, automated backup systems, and 24/7 monitoring capabilities.</p>
+</div>
+
+<h2>Implementation Status Overview</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Items Planned</th>
+            <th>Items Implemented</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cloud Infrastructure Updates</td>
+            <td>15</td>
+            <td>15</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+        </tr>
+        <tr class="alternate-row">
+            <td>DAC Role Clarifications</td>
+            <td>4</td>
+            <td>4</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+        </tr>
+        <tr>
+            <td>Contact Information Updates</td>
+            <td>3</td>
+            <td>3</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+        </tr>
+        <tr class="alternate-row">
+            <td>Lisa's Comments (LA2-LA8)</td>
+            <td>5</td>
+            <td>5</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+        </tr>
+        <tr>
+            <td>Annex Renumbering</td>
+            <td>6</td>
+            <td>6</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+        </tr>
+        <tr class="alternate-row">
+            <td>Figure 1 Updates</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Key Changes Implemented by Category</h2>
+
+<h3>1. Cloud Infrastructure Transition Updates</h3>
+
+<div class="change-summary">
+    <strong>Primary Change:</strong> Complete removal of transitional language and establishment of WHC-managed cloud infrastructure as the primary platform.
+    
+    <p><strong>Sections Updated:</strong></p>
+    <ul>
+        <li><span class="status-implemented">Section 4.1.2 (Original Study Data):</span> Implemented single copy policy on cloud infrastructure per LA3 comment. Removed dual storage references.</li>
+        <li><span class="status-implemented">Section 4.2 (Climate/Weather Data):</span> Removed transition period language and auto-scaling references.</li>
+        <li><span class="status-implemented">Section 6.1 (Pre-processing):</span> Updated to reflect WHC-managed cloud infrastructure with enhanced security.</li>
+        <li><span class="status-implemented">Section 8 (Data Analysis Platform):</span> Removed transition period references, established cloud-based computational resources.</li>
+        <li><span class="status-implemented">Section 14 (Restricted Data Access):</span> Updated encryption standards to AES-256 across all infrastructure.</li>
+    </ul>
+</div>
+
+<h3>2. Data Access Committee (DAC) Role Clarifications</h3>
+
+<div class="change-summary">
+    <strong>Major Policy Change:</strong> DAC now evaluates ALL data access requests, both internal consortium members and external researchers.
+    
+    <p><strong>Key Implementations:</strong></p>
+    <ul>
+        <li><span class="status-implemented">Section 10.4:</span> Updated to specify "All projects, regardless of whether they involve internal HE²AT Center Consortium members or external researchers, must go through the DAC for data access approval."</li>
+        <li><span class="status-implemented">Section 12.3:</span> Clarified that DAC evaluates ALL data access requests with consistent ethical and scientific standards.</li>
+        <li><span class="status-implemented">Enhanced Governance:</span> Ensures equitable data sharing and comprehensive tracking of all projects.</li>
+    </ul>
+</div>
+
+<h3>3. Contact Information Standardization</h3>
+
+<div class="change-summary">
+    <strong>Professional Contact Management:</strong> Replaced individual names with institutional contacts for improved document maintenance.
+    
+    <p><strong>Changes Made:</strong></p>
+    <ul>
+        <li><span class="status-implemented">Generic Contact Updates:</span> Replaced "Elizabeth Frederick" with "HE²AT Data Management Team"</li>
+        <li><span class="status-implemented">Email Standardization:</span> Updated to data.management@he2at.org</li>
+        <li><span class="status-implemented">Section 15 Updates:</span> Removed individual names from roles and responsibilities table</li>
+    </ul>
+</div>
+
+<h3>4. Document Structure Optimization</h3>
+
+<div class="change-summary">
+    <strong>Streamlined Architecture:</strong> Removed completed transition documentation and renumbered annexes for clarity.
+    
+    <p><strong>Structural Changes:</strong></p>
+    <ul>
+        <li><span class="status-removed">Annex 1 (Transition Implementation Details):</span> Removed - no longer needed with completed migration</li>
+        <li><span class="status-implemented">Annex Renumbering:</span> Key data sources (now Annex 2), POPIA agreements (now Annex 3), Ethics templates (now Annex 4), DAC Terms (now Annex 5), Data Request Form (now Annex 6)</li>
+        <li><span class="status-implemented">Cover Page Cleanup:</span> Removed duplicated version numbering</li>
+    </ul>
+</div>
+
+<div class="section-divider"></div>
+
+<h2>Lisa's Comments Resolution Summary</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Comment ID</th>
+            <th>Original Request</th>
+            <th>Implementation Status</th>
+            <th>Section(s) Updated</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>LA2</strong></td>
+            <td>Simplify Figure 1 diagram - remove individual consortium boxes, replace with role-based access control</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+            <td>Figure 1 Data Management Workflow</td>
+        </tr>
+        <tr class="alternate-row">
+            <td><strong>LA3</strong></td>
+            <td>Preference for single copy of sensitive data on cloud once verified, delete UCT copies</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+            <td>Section 4.1.2 (Original Study Data)</td>
+        </tr>
+        <tr>
+            <td><strong>LA6</strong></td>
+            <td>Add WHC to roles and responsibilities section</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+            <td>Section 15 (Roles and Responsibilities)</td>
+        </tr>
+        <tr class="alternate-row">
+            <td><strong>LA7</strong></td>
+            <td>Suggest starting with subset of health datasets where DTA has gone through WHC</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+            <td>Migration strategy (Annex 1 - now removed)</td>
+        </tr>
+        <tr>
+            <td><strong>LA8</strong></td>
+            <td>Provide generic contact instead of individual names</td>
+            <td><span class="status-completed">✓ COMPLETED</span></td>
+            <td>Annex 6 (Data Request Form), Section 15</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Technical Infrastructure Updates</h2>
+
+<h3>Security Enhancements Implemented</h3>
+<div class="change-summary">
+    <ul>
+        <li><strong>Encryption Standards:</strong> AES-256 encryption implemented across all infrastructure components</li>
+        <li><strong>24/7 Monitoring:</strong> WHC-managed Security Operations Centre (SOC) monitoring established</li>
+        <li><strong>Advanced Threat Detection:</strong> Automated threat detection systems implemented</li>
+        <li><strong>Enhanced Backup Systems:</strong> Automated backup and disaster recovery capabilities</li>
+        <li><strong>Network Security:</strong> Updated network security protocols for cloud infrastructure</li>
+    </ul>
+</div>
+
+<h3>Data Transfer Protocol Updates</h3>
+<div class="change-summary">
+    <ul>
+        <li><span class="status-removed">WeTransfer:</span> Removed as data transfer option</li>
+        <li><span class="status-implemented">FileSender:</span> Established as primary secure data transfer protocol</li>
+        <li><strong>Encryption in Transit:</strong> All data transfers encrypted during transmission</li>
+        <li><strong>Storage Encryption:</strong> AES-256 encryption for all stored data</li>
+    </ul>
+</div>
+
+<h2>Compliance and Governance Enhancements</h2>
+
+<div class="highlight-box">
+    <h3>Universal DAC Review Implementation</h3>
+    <p><strong>Policy Enhancement:</strong> The most significant governance change is the establishment of universal DAC review for ALL data access requests. This ensures:</p>
+    <ul>
+        <li>Equitable treatment of internal consortium members and external researchers</li>
+        <li>Consistent application of ethical and scientific standards</li>
+        <li>Comprehensive tracking and oversight of all data usage</li>
+        <li>Enhanced transparency in data governance decisions</li>
+    </ul>
+</div>
+
+<h3>POPIA Compliance Maintenance</h3>
+<div class="change-summary">
+    <ul>
+        <li><strong>Enhanced Data Protection:</strong> Single copy policy for sensitive data reduces exposure risk</li>
+        <li><strong>Improved Access Controls:</strong> Role-based access control system implementation</li>
+        <li><strong>Automated Compliance Reporting:</strong> Cloud infrastructure provides enhanced audit capabilities</li>
+        <li><strong>Professional Monitoring:</strong> 24/7 SOC monitoring ensures continuous compliance oversight</li>
+    </ul>
+</div>
+
+<h2>Document Version Control and Quality Assurance</h2>
+
+<h3>Version Control Summary</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Primary Focus</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>v2.1</td>
+            <td>September 2024</td>
+            <td>Pre-cloud migration version</td>
+            <td>Archived</td>
+        </tr>
+        <tr class="alternate-row">
+            <td>v2.2 (Draft)</td>
+            <td>August 2025</td>
+            <td>Transition period documentation</td>
+            <td>Superseded</td>
+        </tr>
+        <tr>
+            <td>v2.2 (Final)</td>
+            <td>September 2025</td>
+            <td>Completed cloud migration</td>
+            <td><span class="status-completed">✓ CURRENT</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Quality Assurance Verification</h3>
+<div class="change-summary">
+    <p><strong>Document Integrity Checks:</strong></p>
+    <ul>
+        <li>✓ All tracked changes have been accepted and implemented</li>
+        <li>✓ Cross-references and section numbers updated accurately</li>
+        <li>✓ Hyperlinks and table of contents verified</li>
+        <li>✓ Formatting consistency maintained throughout document</li>
+        <li>✓ Annex renumbering completed without reference errors</li>
+    </ul>
+</div>
+
+<h2>HREC Review Considerations</h2>
+
+<div class="highlight-box">
+    <h3>Ethical Impact Assessment - Final Status</h3>
+    <p><strong>Participant Protection:</strong> All changes implemented enhance participant data protection through:</p>
+    <ul>
+        <li>Superior encryption standards (AES-256 across all systems)</li>
+        <li>Professional 24/7 security monitoring</li>
+        <li>Automated backup and disaster recovery systems</li>
+        <li>Single copy policy reducing data exposure risk</li>
+        <li>Enhanced governance through universal DAC review</li>
+    </ul>
+    
+    <p><strong>Risk Mitigation:</strong> The completed cloud migration provides:</p>
+    <ul>
+        <li>Enhanced security posture compared to academic infrastructure</li>
+        <li>Professional-grade threat detection and response</li>
+        <li>Improved business continuity and disaster recovery</li>
+        <li>Automated compliance reporting capabilities</li>
+    </ul>
+</div>
+
+<h2>Recommendations and Next Steps</h2>
+
+<h3>Document Management</h3>
+<div class="change-summary">
+    <ul>
+        <li><strong>Archive Previous Versions:</strong> Move v2.2 draft materials to archive folder</li>
+        <li><strong>Update References:</strong> Ensure all external documents reference the final v2.2</li>
+        <li><strong>Stakeholder Communication:</strong> Distribute final version to all consortium partners</li>
+    </ul>
+</div>
+
+<h3>Operational Implementation</h3>
+<div class="change-summary">
+    <ul>
+        <li><strong>DAC Operationalization:</strong> Ensure DAC processes are fully implemented for all requests</li>
+        <li><strong>Contact Updates:</strong> Update all external communications to use generic contact information</li>
+        <li><strong>Data Provider Notifications:</strong> Communicate completed migration status to all data providers</li>
+    </ul>
+</div>
+
+<h3>Compliance Monitoring</h3>
+<div class="change-summary">
+    <ul>
+        <li><strong>Regular Reviews:</strong> Schedule periodic compliance reviews with WHC cloud infrastructure</li>
+        <li><strong>Policy Updates:</strong> Monitor for changes in POPIA requirements or NIH guidelines</li>
+        <li><strong>Audit Preparation:</strong> Maintain documentation for compliance audits</li>
+    </ul>
+</div>
+
+<div class="section-divider"></div>
+
+<h2>Conclusion</h2>
+
+<p>The HE²AT Center Data Management Plan v2.2 has been successfully updated to reflect the completed cloud infrastructure migration and enhanced governance procedures. All tracked changes from the original instruction document have been implemented, addressing infrastructure updates, governance enhancements, and stakeholder feedback.</p>
+
+<p>The final document represents a significant improvement in data security, governance transparency, and operational efficiency while maintaining full POPIA compliance and ethical standards. The universal DAC review requirement ensures equitable treatment of all data access requests and strengthens the Center's commitment to responsible data stewardship.</p>
+
+<p>This implementation summary confirms that the DMP v2.2 is ready for final HREC review and operational deployment across the HE²AT Center consortium.</p>
+
+<div class="header-info" style="margin-top: 30px;">
+    <strong>Document prepared:</strong> September 2025<br>
+    <strong>Prepared by:</strong> HE²AT Center Data Management Team<br>
+    <strong>For questions:</strong> data.management@he2at.org<br>
+    <strong>HREC Reference:</strong> RP1 (220605), RP2 (220606)
+</div>
+
+</body>
+</html>

@@ -6,11 +6,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This repository contains the Data Management Plan (DMP) and related documentation for the HE²AT Center (Heat and Health in Africa Transdisciplinary Center), a U54 Cooperation agreement with the NIH (2021-2026). This is a documentation-focused repository containing policy documents, data governance frameworks, compliance documentation, and architectural diagrams rather than traditional source code.
 
+## Common Development Commands
+
+This repository does not use traditional build or test commands since it primarily contains documentation. However, common workflows include:
+
+### Document Conversion and Processing
+- Use `pandoc` for converting between document formats (Word ↔ Markdown ↔ HTML)
+- VS Code launch configuration exists for viewing HTML files (e.g., current HREC changes summary)
+
+### Git Workflow Commands
+- `git status` - Check which documents have been modified
+- `git add <file>` - Stage document changes
+- `git commit -m "docs: <description>"` - Commit with conventional commit format
+- `git log --oneline` - View recent document version history
+
+### File Management Commands  
+- Archive superseded versions before major updates using standard file operations
+- Maintain document structure using directory operations (mkdir, mv, cp)
+
 ## Current Working Files
 
-### Primary Documents (Current Version 2.2)
-- `HE2AT_DMP_v2.2_COMPLETE_with_figures_22082025.docx` - Main Data Management Plan with embedded diagrams
+### Primary Documents (Version 2.2 - In Progress)
+- `HE2AT_DMP_v2.2_COMPLETE_with_figures_22082025.docx` - Main Data Management Plan with embedded diagrams (incorporating previous changes and Lisa's revisions)
 - `HE2AT_DMP_v2.2_COMPLETE_with_figures_22082025.pdf` - PDF version for distribution
+- `HE2AT_DMP_v2.2_WITH_TRACKED_CHANGES_IMPLEMENTED.docx` - Version with tracked changes implemented
 - `DMP_v2.2_Changes_Summary_HREC_FINAL.docx` - Summary of changes for HREC review
 - `Data Types.xlsx` - Data classification and type definitions
 - `Personal Information Processing Agreements/` - Signed POPIA compliance agreements
@@ -42,11 +61,12 @@ This repository contains the Data Management Plan (DMP) and related documentatio
 - Maintain draft versions in separate directories during development
 
 ### Git Workflow
-Recent commits show pattern of:
-- Architectural diagram updates
+Recent commits follow conventional commit format with "docs:" prefix:
+- Architectural diagram updates and SVG management
 - POPIA compliance documentation
-- Cloud infrastructure transition documentation
-- Document reorganization and archival
+- Cloud infrastructure transition documentation  
+- Document reorganization and archival (moving files to Archive/ directories)
+- Version 2.2 updates (incorporating previous changes and Lisa's revisions)
 
 ## Key Content Framework
 
@@ -105,3 +125,25 @@ Version 2.2 specifically addresses ongoing migration from UCT on-premise to WHC-
 
 ### Human Subjects Study Classification
 This project involves enhanced consent procedures and additional ethical oversight due to its human subjects research classification.
+
+## Repository Architecture and File Management
+
+### Current State Management
+The repository maintains a clear separation between:
+- **Active Documents**: Current version files in repository root
+- **Development Archives**: Complete development history in `Archive/Version_X.X_Development/` 
+- **Version Archives**: Historical versions in `Archive/Version_X.X/`
+- **Supporting Materials**: Compliance agreements in `Personal Information Processing Agreements/`
+
+### File Organization Patterns
+- SVG diagrams for architecture and data flow visualizations
+- Word documents (.docx) as primary format with PDF distributions
+- HTML versions for web-based review and stakeholder access
+- Markdown versions for version control and diff tracking
+- Excel spreadsheets for structured data definitions
+
+### Development Workflow Integration
+- VS Code launch configurations for HTML file viewing
+- Git tracking of document changes with conventional commit formatting
+- Systematic archival process before major version updates
+- Cross-platform file path handling (Box Cloud Storage integration)
