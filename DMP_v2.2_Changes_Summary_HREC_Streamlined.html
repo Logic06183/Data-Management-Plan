@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Calibri, Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            margin: 40px;
+        }
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        p {
+            margin: 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            vertical-align: top;
+            text-align: left;
+        }
+        th {
+            background-color: #D9E2F3;
+            font-weight: bold;
+        }
+        .location {
+            width: 20%;
+        }
+        .description {
+            width: 45%;
+        }
+        .reason {
+            width: 35%;
+        }
+        ul {
+            margin: 8px 0;
+            padding-left: 25px;
+        }
+        .metadata {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Heat and Health in Africa Transdisciplinary Center</h2>
+<h2>Data Management Plan Version 2.2 - Summary of Proposed Changes</h2>
+
+<div class="metadata">
+<p><strong>Study Title:</strong> Heat and Health in Africa Transdisciplinary Center Data Management Plan</p>
+<p><strong>Protocol number:</strong> HE²AT-DMP-v2.2</p>
+<p><strong>Date of last version of protocol:</strong> 09 September 2024</p>
+<p><strong>HREC Reference No:</strong> RP1-220605 and RP2-220606</p>
+</div>
+
+<h3>Overall Rationale for the Amendment</h3>
+
+<p>The HE²AT Center Data Management Plan Version 2.2 implements a transition from UCT on-premise infrastructure to WHC-managed cloud infrastructure during Year 5 to enhance data security, scalability, and operational efficiency whilst maintaining full regulatory compliance.</p>
+
+<p>Key changes include:</p>
+<ul>
+    <li>WHC-managed cloud infrastructure with AES-256 encryption</li>
+    <li>24/7 Security Operations Centre monitoring and advanced threat detection</li>
+    <li>Automated backup and disaster recovery systems</li>
+    <li>Cloud-based computational resources with GPU acceleration</li>
+    <li>Structured 5-phase migration strategy with comprehensive risk mitigation</li>
+</ul>
+
+<h3>All Proposed Changes and Their Rationale</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th class="location">Location of Revision</th>
+            <th class="description">Description of Revision</th>
+            <th class="reason">Reason for Changes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Section 3.4, page 14</strong><br>Overview of Data Management Workflow</td>
+            <td>New text added: The HE²AT Center is currently implementing a transition from UCT on-premise infrastructure to cloud-based data management during Year 5, with the goal of complete migration of all sensitive health data to the cloud by the end of Year 5. This transition enhances security, scalability, and operational efficiency whilst maintaining full regulatory compliance.</td>
+            <td rowspan="14">Version 2.2 implements a structured transition from UCT on-premise infrastructure to WHC-managed cloud infrastructure to enhance data security, scalability, and operational efficiency. The cloud migration provides AES-256 encryption, 24/7 security monitoring, automated backup systems, and improved disaster recovery capabilities whilst maintaining full POPIA compliance and all existing ethical standards. All participant data protections are maintained or enhanced through this transition.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 4.1.2, page 16</strong><br>Original Study Data</td>
+            <td>Added: The Original Study Data is currently held under strong access control on servers hosted at UCT, but from the start of Year 5, the data will shift to be stored on WHC-managed cloud infrastructure with AES-256 encryption, providing enhanced scalability and disaster recovery capabilities whilst maintaining POPIA compliance.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 4.2, page 19</strong><br>Climate/Weather Data</td>
+            <td>Previous text: The data will be stored on IBM Research Africa and CSAG/UCT systems<br><br>New text: The data will be stored on IBM Research Africa and CSAG/UCT systems. Relevant datasets, or subsets of datasets, will also be stored on the WHC-managed cloud services to allow for the association/linkage with the health datasets.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 4.3, page 20</strong><br>Area/Geospatial Socio-economic Data</td>
+            <td>Added: ...while a copy will be stored on the WHC-managed cloud services</td>
+        </tr>
+        <tr>
+            <td><strong>Section 6.1, page 23</strong><br>Pre-processing</td>
+            <td>Previous text: This team has exclusive authorisation to access incoming data securely stored on UCT data servers<br><br>New text: This team has exclusive authorisation to access incoming data securely stored on UCT data servers and WHC-managed cloud infrastructure with enhanced security and automated backup systems.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 6.4, page 24</strong><br>Database Population</td>
+            <td>Added: Database population utilises cloud-native database services, providing automated backup and recovery systems with enhanced data integrity and disaster recovery capabilities.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 8, page 27</strong><br>Data Analysis Platform</td>
+            <td>Previous text: Data analysis involving the Consortium Shared Data and RP1/RP2 de-identified data will initially be facilitated through the CSAG/UCT Jupyter Hub platform<br><br>New text: Data analysis involving the Consortium Shared Data and RP1/RP2 de-identified data will initially be facilitated through the CSAG/UCT Jupyter Hub platform and will transition to being supported by cloud-based computational resources with GPU acceleration for complex analyses, improved processing times, and enhanced analytical capabilities.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 10.4, page 34</strong><br>Procedure for Making RP1/RP2 De-identified Data Available</td>
+            <td>New text: All projects, regardless of whether they involve internal HE²AT Center Consortium members or external researchers, must go through the DAC for data access approval. This ensures equitable data sharing and maintains comprehensive tracking of all projects using the data.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 14.1, page 40</strong><br>Data Transfer, Storage and Encryption</td>
+            <td>Previous text: Once transferred to UCT<br><br>New text: Once transferred to UCT or the WHC-managed cloud infrastructure, any data identified as containing Personal Identifiers or specified by the DTA is encrypted for storage using the AES-256 encryption standard for both UCT servers and cloud storage.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 14.2, page 41</strong><br>Network Security</td>
+            <td>Previous text: The CSAG compute infrastructure benefits from UCT's comprehensive security policies.<br><br>New text: The CSAG compute infrastructure benefits from UCT's comprehensive security policies, and from the start of Year 5, from WHC-managed cloud security architecture with 24/7 Security Operations Centre (SOC) monitoring and advanced threat detection systems for improved security posture and compliance.<br><br>Also changed: UCT's Cisco firewall → UCT's Cisco firewall and cloud-native firewall services</td>
+        </tr>
+        <tr>
+            <td><strong>Section 14.3, page 41</strong><br>Local Authentication and Authorisation</td>
+            <td>Previous text: Beyond UCT's broader security measures, the CSAG/UCT platform employs additional authentication and authorisation protocols<br><br>New text: Beyond UCT's broader security measures, the CSAG/UCT platform employs additional authentication and authorisation protocols alongside cloud-specific access controls and automated compliance reporting for streamlined governance oversight during the transition period.</td>
+        </tr>
+        <tr>
+            <td><strong>Section 14 (end), page 42</strong><br>Enhanced Cloud Security Measures</td>
+            <td>New section added: From the start of Year 5, enhanced cloud security measures include:<br>
+            • AES-256 Encryption: All data at rest and in transit<br>
+            • 24/7 SOC Monitoring: Continuous security monitoring and threat detection<br>
+            • Role-based Access Controls: Multi-factor authentication and granular permissions<br>
+            • Automated Backup Systems: Enhanced disaster recovery capabilities<br>
+            • Compliance Monitoring: Automated reporting for regulatory compliance</td>
+        </tr>
+        <tr>
+            <td><strong>Section 16.2, page 44</strong><br>Review and Approval Process</td>
+            <td>Added: Additional legal and compliance review will be conducted by UCT legal counsel or WHC legal representative to ensure all changes maintain legal compliance and align with institutional obligations before final approval.</td>
+        </tr>
+        <tr>
+            <td><strong>New Annex 1, page 47</strong><br>Transition Implementation Details</td>
+            <td>Complete new annex detailing structured 5-phase cloud migration approach including Planning and Assessment, Pilot Implementation, Gradual Migration, Full Migration, and Optimization phases with comprehensive implementation strategy and communication procedures for data providers.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>POPIA Compliance</h3>
+
+<p>All enhanced data management procedures maintain full POPIA compliance:</p>
+<ul>
+    <li>Data stored on secure cloud servers with appropriate cross-border transfer protections</li>
+    <li>Only the research team will have access to participant data through enhanced authentication protocols</li>
+    <li>Data will continue to be anonymized using participant IDs</li>
+    <li>All cloud infrastructure changes enhance existing compliance standards</li>
+</ul>
+
+<h3>Implementation</h3>
+
+<p>Upon receiving research ethics committee approval, the cloud migration will be implemented following a structured 5-phase approach during Year 5. All changes enhance rather than compromise participant protection through improved technical infrastructure.</p>
+
+</body>
+</html>
