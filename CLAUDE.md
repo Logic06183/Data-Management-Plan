@@ -8,142 +8,219 @@ This repository contains the Data Management Plan (DMP) and related documentatio
 
 ## Common Development Commands
 
-This repository does not use traditional build or test commands since it primarily contains documentation. However, common workflows include:
-
 ### Document Conversion and Processing
-- Use `pandoc` for converting between document formats (Word ↔ Markdown ↔ HTML)
-- VS Code launch configuration exists for viewing HTML files (e.g., current HREC changes summary)
+```bash
+# Convert Word to Markdown
+pandoc "HE2AT_DMP_v2.2_COMPLETE_with_figures_09092025.docx" -o output.md
+
+# Convert Markdown to HTML
+pandoc input.md -o output.html --standalone
+
+# Convert Word to HTML with styling
+pandoc "document.docx" -o "document.html" --standalone --embed-resources
+```
 
 ### Git Workflow Commands
-- `git status` - Check which documents have been modified
-- `git add <file>` - Stage document changes
-- `git commit -m "docs: <description>"` - Commit with conventional commit format
-- `git log --oneline` - View recent document version history
+```bash
+git status                              # Check modified documents
+git add <file>                          # Stage document changes
+git commit -m "docs: <description>"     # Commit with conventional format
+git log --oneline -15                   # View recent document history
+```
 
-### File Management Commands  
-- Archive superseded versions before major updates using standard file operations
-- Maintain document structure using directory operations (mkdir, mv, cp)
+### Document Archiving Commands
+```bash
+# Archive document before major update
+cp "HE2AT_DMP_v2.2_COMPLETE.docx" "Archive/Version_2.2/"
 
-## Current Working Files
+# Create new version directory
+mkdir -p "Archive/Version_2.3/"
+```
 
-### Primary Documents (Version 2.2 - In Progress)
-- `HE2AT_DMP_v2.2_COMPLETE_with_figures_22082025.docx` - Main Data Management Plan with embedded diagrams (incorporating previous changes and Lisa's revisions)
-- `HE2AT_DMP_v2.2_COMPLETE_with_figures_22082025.pdf` - PDF version for distribution
-- `HE2AT_DMP_v2.2_WITH_TRACKED_CHANGES_IMPLEMENTED.docx` - Version with tracked changes implemented
-- `DMP_v2.2_Changes_Summary_HREC_FINAL.docx` - Summary of changes for HREC review
+### HTML Document Viewing
+VS Code launch configuration exists at `.vscode/launch.json` for viewing HTML documents in browser.
+
+## Current Working Files (Version 2.0 - HREC Submission)
+
+### Primary HREC Submission Documents (Version 2.0)
+Located in `/Version_2.0_HREC_Submission/`:
+- `HREC_Amendment_DMP_v2.0_Consolidated.md` - Formal HREC amendment consolidating all v1.0→v2.0 changes
+- `DMP_v2.0_Thematic_Changes_Summary.md` - Changes organized by functional themes
+- `Executive_Summary_for_HREC.md` - 5-minute overview for committee members
+- `HREC_Submission_Cover_Letter.md` - Formal submission letter
+- `Implementation_Timeline_and_Milestones.md` - 10-month phased implementation plan
+- `README.md` - Navigation guide for HREC reviewers
+
+### Supporting Documents
 - `Data Types.xlsx` - Data classification and type definitions
-- `Personal Information Processing Agreements/` - Signed POPIA compliance agreements
+- `Personal Information Processing Agreements/` - Signed POPIA compliance agreements (9 signatories)
 
-### Architecture Diagrams
-- `HE2AT_Data_Management_Architecture.svg` - Comprehensive system architecture
-- `HE2AT_Data_Flow_Pipeline.svg` - Data processing workflow
-- `HE2AT_Cloud_Migration_Transition.svg` - Cloud migration visualization
+## Architecture and Structure
 
-## Archive Structure and Versioning
+### Repository Organization
+```
+/
+├── Version_2.0_HREC_Submission/        # Active HREC submission documents
+├── Archive/
+│   ├── Version_1.0/                    # Original NIH DMP (HREC approved)
+│   ├── Pre-HREC_Versions/              # Never submitted to HREC
+│   │   ├── Version_2.0_Never_Submitted/    # Original v2.0 drafts
+│   │   ├── Version_2.1_Never_Submitted/    # v2.1 materials
+│   │   ├── Version_2.2_Never_Submitted/    # v2.2 materials
+│   │   ├── Version_2.2_Development_Materials/ # Working files
+│   │   └── Version_2.2_HREC_Materials_Never_Submitted/ # Prepared but unused
+│   ├── CLAUDE.md                       # Previous guidance versions
+│   ├── CLAUDE_v2.2.md
+│   ├── Miscellaneous/                  # Research papers and images
+│   └── Standalone_Documents/           # DAC terms, data request procedures
+└── Personal Information Processing Agreements/
+```
 
-### Version History
-- `Archive/Version_1.0/` - Original NIH DMP documents
-- `Archive/Version_2.0/` - Various iterations of v2.0 with different review stages
-- `Archive/Version_2.1/` - Pre-cloud migration version with multiple draft iterations
-- `Archive/Version_2.2/` - Cloud migration update materials
-- `Archive/Version_2.2_Drafts/` - Working drafts for v2.2
+### Data Management Architecture
+The DMP documents a hybrid infrastructure model:
 
-### Supporting Documentation
-- `Archive/Standalone_Documents/` - DAC terms of reference, data request procedures
-- `Archive/CLAUDE.md` and `Archive/CLAUDE_v2.2.md` - Previous versions of this guidance
+**UCT Infrastructure (Current)**
+- CSAG servers with on-premise storage
+- Jupyter Hub platform
+- GitLab version control
+
+**WHC Cloud Infrastructure (Migration Target)**
+- AES-256 encryption (at rest and in transit)
+- 24/7 SOC monitoring
+- Auto-scaling compute resources
+- Daily automated backups (30-day retention)
+
+**External Integration Points**
+- eLwazi data catalog indexing
+- DS-I Africa collaboration platform
+- CSAG GitLab repositories
+
+### Data Processing Pipeline
+1. **Data Acquisition** → Health, climate, socio-economic, remote sensing data
+2. **Pre-Processing** → Core Data Team validation and quality checks
+3. **Harmonisation** → Variable standardization, common codebook
+4. **De-identification** → Remove identifiers, apply POPIA compliance
+5. **Data Sharing** → DAC review, DTA execution, controlled access
 
 ## Document Management Workflow
 
-### Version Control Practice
-- Documents follow semantic versioning (v1.0 → v2.0 → v2.1 → v2.2)
-- Version 2.2 represents current cloud migration implementation
-- Archive superseded versions before creating new major versions
-- Maintain draft versions in separate directories during development
+### Version Control
+- **HREC Approved**: Version 1.0 only
+- **Current Submission**: Version 2.0 (consolidates all changes from never-submitted v2.0-v2.2)
+- **Archive Strategy**: All never-submitted versions moved to `Archive/Pre-HREC_Versions/`
+- **Compliance Approach**: Present consolidated changes as single strategic update
 
-### Git Workflow
-Recent commits follow conventional commit format with "docs:" prefix:
-- Architectural diagram updates and SVG management
-- POPIA compliance documentation
-- Cloud infrastructure transition documentation  
-- Document reorganization and archival (moving files to Archive/ directories)
-- Version 2.2 updates (incorporating previous changes and Lisa's revisions)
+### Git Commit Convention
+Use conventional commit format with "docs:" prefix:
+```bash
+git commit -m "docs: create consolidated Version 2.0 HREC submission"
+git commit -m "docs: archive never-submitted v2.x documents"
+git commit -m "docs: reorganize repository for HREC compliance"
+```
 
-## Key Content Framework
+### Document Update Checklist
+When updating documents, ensure:
+- [ ] Version numbers consistent across all documents
+- [ ] Dates updated in document headers/footers
+- [ ] Contact information current for all stakeholders
+- [ ] Technical specifications reflect both UCT and cloud capabilities
+- [ ] POPIA compliance maintained
+- [ ] Ethics references current (RP1-220605, RP2-220606)
+- [ ] Archive previous version before major changes
 
-### Data Management Architecture
-The repository documents a hybrid cloud architecture with:
-- **UCT Infrastructure**: CSAG servers, Jupyter Hub, on-premise storage
-- **WHC Cloud Infrastructure**: AES-256 encrypted storage, 24/7 SOC monitoring, auto-scaling compute
-- **External Integration**: eLwazi indexing, CSAG GitLab, DS-I Africa collaboration
+## Key Stakeholders
 
-### Data Processing Pipeline
-1. **Data Acquisition** - Health, climate, socio-economic, remote sensing data
-2. **Pre-Processing** - Core Data Team validation, quality checks, secure storage
-3. **Harmonisation** - Variable standardization, common codebook, format consistency
-4. **De-identification** - Remove identifiers, POPIA compliance, access control
-5. **Data Sharing** - DAC review, access evaluation, DTA execution
-
-### Compliance Framework
-- **POPIA Compliance** - South African data protection framework
-- **Ethics Oversight** - Wits HREC approvals (RP1-220605, RP2-220606)
-- **Data Transition** - UCT → WHC recipient role with tripartite agreements
-- **Risk Management** - Security assessments, incident response protocols
-
-## Working with Documents
-
-### Key Stakeholders
+### Leadership
 - **DMAC PIs**: Christopher Jack (UCT), Sibusisiwe Makhanya (IBM)
 - **Health Data Acquisition**: Craig Parker (Wits PHR), Stanley Luchters (CeSHHAR)
-- **Core Data Team**: Multi-institutional team (see section 15 of main DMP)
 
-### Document Editing Guidelines
-- Maintain document structure and version consistency
-- Use tracked changes for major revisions in Word documents
-- Update version numbers and dates for significant changes
-- Ensure all changes maintain POPIA compliance and ethical standards
-- Archive previous versions before substantial modifications
+### Core Data Team
+Multi-institutional team detailed in Section 15 of main DMP, including members from:
+- University of Cape Town (UCT)
+- University of Witwatersrand (Wits)
+- IBM Research Africa
+- CeSHHAR Zimbabwe
 
-### Cross-Reference Requirements
-When updating documents, ensure consistency across:
-- Main DMP document and summary tables
-- Version numbers and revision dates
-- Contact information and institutional affiliations
-- Technical infrastructure specifications
-- Compliance requirements and procedures
+### Data Access Committee (DAC)
+Composition and procedures documented in `Archive/Standalone_Documents/HE2AT Center DAC terms of reference.docx`
+
+## Compliance Framework
+
+### POPIA Requirements
+- Personal Information Processing Agreements required for all data handlers
+- Data minimization and purpose limitation principles
+- Consent procedures for participant data
+- Cross-border data transfer restrictions
+
+### Ethics Oversight
+- **Primary Approval**: Wits HREC (Medical)
+- **RP1 Certificate**: M220605 (expires annually)
+- **RP2 Certificate**: M220606 (expires annually)
+- **Amendment Process**: Submit changes via HREC submission letter
+
+### Cloud Migration Compliance
+- Tripartite agreement: UCT → WHC (data recipient)
+- Security assessment requirements
+- Incident response protocols
+- Business continuity planning
 
 ## Special Considerations
 
-### Cloud Migration Context
-Version 2.2 specifically addresses ongoing migration from UCT on-premise to WHC-managed cloud infrastructure. When updating technical specifications, consider both current (UCT) and future (cloud) capabilities.
+### Working with HREC Documents
+- Maintain formal tone and structure
+- Use tracked changes for transparency
+- Include comprehensive change summaries
+- Follow three-section format for amendments:
+  1. Background and Context
+  2. Detailed Changes
+  3. Justification and Impact
+- **Critical**: Present as consolidated v1.0→v2.0 update, not incremental versions
+- Group changes thematically rather than chronologically
+- Emphasize strategic planning over reactive changes
 
-### Sensitive Content Management
-- Documents contain personal data handling procedures
-- Maintain confidentiality of ethics approval processes
-- Ensure regulatory compliance in all updates
-- Do not modify core ethics frameworks without proper review
+### Sensitive Content
+- Do not expose personal identifiers in examples
+- Maintain confidentiality of ethics processes
 - Protect participant privacy information
+- Secure handling of signed agreements
 
-### Human Subjects Study Classification
-This project involves enhanced consent procedures and additional ethical oversight due to its human subjects research classification.
+### Cloud Migration Context
+Version 2.2 documents transition from UCT on-premise to WHC cloud:
+- Consider both current and future state
+- Document migration timelines
+- Maintain service continuity requirements
+- Address data sovereignty concerns
 
-## Repository Architecture and File Management
+### HTML Document Development
+When creating HTML versions:
+- Use pandoc for initial conversion
+- Maintain accessibility standards
+- Embed styles for standalone viewing
+- Test in VS Code launch configuration
 
-### Current State Management
-The repository maintains a clear separation between:
-- **Active Documents**: Current version files in repository root
-- **Development Archives**: Complete development history in `Archive/Version_X.X_Development/` 
-- **Version Archives**: Historical versions in `Archive/Version_X.X/`
-- **Supporting Materials**: Compliance agreements in `Personal Information Processing Agreements/`
+## Development Best Practices
 
-### File Organization Patterns
-- SVG diagrams for architecture and data flow visualizations
-- Word documents (.docx) as primary format with PDF distributions
-- HTML versions for web-based review and stakeholder access
-- Markdown versions for version control and diff tracking
-- Excel spreadsheets for structured data definitions
+### Before Making Changes
+1. Check current version in root directory
+2. Review recent git history for context
+3. Verify stakeholder information is current
+4. Understand compliance requirements
 
-### Development Workflow Integration
-- VS Code launch configurations for HTML file viewing
-- Git tracking of document changes with conventional commit formatting
-- Systematic archival process before major version updates
-- Cross-platform file path handling (Box Cloud Storage integration)
+### During Development
+1. Use tracked changes in Word documents
+2. Maintain consistent formatting
+3. Cross-reference related documents
+4. Document rationale for significant changes
+
+### After Updates
+1. Update version numbers and dates
+2. Archive superseded versions
+3. Commit with descriptive message
+4. Update change summary documents
+
+### Quality Checks
+- Spell check and grammar review
+- Consistency across document suite
+- Technical accuracy verification
+- Compliance requirement validation
+- Stakeholder information accuracy
