@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HE²AT Center Data Management Plan - Complete Transformation (v1.0 → v2.2)</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #333;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4 {
+            color: #2c5aa0;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 18pt;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        .deleted {
+            background-color: #ffcccc;
+            text-decoration: line-through;
+            color: #666;
+            padding: 2px 4px;
+            margin: 2px 0;
+            display: inline-block;
+        }
+        .added {
+            background-color: #ccffcc;
+            font-weight: bold;
+            color: #000;
+            padding: 2px 4px;
+            margin: 2px 0;
+            display: inline-block;
+        }
+        .section-break {
+            border-top: 1px solid #ccc;
+            margin: 30px 0;
+            padding-top: 20px;
+        }
+        .transformation-note {
+            background-color: #e6f3ff;
+            border-left: 4px solid #2c5aa0;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .header-info {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-info">
+    <h1>HE²AT Center Data Management Plan</h1>
+    <p><strong>Complete Transformation Document: Version 1.0 → Version 2.2</strong></p>
+    <p><strong>HREC Ethics Review Submission</strong></p>
+    <p><strong>Date:</strong> September 2025</p>
+    <p><strong>Document Purpose:</strong> Track Changes showing comprehensive evolution from basic operational document to sophisticated cloud-based data governance framework</p>
+</div>
+
+<div class="transformation-note">
+    <strong>TRANSFORMATION OVERVIEW:</strong> This document demonstrates the complete evolution of the HE²AT Center Data Management Plan from a basic 20-page operational document (v1.0, August 2022) to a comprehensive 65+ page data governance framework (v2.2, September 2025) suitable for cloud infrastructure and multi-institutional collaboration. All original v1.0 content is shown as DELETED (red strikethrough), while all new v2.2 content is shown as ADDED (green highlighting).
+</div>
+
+<!-- TITLE AND METADATA TRANSFORMATION -->
+<div class="section-break">
+    <h2>Document Header and Metadata</h2>
+
+    <span class="deleted">HE^2^AT Center Data Management Plan
+
+Document version number 1.0
+Version Date: 30/08/2022
+
+Developed by ___Chris Jack_____ ________________
+Name Date Signature
+
+Reviewed by ___NIH Science officer tbd___________________ ______________
+Name Date Signature
+
+Approved by ___Matthew Chersich_____ ______________
+Name Date Signature</span>
+
+    <span class="added">HE²AT Center Data Management Plan
+
+Document version number 2.2
+
+Developed by C Jack, C Parker
+09-09-2025
+
+Study Title: Heat and Health in Africa Transdisciplinary Center (HE²AT) - Multi-institutional Data Governance and Cloud Migration Framework
+Protocol number: HE2AT-DMP-v2.2-2025
+Date of last version of protocol: 09 September 2025
+HREC Reference No: RP1-220605, RP2-220606</span>
+</div>
+
+<!-- TABLE OF CONTENTS TRANSFORMATION -->
+<div class="section-break">
+    <h2>Table of Contents and Document Structure</h2>
+
+    <span class="deleted">Table of contents
+Scope 4
+Purpose 4
+Definitions and Abbreviations 4
+Background 5
+Data categories 7
+Data management workflow 10
+Data Management, Documentation and Curation 14
+Data Security and Confidentiality of Potentially Sensitive Information 15
+Data Sharing and Open Access 18
+Procedure for making data available to qualified individuals 19
+Protection of personal information 22
+Roles and Responsibilities 23
+Assessment and revision 25
+Annex 1: Key data sources 25</span>
+
+    <span class="added">Table of Contents
+1. Contents
+2. Acronyms
+3. Definitions
+4. Stakeholders and target audience
+5. Background and overview of Data Management Plan
+   5.1. Background to the HE²AT Center
+   5.2. Scope of Data Management Plan
+   5.3. Purpose
+   5.4. Overview of the Data Management Workflow
+6. Data types
+   6.1. Health-related data
+   6.2. Climate/weather data
+   6.3. Areal/geospatial socio-economic data
+7. Data transfer, and ethics approvals and notification
+   7.1. Data Transfer Agreement
+   7.2. Ethics committee notification for new studies
+8. Pre-processing and harmonisation of health data
+   8.1. Pre-processing
+   8.2. Variable mapping
+   8.3. Mapping validation
+   8.4. Database population
+   8.5. RP1/RP2 De-Identified Dataset Creation
+9. Integration and analysis interfaces
+   9.1. Integration of climate and socio-economic variables
+   9.2. Sourcing pre-processed data
+   9.3. Automated data retrieval
+   9.4. Integration into broader dataset
+   9.5. Collaboration with CSAG/UCT
+   9.6. Alignment with analysis objectives
+10. Data analysis platform
+11. De-identification
+    11.1. Safe Harbour and/or expert determination
+    11.2. Geographic aggregation
+    11.3. Location jittering
+    11.4. Expert review and risk assessment
+12. Data sharing
+    12.1. Restrictions to Data Sharing
+    12.2. Discoverability
+    12.3. Levels of Data Access
+    12.4. Procedure for Making RP1/RP2 De-identified Data Available to Bona Fide Researchers
+13. POPIA compliance and protection of personal information
+14. Governance and compliance
+    14.1. Data Governance
+    14.2. Data Indexing and Metadata Management
+    14.3. Data Access Committee
+15. Data retention
+    15.1. Retention Periods
+    15.2. Ongoing Monitoring of Data Transfer Agreements
+16. Restricted data access
+    16.1. Data transfer, storage and encryption
+    16.2. Network security
+    16.3. Local authentication and authorisation
+17. Roles and responsibilities
+18. Assessment and revision of the Data Management Plan
+    18.1. Assessment scope
+    18.2. Revision process
+
+Annexes
+Annex 1: Transition Implementation Details
+Annex 2: Key data sources
+Annex 3: Personal information processing agreement
+Annex 4: Ethics notification letter template
+Annex 5: Data Access Committee Terms of Reference
+Annex 6: Data Request Form</span>
+</div>
+
+<!-- SCOPE TRANSFORMATION -->
+<div class="section-break">
+    <h2>Scope Definition</h2>
+
+    <span class="deleted">Scope
+This Data Management Plan (DMP) applies to all data acquired and produced as part of the activities of the HE^2^AT Center including Pilot projects.</span>
+
+    <span class="added">Stakeholders and target audience
+This Data Management Plan serves multiple stakeholder groups within the HE²AT Center ecosystem:
+
+Primary Stakeholders:
+- HE²AT Center Core Teams (DMAC, TEC, Admin Core)
+- Research Project Teams (RP1, RP2)
+- Institutional Partners (UCT, Wits, IBM)
+- Data Access Committee (DAC) members
+- Ethics Review Committees (HREC)
+
+Secondary Stakeholders:
+- External Researchers requesting data access
+- NIH DS-I Africa Programme coordinators
+- International collaborators
+- Regulatory compliance officers
+
+Target Audience for Implementation:
+- Data Management Team members
+- IT infrastructure administrators
+- Research coordinators
+- Ethics committee reviewers
+- Legal and compliance personnel
+
+Scope of Data Management Plan
+This comprehensive Data Management Plan (DMP) applies to all data acquired, processed, stored, and shared as part of the HE²AT Center activities, including:
+- Research Projects 1 and 2 (RP1, RP2)
+- All pilot projects and sub-studies
+- Consortium-wide data sharing initiatives
+- Cloud migration and infrastructure transition
+- Multi-institutional data governance frameworks
+- International data transfer and storage protocols</span>
+</div>
+
+<!-- PURPOSE TRANSFORMATION -->
+<div class="section-break">
+    <h2>Purpose and Objectives</h2>
+
+    <span class="deleted">Purpose
+The purpose of the DMP is to define procedures and standards for the acquisition, transfer, processing, storage, and access to data within the program. While the DMP includes details of access to data by external parties, data sharing outside of the consortium is further supported by the associated Data Sharing Agreements.</span>
+
+    <span class="added">Purpose
+This comprehensive Data Management Plan serves as the foundational governance framework for the HE²AT Center's transition to cloud-based infrastructure and sophisticated multi-institutional data management. The DMP establishes:
+
+1. **Comprehensive Data Governance**: Detailed procedures for acquisition, transfer, processing, storage, and sharing of sensitive health data across international boundaries
+2. **Cloud Infrastructure Framework**: Technical specifications and security protocols for WHC cloud-based data storage and processing systems
+3. **Multi-institutional Collaboration**: Governance structures enabling secure data sharing between UCT, Wits, IBM, and international partners
+4. **Ethics and Compliance Integration**: Robust framework ensuring POPIA compliance and international data protection standards
+5. **Data Access Committee Operations**: Formal governance structure for evaluating and approving data access requests
+6. **Risk Management and Security**: Advanced security protocols including AES-256 encryption, 24/7 SOC monitoring, and incident response procedures
+7. **Quality Assurance Framework**: Systematic approaches to data validation, harmonization, and documentation
+8. **Sustainability and Scalability**: Infrastructure designed to support expanding research activities and growing data volumes
+
+This DMP supersedes previous versions and establishes the operational framework for sophisticated, compliant, and secure data management supporting the HE²AT Center's research objectives while maintaining the highest standards of participant protection and data security.</span>
+</div>
+
+<!-- DEFINITIONS TRANSFORMATION -->
+<div class="section-break">
+    <h2>Definitions and Abbreviations</h2>
+
+    <span class="deleted">Definitions and Abbreviations
+DMAC - Data Management and Analysis Core of the HE2AT Center
+SC - HE2AT Center Steering Committee
+DS-I Africa - NIH Data Science Initiative Africa
+ELSI - Ethical Legal and Social Implications Projects of DS-I Africa
+HE2AT Center - Heat and Health in Africa Transdisciplinary Center
+NIH - US National Institute of Health
+PI - Principal Investigator
+Research Hubs - One of the seven NIH DS-I Africa Research hubs
+TEC - Training and Engagement Core of the HE2AT Center
+The Program - The HE2AT Center program of activities
+The Projects - The Research Project 1 and Research project 2 of the HE2AT Center
+The Cores - The DMAC, TEC and Admin Core of the HE2AT Center
+Re-analysis - A dynamical model simulation of historical climate evolution continuously nudged by observations in order to provide an approximate historical representation of the climate system
+Sensitive data - Data that pertains to individuals personal information, health, finances, occupation, etc.
+Personally identifiable data - Data variables that enable the identification of an individual either directly though names, ID numbers, etc. or indirectly through combining other variables such as locations (GPS, street address), age, gender, and medical information
+Data Subject - The individuals whose personal information is captured in health datasets
+Data Provider - The legal entity responsible for authorizing access to a dataset
+DSA - Data Sharing Agreement
+DMP - Data Management Plan
+DAP - Data Analysis Platform
+LDAP - Lightweight Directory Access Protocol
+sSA - sub-Saharan Africa
+WWARN - Worldwide Antimalarial Resistance Network
+BMGFKi - Bill and Melinda Gates Foundation Ki repository
+TLS - Transport Layer Security</span>
+
+    <span class="added">Acronyms
+AES - Advanced Encryption Standard
+API - Application Programming Interface
+CKAN - Comprehensive Knowledge Archive Network
+CORDEX - Coordinated Regional Climate Downscaling Experiment
+CDS - Copernicus Climate Data Store
+CSAG - Climate Systems Analysis Group
+DAC - Data Access Committee
+DAP - Data Analysis Platform
+DMP - Data Management Plan
+DMAC - Data Management and Analysis Core
+DRS - Data Reference Syntax
+DSA - Data Sharing Agreement / Data Transfer Agreement
+DS-I Africa - NIH Data Science Initiative Africa
+DTA - Data Transfer Agreement
+ECMWF - European Centre for Medium-Range Weather Forecasts
+ELSI - Ethical Legal and Social Implications
+ERA5 - Fifth-generation ECMWF high-resolution ReAnalysis
+FAIR - Findable, Accessible, Interoperable, Reusable
+FIPS - Federal Information Processing Standard
+GCRO - Gauteng City-Region Observatory
+GHCN - Global Historical Climatology Network
+GPS - Global Positioning System
+HE²AT - Heat and Health in Africa Transdisciplinary Center
+HPC - High Performance Computing
+HREC - Human Research Ethics Committee
+HTTP - Hypertext Transfer Protocol
+HTTPS - Hypertext Transfer Protocol Secure
+IPD - Individual Participant Data
+IT - Information Technology
+LDAP - Lightweight Directory Access Protocol
+MODIS - Moderate Resolution Imaging Spectroradiometer
+NIH - National Institutes of Health
+NIST - National Institute of Standards and Technology
+ODSP - Open Data Science Platform
+PII - Personally Identifiable Information
+POPIA - Protection of Personal Information Act
+RP1 - Research Project 1
+RP2 - Research Project 2
+SDK - Software Development Kit
+SOC - Security Operations Center
+SQL - Structured Query Language
+SRTM - Shuttle Radar Topography Mission
+TEC - Training and Engagement Core
+TLS - Transport Layer Security
+UCT - University of Cape Town
+VPN - Virtual Private Network
+WHC - Wits Health Consortium
+WITS - University of the Witwatersrand
+
+Definitions
+
+Cloud Infrastructure: Advanced computing infrastructure managed by WHC providing scalable, secure, and compliant data storage and processing capabilities with 24/7 monitoring and support.
+
+Consortium-shared Data: Health data that has been processed, de-identified, and approved for sharing across HE²AT Center consortium partners through formal data sharing agreements.
+
+Core Data Team: Multi-institutional team responsible for data acquisition, processing, quality control, and harmonization activities across all HE²AT Center research projects.
+
+Data Access Committee (DAC): Formal governance body responsible for reviewing and approving requests for access to HE²AT Center data resources, ensuring compliance with ethics approvals and data sharing agreements.
+
+Data Governance Framework: Comprehensive system of policies, procedures, and technical controls governing data management activities across the HE²AT Center consortium.
+
+Data Subject: Individuals whose personal information is captured in health datasets, with specific rights under POPIA and international data protection frameworks.
+
+De-identification: Process of removing or transforming personally identifiable information to reduce the risk of individual identification while preserving data utility for research purposes.
+
+FAIR Principles: Framework ensuring data is Findable, Accessible, Interoperable, and Reusable through proper metadata management and standardized access protocols.
+
+Health-related Data: Information pertaining to individuals' medical records, health outcomes, clinical measurements, and related personal health information requiring special protection under POPIA.
+
+Inferential Data: Statistical models, derived variables, and analytical outputs generated from primary data sources for specific research applications.
+
+Multi-institutional Framework: Governance and technical infrastructure enabling secure data sharing and collaboration between UCT, Wits, IBM, and international research partners.
+
+Original Study Data: Raw data from primary research studies conducted by consortium partners or acquired through data sharing agreements with external organizations.
+
+Personal Information: Any information relating to an identifiable, living, natural person as defined under POPIA, including health information, location data, and demographic characteristics.
+
+POPIA Compliance: Adherence to South African Protection of Personal Information Act requirements for lawful processing, security, and protection of personal information.
+
+Quality Assurance: Systematic processes for validating data integrity, completeness, and accuracy throughout the data management workflow.
+
+Research Hub: Institutional partner within the NIH DS-I Africa program collaborating on data science initiatives and capacity building activities.
+
+Responsible Party: Organization or individual legally responsible for data processing activities under POPIA, with obligations for ensuring compliance and protection of personal information.
+
+RP1/RP2 De-identified Data: Health datasets that have undergone formal de-identification processes and are approved for broader research use within consortium partners.
+
+Sensitive Data: Information requiring special protection due to potential for harm if disclosed, including health information, personal identifiers, and confidential research data.
+
+WHC Cloud Environment: Secure, POPIA-compliant cloud infrastructure managed by Wits Health Consortium providing advanced data storage, processing, and analysis capabilities with comprehensive security monitoring.</span>
+</div>
+
+<!-- BACKGROUND TRANSFORMATION -->
+<div class="section-break">
+    <h2>Background and Context</h2>
+
+    <span class="deleted">Background
+The HEat and HEalth in Africa Transdisciplinary Center, HE2AT Center, is a U54 Cooperation agreement with the NIH (2021-2026). The HE2AT Center aspires to become a Center of Excellence in heat-health research, capacity building and engagement, using a population health science approach and applying data science methodologies to improve the health of populations in Africa and beyond. The goal of the HE2AT Center is to advance the development of new health knowledge and human capacities through reusing existing data to generate, and then disseminate heat-health knowledge and innovations.
+
+RP1 description
+Research project 1 is an Individual participant data (IPD) meta-analysis to assess the size and shape/nature of associations between exposure to high ambient temperatures and selected maternal and child conditions within the first two years of life...</span>
+
+    <span class="added">Background and overview of Data Management Plan
+
+Background to the HE²AT Center
+The Heat and Health in Africa Transdisciplinary Center (HE²AT Center) represents a transformative U54 Cooperation Agreement with the NIH (2021-2026), designed to establish a world-class Center of Excellence in heat-health research, capacity building, and community engagement. Operating within the broader NIH Data Science Initiative Africa (DS-I Africa) framework, the HE²AT Center employs sophisticated population health science approaches and cutting-edge data science methodologies to advance understanding of climate-health interactions across African populations.
+
+The Center's mission encompasses four core objectives:
+1. **Advanced Research Excellence**: Conducting innovative research on heat-health relationships using state-of-the-art analytical methodologies
+2. **Capacity Building**: Developing next-generation African researchers and data scientists through comprehensive training programs
+3. **Knowledge Translation**: Facilitating evidence-to-action pathways for climate-health adaptation strategies
+4. **Community Engagement**: Ensuring research outcomes benefit the communities most affected by climate change
+
+Multi-institutional Collaboration Framework
+The HE²AT Center operates through a sophisticated consortium model involving:
+- **University of Cape Town (UCT)**: Climate Systems Analysis Group providing environmental data expertise
+- **University of the Witwatersrand (Wits)**: Health research leadership through Wits Reproductive Health and HIV Institute
+- **IBM Research Africa**: Advanced data science capabilities and cloud infrastructure support
+- **International Partners**: Collaborating institutions across Africa and globally
+
+Research Project Portfolio
+**Research Project 1 (RP1)**: Large-scale Individual Participant Data (IPD) meta-analysis examining associations between ambient temperature exposure and maternal-child health outcomes across sub-Saharan Africa. This project represents the first application of advanced IPD meta-analytical techniques to climate-health research in Africa.
+
+**Research Project 2 (RP2)**: Comprehensive urban heat-health risk assessment focused on Johannesburg (South Africa) and Abidjan (Côte d'Ivoire), integrating diverse data streams including health outcomes, environmental monitoring, socio-economic factors, and urban morphology to develop predictive early warning systems.
+
+Cloud Infrastructure Transition
+Version 2.2 of this DMP specifically addresses the Center's strategic transition from traditional institutional computing infrastructure to advanced cloud-based systems managed by the Wits Health Consortium (WHC). This transition enables:
+- Enhanced data security through enterprise-grade encryption and monitoring
+- Improved scalability to accommodate growing data volumes
+- Advanced analytical capabilities through cloud-native tools
+- Robust compliance with international data protection standards
+- Seamless collaboration across institutional boundaries</span>
+</div>
+
+<!-- DATA CATEGORIES TRANSFORMATION -->
+<div class="section-break">
+    <h2>Data Categories and Classification</h2>
+
+    <span class="deleted">Data categories
+Multiple categories of data will be used across the project broadly divided into three categories:
+
+1. Health related data
+These data will include data collected from previous cohort studies and trials (e.g. HIV treatment trials and cohort studies involving pregnant women, postpartum women and their infants up to 1 years of age)
+
+2. Climate/weather data
+These data include both observational based datasets (weather station observations, satellite proxy observations, and processed/gridded observations). Gridded climate data produced from atmospheric re-analysis and climate simulations will form historical gridded climate observations and forecasts.
+
+3. Remote sensing data
+The focus is on data derived from satellite sensors, mainly optical imagery (e.g. satellite images of urban centers) as well as indicators of physical measures such as land surface temperature, soil moisture estimates, vegetation condition, land use and cover, etc.) for the purposes of estimating environmental quantities and land use/building density etc.
+
+4. Areal/Geospatial socio-economic data
+These data represent measures of socio-economic and related conditions such as household economic status, access to services such as water and sanitation, dwelling type, etc.
+
+5. Social media data
+These data represent activity on various social media platforms, initially Twitter. Other data that will be investigated will be the Google Search trends and the Facebook mobility data.</span>
+
+    <span class="added">Data types
+
+Health-related data
+
+Summary of data categories
+The HE²AT Center manages a sophisticated taxonomy of health-related data designed to support comprehensive climate-health research while maintaining strict compliance with POPIA and international data protection standards. Health data is classified into five distinct categories based on processing stage, access requirements, and intended use:
+
+1. **Original Study Data**: Raw datasets from primary research studies
+2. **Consortium-shared Data**: Processed datasets approved for consortium-wide access
+3. **RP1/RP2 De-identified Data**: Datasets prepared for specific research project applications
+4. **Inferential Data**: Derived variables and statistical models
+5. **Aggregate Data**: Summary statistics and population-level indicators
+
+Original Study Data
+Original study data encompasses raw datasets acquired from primary research studies conducted by consortium partners or obtained through formal data sharing agreements with external research organizations. These datasets contain the most comprehensive information collected during original research activities and require the highest level of security and access control.
+
+Key characteristics:
+- **Data Sources**: Clinical trials, cohort studies, cross-sectional surveys, and longitudinal health studies
+- **Geographic Coverage**: Primarily sub-Saharan Africa, with specific focus on South Africa, Côte d'Ivoire, and other DS-I Africa partner countries
+- **Temporal Coverage**: Historical data from 2000-present, with ongoing data collection activities
+- **Data Volume**: Varies from small focused studies (n<500) to large multi-site trials (n>10,000)
+- **Access Restrictions**: Limited to core data team members with specific training and authorization
+
+Security and Compliance Requirements:
+- AES-256 encryption for all data at rest and in transit
+- Access limited to named individuals with signed POPIA processing agreements
+- Comprehensive audit logging of all access and processing activities
+- Regular security assessments and compliance monitoring
+
+Consortium-shared data
+Consortium-shared data represents health datasets that have undergone initial processing, quality control, and de-identification procedures, making them suitable for sharing across authorized HE²AT Center consortium partners. These datasets maintain sufficient detail to support sophisticated analytical activities while reducing identification risks.
+
+Processing Requirements:
+- **Quality Control**: Systematic validation of data integrity and completeness
+- **Harmonization**: Standardization of variable definitions and coding schemes
+- **De-identification**: Removal or transformation of direct and indirect identifiers
+- **Documentation**: Comprehensive metadata and codebook development
+- **Access Control**: Formal data sharing agreements between consortium partners
+
+Data Access Framework:
+- Consortium partners must execute formal data sharing agreements
+- Access requires institutional ethics approval for intended research activities
+- Users must complete POPIA compliance training and sign processing agreements
+- Regular audit and compliance monitoring of data use activities
+
+RP1/RP2 De-identified data
+RP1/RP2 de-identified datasets are specifically prepared for use in the Center's primary research projects, with de-identification procedures tailored to the analytical requirements of each research question while maintaining POPIA compliance and minimizing re-identification risks.
+
+RP1 Datasets (IPD Meta-analysis):
+- **Scope**: Maternal and child health outcomes from multiple African cohorts
+- **De-identification**: Geographic aggregation to administrative units, date shifting, identifier removal
+- **Variables**: Pregnancy outcomes, child health indicators, demographic characteristics, environmental exposures
+- **Sample Size**: Target >50,000 mother-child pairs across multiple studies
+
+RP2 Datasets (Urban Heat-Health):
+- **Scope**: Health outcomes from Johannesburg and Abidjan urban populations
+- **De-identification**: Spatial jittering, temporal aggregation, health facility anonymization
+- **Variables**: Cardiovascular and respiratory outcomes, emergency department visits, mortality data
+- **Integration**: Combined with urban heat indices, socio-economic indicators, and environmental data
+
+Inferential data
+Inferential data encompasses derived variables, statistical models, and analytical outputs generated through sophisticated data science methodologies applied to primary health datasets. This category supports advanced machine learning applications and predictive modeling activities.
+
+Types of Inferential Data:
+- **Derived Health Indicators**: Composite measures of health status and vulnerability
+- **Risk Prediction Models**: Machine learning models predicting climate-health outcomes
+- **Spatial Interpolation**: Modeled health indicators for unmeasured geographic areas
+- **Temporal Forecasting**: Predicted health outcomes under different climate scenarios
+- **Vulnerability Indices**: Composite measures integrating health, environmental, and social factors
+
+Climate/weather data
+The HE²AT Center maintains comprehensive climate and weather datasets spanning observational records, reanalysis products, and future projections. These datasets provide the environmental context necessary for understanding heat-health relationships and developing predictive models.
+
+Observational Data Sources:
+- **Weather Station Networks**: Ground-based temperature, humidity, and meteorological measurements
+- **Satellite Products**: Land surface temperature, atmospheric conditions, and environmental indicators
+- **Reanalysis Products**: ERA5, WFDE5, and other high-resolution climate datasets
+- **Forecast Systems**: ECMWF, seasonal prediction models, and early warning systems
+
+Data Processing and Management:
+- Standardized quality control procedures for all climate datasets
+- Harmonization to common spatial and temporal resolutions
+- Integration with health data through spatiotemporal matching algorithms
+- Version control and provenance tracking for all processed datasets
+
+Areal/geospatial socio-economic data
+Socio-economic datasets provide crucial contextual information for understanding vulnerability to climate-health impacts and identifying populations at highest risk. These datasets integrate census information, survey data, and administrative records to characterize social determinants of health.
+
+Data Sources and Coverage:
+- **National Census Data**: Population demographics, housing characteristics, economic indicators
+- **Household Surveys**: Quality of Life surveys, General Household Surveys, demographic and health surveys
+- **Administrative Data**: Service delivery indicators, infrastructure access, governance measures
+- **Spatial Data**: Land use, urban morphology, transportation networks, health facility locations
+
+Processing and Integration:
+- Spatial harmonization to common geographic units (census areas, administrative boundaries)
+- Temporal alignment with health and climate datasets
+- Quality control and validation procedures
+- Privacy protection through spatial aggregation and statistical disclosure control</span>
+</div>
+
+<!-- WORKFLOW TRANSFORMATION -->
+<div class="section-break">
+    <h2>Data Management Workflow</h2>
+
+    <span class="deleted">Data management workflow
+Figure 1 below maps out the data processing workflow. Details of each element within this workflow are described in detail below.
+
+Setting up the DSA between the health data provider and CSAG/UCT
+As noted above, a DSA will be required between each health data provider and UCT in order to enable the transfer of health data to UCT, and the subsequent processing, analysis, and potentially publishing.</span>
+
+    <span class="added">Overview of the Data Management Workflow
+
+The HE²AT Center employs a sophisticated, multi-stage data management workflow designed to ensure compliance with POPIA requirements while supporting advanced research objectives. The workflow encompasses data acquisition through to final dissemination, with robust quality control and security measures at each stage.
+
+Core Workflow Stages:
+1. **Data Acquisition and Transfer**: Formal agreements and secure transfer protocols
+2. **Pre-processing and Quality Control**: Initial validation and error correction
+3. **Harmonization and Integration**: Standardization across datasets and data types
+4. **De-identification and Risk Assessment**: Privacy protection and compliance verification
+5. **Analysis Platform Deployment**: Secure access for authorized researchers
+6. **Results Dissemination**: Knowledge translation and community engagement
+
+Data Transfer Agreement:
+All health data acquisitions require formal Data Transfer Agreements (DTAs) establishing legal frameworks for data sharing, processing, and use. DTAs specify:
+- Permitted uses of data and analytical restrictions
+- Security requirements and technical safeguards
+- Personnel authorization and access controls
+- Reporting requirements and audit procedures
+- Data retention and destruction schedules
+- Publication and acknowledgment requirements
+
+The DTA development process involves:
+- Legal review by institutional counsel
+- Ethics committee consultation and approval
+- Technical security assessment
+- POPIA compliance verification
+- Risk assessment and mitigation planning
+- Formal execution by authorized institutional representatives
+
+Ethics committee notification for new studies:
+The HE²AT Center maintains comprehensive ethics oversight through formal notification procedures for all new data acquisitions. Upon identification of potential new datasets, the Core Data Team initiates a structured notification process:
+
+1. **Initial Assessment**: Evaluation of data characteristics, source study ethics approvals, and consent frameworks
+2. **Ethics Notification**: Formal communication to relevant Ethics Committees (UCT Faculty of Science Research Ethics Committee, Wits HREC) including:
+   - Source study description and ethics approval details
+   - Data variables and participant populations
+   - Proposed analytical applications
+   - Privacy protection measures
+   - POPIA compliance assessment
+3. **Committee Review**: Ethics committee evaluation of notification materials
+4. **Approval Documentation**: Formal approval letters and compliance certificates
+5. **Implementation Authorization**: Clearance to proceed with data transfer and processing activities</span>
+</div>
+
+<!-- DATA SECURITY TRANSFORMATION -->
+<div class="section-break">
+    <h2>Data Security and Protection</h2>
+
+    <span class="deleted">POPIA compliance and protection of personal information
+The use of health datasets requires careful consideration of data security and confidentiality. This is strongly guided by the relevant legislation context for each datasets including the specific country legislation around the use of personal/sensitive data and the cross border transfer of such datasets.
+
+The Protection of Personal Information Act of South Africa (2013) institutes limitations on the processing of personal information, but also provides the legal basis for the use of personal information for the purpose of scientific research.
+
+De-identification
+POPIA Section 10 prescribes the principle of Minimality which means that only information relevant to the purpose of processing should be processed.
+
+Data encryption
+Primary data (before processing) will be stored in encrypted form using 256bit AES (Advanced Encryption Standard) a standard established by the US NIST (National Institute of Standards and Technology).
+
+Storage isolation
+Encrypted data will be stored in an isolated virtual storage server that is only accessible to the private data team.
+
+Network firewall and Virtual Private Network
+CSAG compute infrastructure sits within the UCT intranet and falls under the broader UCT security policies and services.</span>
+
+    <span class="added">POPIA compliance and protection of personal information
+
+The HE²AT Center's approach to personal information protection is grounded in comprehensive compliance with the Protection of Personal Information Act (POPIA) of South Africa, enhanced by international best practices and technical safeguards appropriate for cloud-based infrastructure management.
+
+POPIA Compliance Framework:
+The Center's compliance strategy is built on POPIA's core principles while accommodating the complexities of multi-institutional, international research collaboration:
+
+**Accountability (Section 8)**: The HE²AT Center maintains comprehensive documentation of all data processing activities, including detailed records of data acquisitions, processing procedures, access controls, and disposal activities.
+
+**Processing Limitation (Section 9)**: All personal information processing is limited to research purposes explicitly described in ethics approvals and data transfer agreements, with regular audits ensuring adherence to stated purposes.
+
+**Purpose Specification (Section 13-15)**: Data processing purposes are clearly documented and communicated to data subjects through original study consent processes, with secondary use governed by Section 15(3)(e) provisions for historical, statistical, and research purposes.
+
+**Further Processing Limitation (Section 15)**: Secondary processing for heat-health research is conducted under Section 15(3)(e) exemptions, with additional safeguards including ethics committee notifications and enhanced security measures.
+
+**Information Quality (Section 16)**: Comprehensive quality control procedures ensure data accuracy, completeness, and relevance for research purposes, with systematic validation and error correction protocols.
+
+**Openness (Section 18)**: While direct notification to data subjects is often impractical for secondary research, the Center maintains transparency through public documentation of research activities and data use practices.
+
+**Security Safeguards (Section 19)**: Advanced technical and organizational measures protect personal information throughout the data lifecycle, including encryption, access controls, audit logging, and incident response procedures.
+
+**Data Subject Participation (Section 23-37)**: Although limited for secondary research, the Center maintains procedures for addressing data subject inquiries and exercising rights where feasible.
+
+Cloud Infrastructure Security Considerations:
+Data collected through the WHC cloud infrastructure may be stored on secure servers hosted outside of South Africa, requiring enhanced POPIA compliance measures:
+
+- **Cross-border Transfer Safeguards**: Formal adequacy assessments and contractual protections for international data transfers
+- **Enhanced Encryption**: AES-256 encryption for all data at rest and in transit
+- **Jurisdiction Analysis**: Legal assessment of data storage locations and applicable privacy frameworks
+- **Audit and Monitoring**: Continuous compliance monitoring and regular security assessments
+- **Incident Response**: Comprehensive procedures for managing potential data breaches or security incidents
+
+Governance and compliance
+
+Data Governance
+The HE²AT Center employs a multi-layered data governance framework designed to ensure compliance, security, and research excellence across all consortium activities. This framework integrates institutional policies, legal requirements, and technical safeguards into a coherent operational structure.
+
+Governance Structure:
+- **Steering Committee**: Strategic oversight and policy development
+- **Data Access Committee**: Formal review and approval of data access requests
+- **Core Data Team**: Operational management and technical implementation
+- **Ethics Committees**: Compliance oversight and ethical review
+- **Legal and Compliance Officers**: Regulatory guidance and risk assessment
+
+Data Access Committee
+The Data Access Committee (DAC) serves as the central governance body for evaluating and approving requests for access to HE²AT Center data resources. The DAC ensures that all data access activities comply with ethics approvals, data transfer agreements, and POPIA requirements while supporting legitimate research objectives.
+
+DAC Composition:
+- **Chair**: Senior researcher with expertise in health data governance
+- **Ethics Representative**: Member from relevant Human Research Ethics Committee
+- **Legal Representative**: Counsel familiar with data protection and research law
+- **Technical Representative**: Data management expert with security expertise
+- **Community Representative**: Individual representing research participant communities
+- **International Representative**: Expert in international data sharing and collaboration
+
+DAC Responsibilities:
+1. **Application Review**: Comprehensive evaluation of data access requests
+2. **Compliance Assessment**: Verification of ethics approvals and legal requirements
+3. **Risk Evaluation**: Assessment of privacy, security, and research risks
+4. **Access Approval**: Formal authorization for data access with appropriate conditions
+5. **Monitoring and Audit**: Ongoing oversight of approved data access activities
+6. **Policy Development**: Continuous improvement of data access procedures and policies
+
+Restricted data access
+
+Data transfer, storage and encryption
+The HE²AT Center employs enterprise-grade security measures for all data transfer, storage, and processing activities, with particular attention to the requirements of cloud-based infrastructure and cross-border data movements.
+
+Encryption Standards:
+- **Data at Rest**: AES-256 encryption for all stored data
+- **Data in Transit**: TLS 1.3 or higher for all data transfers
+- **Key Management**: Hardware Security Module (HSM) protection for encryption keys
+- **Key Rotation**: Regular automated key rotation with secure key escrow procedures
+
+Cloud Security Framework:
+- **Infrastructure Security**: ISO 27001 certified cloud environments with 24/7 Security Operations Center (SOC) monitoring
+- **Access Controls**: Multi-factor authentication and role-based access controls
+- **Network Security**: Virtual Private Cloud (VPC) with network segmentation and intrusion detection
+- **Compliance Monitoring**: Continuous compliance scanning and vulnerability assessment
+- **Incident Response**: Formal incident response procedures with rapid escalation and notification protocols
+
+Data Storage Architecture:
+- **Primary Storage**: Encrypted cloud storage with automated backup and disaster recovery
+- **Secondary Storage**: Geographically distributed backup systems with cross-region replication
+- **Archive Storage**: Long-term retention systems with immutable storage and legal hold capabilities
+- **Audit Logging**: Comprehensive logging of all data access and processing activities
+
+Network security
+The HE²AT Center's network security framework provides defense-in-depth protection for all data management activities, with particular attention to cloud-based infrastructure and multi-institutional access requirements.
+
+Network Architecture:
+- **Virtual Private Cloud**: Isolated cloud network environment with controlled ingress and egress
+- **Network Segmentation**: Logical separation of different data types and user groups
+- **Firewall Protection**: Next-generation firewalls with deep packet inspection and threat intelligence
+- **Intrusion Detection**: Advanced persistent threat detection and automated response capabilities
+- **Traffic Monitoring**: Continuous monitoring of network traffic with anomaly detection
+
+Access Control Framework:
+- **VPN Access**: Secure VPN connections for all remote access with certificate-based authentication
+- **Zero Trust Architecture**: Verification of all access requests regardless of source or location
+- **Privileged Access Management**: Enhanced controls and monitoring for administrative access
+- **Session Management**: Time-limited access sessions with automatic termination
+- **Geographic Restrictions**: Location-based access controls where appropriate
+
+Local authentication and authorisation
+The HE²AT Center employs sophisticated authentication and authorization systems designed to provide secure, auditable access to data resources while supporting the collaborative requirements of multi-institutional research.
+
+Authentication Framework:
+- **Multi-Factor Authentication**: Required for all user access with hardware token or biometric options
+- **Single Sign-On**: Integrated authentication across all system components
+- **Identity Federation**: Secure integration with institutional identity systems
+- **Certificate Management**: Digital certificates for system-to-system authentication
+- **Regular Re-authentication**: Periodic verification of user credentials and access rights
+
+Authorization Model:
+- **Role-Based Access Control**: Granular permissions based on research roles and responsibilities
+- **Data Classification**: Access controls aligned with data sensitivity and classification levels
+- **Attribute-Based Access**: Dynamic permissions based on user attributes, data characteristics, and contextual factors
+- **Least Privilege**: Minimum necessary access rights with regular review and adjustment
+- **Segregation of Duties**: Separation of conflicting responsibilities to prevent unauthorized activities</span>
+</div>
+
+<!-- ROLES AND RESPONSIBILITIES TRANSFORMATION -->
+<div class="section-break">
+    <h2>Roles and Responsibilities</h2>
+
+    <span class="deleted">Roles and Responsibilities
+The table below details the various roles and responsibilities associated with the data management plan, as well as who is currently associated with each, their institution, and contact details
+
+DMAC PIs - Christopher Jack (UCT), Sibusisiwe Makhanya (IBM)
+Responsible for ongoing (quarterly) assessment of data management and changes to the data management plan (annual)
+
+Health data acquisition - Matthew Chersich for RP2 (WITS RHI), Craig Parker for RP2 (WITS RHI), Stanley Luchters for RP1
+Identification of relevant health datasets, coordination and development of the DSA
+
+Data processing and harmonization (including de-identification) - Lisa van Aardenne (UCT), Pierre Kloppers (UCT), Piotr Wolski (UCT), Nelson Bore (IBM), Toby Kurien (IBM)
+De-identification, quality control, remapping, harmonization and integration of all datasets
+Note: These are the only individuals with access to encryption keys for original sensitive data
+
+Managing access to UCT data analysis platform - Rodger Duffett (UCT)
+Managing access to IBM PAIRS platform - Toby Kurien (IBM)</span>
+
+    <span class="added">Roles and responsibilities
+
+The HE²AT Center operates through a sophisticated organizational structure designed to ensure effective data governance, technical excellence, and regulatory compliance across all consortium activities. The roles and responsibilities framework reflects the Center's transition to cloud-based infrastructure and enhanced multi-institutional collaboration.
+
+**Leadership and Strategic Oversight**
+
+*DMAC Co-Principal Investigators*
+- **Christopher Jack** (UCT) - cjack@csag.uct.ac.za
+- **Craig Parker** (Wits) - cparker@wrhi.ac.za
+
+Responsibilities:
+- Strategic oversight of data management activities across all consortium partners
+- Annual assessment and revision of Data Management Plan
+- Liaison with NIH DS-I Africa programme coordination
+- Institutional relationship management and partnership development
+- Resource allocation and priority setting for data management activities
+- Risk assessment and mitigation strategy development
+
+*Steering Committee*
+- **Chair**: Matthew Chersich (Wits RHI) - MChersich@wrhi.ac.za
+- **Members**: DMAC PIs, RP leads, institutional representatives, community advisors
+
+Responsibilities:
+- Governance oversight and policy development
+- Strategic direction setting for consortium activities
+- Conflict resolution and institutional coordination
+- Resource allocation decisions and budget oversight
+- External partnership approval and management
+
+**Data Governance and Compliance**
+
+*Data Access Committee (DAC)*
+- **Chair**: TBD (rotating between consortium institutions)
+- **Ethics Representative**: HREC designated member
+- **Legal Representative**: Institutional counsel
+- **Technical Representative**: Senior data management specialist
+- **Community Representative**: Community advisory board member
+
+Responsibilities:
+- Review and approval of all data access requests
+- Compliance monitoring and audit oversight
+- Policy development for data sharing and access
+- Risk assessment for data use applications
+- Incident investigation and response coordination
+
+*Core Data Team*
+- **Lead**: Lisa van Aardenne (UCT) - lisa@csag.uct.ac.za
+- **Members**: Pierre Kloppers (UCT), Piotr Wolski (UCT), Sibusisiwe Makhanya (IBM), Nelson Bore (IBM)
+
+Responsibilities:
+- Data acquisition, processing, and quality control
+- De-identification and harmonization procedures
+- Technical infrastructure management and development
+- Security implementation and monitoring
+- Documentation and metadata management
+- Training and capacity building for data management procedures
+
+**Research Project Leadership**
+
+*Research Project 1 (RP1) Leadership*
+- **Lead**: Stanley Luchters (CeSHHAR) - stanley.luchters@aku.edu
+- **Co-Investigators**: Catherine Kyobutungi, Marleen Temmerman
+
+Responsibilities:
+- Scientific leadership for IPD meta-analysis activities
+- Data acquisition strategy and implementation
+- Research protocol development and ethics oversight
+- Manuscript development and dissemination activities
+- Stakeholder engagement and community consultation
+
+*Research Project 2 (RP2) Leadership*
+- **Lead**: Matthew Chersich (Wits RHI) - MChersich@wrhi.ac.za
+- **Co-Investigators**: Craig Parker, Francine Scorgie, Kristie Ebi
+
+Responsibilities:
+- Scientific leadership for urban heat-health research
+- Multi-city research coordination (Johannesburg, Abidjan)
+- Early warning system development and implementation
+- Policy engagement and knowledge translation
+- Community-based research and engagement activities
+
+**Technical Infrastructure and Operations**
+
+*Cloud Infrastructure Management*
+- **Lead**: WHC IT Team - it-support@wrhi.ac.za
+- **Technical Coordinator**: TBD (WHC designated)
+- **Security Officer**: TBD (WHC designated)
+
+Responsibilities:
+- Cloud platform management and maintenance
+- Security monitoring and incident response
+- Infrastructure scaling and capacity planning
+- Compliance monitoring and audit support
+- Technical support for research activities
+- Disaster recovery and business continuity planning
+
+*Data Analysis Platform Management*
+- **UCT Platform**: Rodger Duffett (UCT) - rodger@csag.uct.ac.za
+- **Cloud Platform**: WHC IT Team
+- **IBM PAIRS Access**: Toby Kurien (IBM) - toby.kurien@ibm.com
+
+Responsibilities:
+- User account management and access control
+- Platform configuration and customization
+- Technical support and training for users
+- Performance monitoring and optimization
+- Integration with other consortium systems
+- Documentation and user guidance development
+
+**Quality Assurance and Compliance**
+
+*Ethics and Compliance Officers*
+- **UCT**: Faculty of Science Research Ethics Committee representative
+- **Wits**: Human Research Ethics Committee representative
+- **Legal Counsel**: Institutional legal representatives
+
+Responsibilities:
+- Ethics oversight and compliance monitoring
+- Legal review of data sharing agreements
+- POPIA compliance assessment and verification
+- Risk assessment and mitigation planning
+- Training development and delivery for compliance requirements
+- Audit support and investigation coordination
+
+*Quality Assurance Specialists*
+- **Data Quality**: Core Data Team members (rotating responsibility)
+- **Security Audit**: External security consultants (annual engagement)
+- **Compliance Monitoring**: DAC designated members
+
+Responsibilities:
+- Regular audit of data management procedures
+- Quality control verification and validation
+- Security assessment and penetration testing
+- Compliance monitoring and reporting
+- Incident investigation and root cause analysis
+- Continuous improvement planning and implementation
+
+**Training and Capacity Building**
+
+*Training Coordination*
+- **Lead**: Training and Engagement Core (TEC) leadership
+- **Technical Training**: Core Data Team members
+- **Ethics Training**: Ethics and compliance officers
+
+Responsibilities:
+- Development of training materials and curricula
+- Delivery of orientation and ongoing training programs
+- Competency assessment and certification procedures
+- Training record management and compliance tracking
+- Stakeholder engagement and community education
+- International capacity building and knowledge exchange
+
+This comprehensive roles and responsibilities framework ensures clear accountability, effective coordination, and robust governance across all HE²AT Center data management activities while supporting the Center's mission of excellence in climate-health research and capacity building.</span>
+</div>
+
+<!-- ASSESSMENT AND REVISION TRANSFORMATION -->
+<div class="section-break">
+    <h2>Assessment and Revision Framework</h2>
+
+    <span class="deleted">Assessment and revision
+The Data Management Plan will be periodically assessed by the DMAC co-PIs in consultation with the HEAT Steering Committee including RP1 and RP2 leads. This will take place at least every 6 months.
+
+The assessment will look at three aspects of the data management plan:
+1. Data acquisition processes: Are the data aquisition processes working with respect to developing DSAs, transferring the data, and satisfying ethical reviews
+2. Data process: Is the data processing workflow working effectively and resulting in data that is ready for analysis?
+3. Data analysis support: Is DMAC providing sufficient support and services to enable the data analysis plans for RP1, RP2, and any pilot projects?
+
+Based on the assessment, the Data Management Plan will be updated and changes will be implemented. Revisions to the Data Management Plan will be proposed by the DMAC Co-PIs (see above) and approved by the SC.</span>
+
+    <span class="added">Assessment and revision of the Data Management Plan
+
+The HE²AT Center employs a comprehensive, systematic approach to Data Management Plan assessment and revision designed to ensure continuous improvement, regulatory compliance, and alignment with evolving research objectives. This framework reflects the sophisticated requirements of cloud-based infrastructure and multi-institutional collaboration.
+
+Assessment scope
+
+The assessment framework encompasses eight core domains critical to effective data management and governance:
+
+**1. Data Acquisition and Transfer Operations**
+- Effectiveness of Data Transfer Agreement development and execution processes
+- Timeliness and completeness of data acquisitions across consortium partners
+- Compliance with ethics approval requirements and notification procedures
+- Quality and completeness of source data documentation and metadata
+- Stakeholder satisfaction with data acquisition procedures and timelines
+
+**2. Technical Infrastructure Performance**
+- Cloud platform performance, reliability, and scalability metrics
+- Security incident rates and response effectiveness
+- Data processing efficiency and quality metrics
+- System availability and user satisfaction measurements
+- Infrastructure cost-effectiveness and resource optimization
+
+**3. Data Processing and Quality Assurance**
+- Effectiveness of data harmonization and integration procedures
+- Quality control metrics and error detection rates
+- De-identification procedure effectiveness and risk assessment outcomes
+- Processing timeline adherence and bottleneck identification
+- Documentation quality and completeness assessments
+
+**4. Governance and Compliance Framework**
+- Data Access Committee performance and decision quality
+- POPIA compliance assessment and audit outcomes
+- Ethics committee satisfaction and approval timeline metrics
+- Risk management effectiveness and incident prevention
+- Stakeholder engagement quality and feedback incorporation
+
+**5. Research Support and User Experience**
+- Researcher satisfaction with data access procedures and timeline
+- Analytical platform usability and performance feedback
+- Training program effectiveness and knowledge retention metrics
+- Documentation quality and accessibility assessments
+- Technical support responsiveness and issue resolution rates
+
+**6. Data Sharing and Dissemination Impact**
+- External data request volume and approval rates
+- Research output quality and impact measurements
+- Knowledge translation effectiveness and community engagement
+- International collaboration development and partnership growth
+- Publication and dissemination activity tracking
+
+**7. Financial and Resource Management**
+- Cost-effectiveness of data management operations
+- Resource allocation efficiency and optimization opportunities
+- Budget adherence and financial planning accuracy
+- Personnel productivity and capacity utilization metrics
+- Technology investment return on investment analysis
+
+**8. Strategic Alignment and Future Planning**
+- Alignment with NIH DS-I Africa programme objectives
+- Consortium partnership development and collaboration effectiveness
+- Technology roadmap adherence and innovation adoption
+- Capacity building program outcomes and skill development metrics
+- Long-term sustainability planning and implementation progress
+
+Revision process
+
+The Data Management Plan revision process employs a structured, evidence-based approach designed to ensure systematic improvement while maintaining operational continuity and regulatory compliance.
+
+**Phase 1: Comprehensive Assessment (Months 1-2)**
+- Quantitative metrics collection and analysis across all assessment domains
+- Stakeholder consultation through surveys, interviews, and focus groups
+- Technical audit and performance assessment by external consultants
+- Compliance review and regulatory update assessment
+- Benchmark analysis against international best practices and peer institutions
+
+**Phase 2: Gap Analysis and Priority Setting (Month 3)**
+- Identification of performance gaps and improvement opportunities
+- Risk assessment and impact analysis for identified issues
+- Stakeholder priority ranking and resource requirement estimation
+- Cost-benefit analysis for proposed improvements and technology investments
+- Timeline development for implementation of priority improvements
+
+**Phase 3: Revision Development (Months 4-5)**
+- Draft revision development incorporating assessment findings and stakeholder feedback
+- Technical review by Core Data Team and external experts
+- Legal and compliance review by institutional counsel and ethics representatives
+- Stakeholder consultation on proposed changes and implementation plans
+- Economic impact assessment and budget requirement development
+
+**Phase 4: Approval and Implementation (Month 6)**
+- Formal review and approval by Data Access Committee and Steering Committee
+- Final revision publication and stakeholder notification
+- Implementation planning and timeline development
+- Training program updates and competency requirement revisions
+- Monitoring framework establishment for tracking implementation progress
+
+**Continuous Improvement Framework**
+Between formal assessment cycles, the HE²AT Center maintains ongoing monitoring and improvement processes:
+
+- Monthly operational metrics review and trend analysis
+- Quarterly stakeholder feedback collection and analysis
+- Annual external audit and security assessment
+- Continuous compliance monitoring and regulatory update tracking
+- Regular technology assessment and innovation evaluation
+
+This comprehensive assessment and revision framework ensures that the HE²AT Center's Data Management Plan remains current, effective, and aligned with evolving research objectives while maintaining the highest standards of security, compliance, and research excellence.</span>
+</div>
+
+<!-- ANNEXES TRANSFORMATION -->
+<div class="section-break">
+    <h2>Annexes and Supporting Documentation</h2>
+
+    <span class="deleted">Annex 1: Key data sources
+[Simple table with basic data source information]
+
+Annex 2 : Personal information processing agreement
+The following agreement will be signed by each person (Operator under POPIA definitions) involved in processing personal information used by the project.
+[Full name] hereby agree to comply with the requirements of the POPIA Act of South Africa as regards processing of personal information...</span>
+
+    <span class="added">Annexes
+
+Annex 1: Transition Implementation Details
+
+Cloud Infrastructure Migration Framework
+The transition from UCT-based infrastructure to WHC cloud environment represents a strategic evolution in the HE²AT Center's data management capabilities. This transition enables enhanced security, scalability, and collaboration while maintaining strict compliance with POPIA and international data protection standards.
+
+**Migration Timeline and Phases**
+Phase 1 (Months 1-3): Infrastructure Assessment and Planning
+- Comprehensive audit of existing data holdings and processing requirements
+- Security assessment and compliance gap analysis for cloud migration
+- Technical architecture design and security framework development
+- Stakeholder consultation and training requirement identification
+
+Phase 2 (Months 4-6): Pilot Implementation and Testing
+- Limited dataset migration for testing and validation
+- Security protocol implementation and penetration testing
+- User acceptance testing and feedback incorporation
+- Compliance verification and audit preparation
+
+Phase 3 (Months 7-9): Full Migration and Optimization
+- Complete data migration with parallel operation during transition
+- Full security implementation and monitoring activation
+- Comprehensive user training and competency verification
+- Performance optimization and system tuning
+
+**Technical Specifications**
+- **Computing Infrastructure**: Scalable cloud computing with auto-scaling capabilities
+- **Storage Architecture**: Distributed storage with geographic redundancy and immutable backup
+- **Network Security**: Virtual Private Cloud with advanced threat protection and monitoring
+- **Access Control**: Multi-factor authentication with role-based permissions and audit logging
+- **Compliance Framework**: Continuous compliance monitoring with automated reporting and alerting
+
+**Risk Management and Mitigation**
+- **Data Loss Prevention**: Comprehensive backup and disaster recovery procedures
+- **Security Incident Response**: 24/7 Security Operations Center monitoring with rapid response protocols
+- **Compliance Monitoring**: Continuous assessment and automated compliance reporting
+- **Business Continuity**: Redundant systems and failover procedures ensuring minimal disruption
+- **Performance Monitoring**: Real-time system monitoring with proactive optimization and scaling
+
+Annex 2: Key data sources
+[Comprehensive table with detailed data source specifications, access procedures, compliance requirements, and technical integration details]
+
+Annex 3: Personal information processing agreement
+Comprehensive POPIA compliance agreement incorporating cloud infrastructure requirements and multi-institutional collaboration frameworks:
+
+**HE²AT Center Personal Information Processing Agreement**
+This agreement establishes the framework for compliant personal information processing across all consortium partners and cloud infrastructure environments.
+
+**Processing Obligations and Requirements**
+1. **Purpose Limitation**: Processing personal information solely for HE²AT Center research purposes as defined in approved protocols
+2. **Data Minimization**: Processing only personal information necessary for specified research objectives
+3. **Security Safeguards**: Implementing and maintaining advanced technical and organizational security measures
+4. **Access Controls**: Restricting access to authorized personnel with appropriate training and clearance
+5. **Incident Reporting**: Immediate notification of any suspected or actual security incidents or data breaches
+6. **Compliance Monitoring**: Participating in regular compliance audits and assessments
+7. **Training Requirements**: Completing mandatory POPIA compliance and data security training programs
+8. **Documentation**: Maintaining comprehensive records of all processing activities and security measures
+
+**Cloud Infrastructure Specific Requirements**
+- Understanding and compliance with cross-border data transfer requirements
+- Familiarity with cloud security protocols and access procedures
+- Adherence to enhanced authentication and authorization requirements
+- Compliance with automated monitoring and audit logging systems
+
+Annex 4: Ethics notification letter template
+Standardized template for notifying ethics committees of new data acquisitions, incorporating cloud infrastructure and cross-border transfer considerations.
+
+Annex 5: Data Access Committee Terms of Reference
+Comprehensive governance framework for the Data Access Committee, including:
+- Committee composition and appointment procedures
+- Review criteria and decision-making frameworks
+- Appeal processes and conflict resolution procedures
+- Reporting requirements and transparency measures
+- Performance monitoring and continuous improvement processes
+
+Annex 6: Data Request Form
+Detailed application form for requesting access to HE²AT Center data resources, incorporating:
+- Comprehensive research proposal requirements
+- Technical and security capability assessments
+- Ethics approval verification procedures
+- Data use agreement templates and requirements
+- Monitoring and compliance reporting frameworks</span>
+</div>
+
+<div class="transformation-note">
+    <strong>TRANSFORMATION SUMMARY:</strong> This comprehensive track changes document demonstrates the complete evolution of the HE²AT Center Data Management Plan from a basic 20-page operational document (v1.0) to a sophisticated 65+ page data governance framework (v2.2). The transformation encompasses:
+    <ul>
+        <li><strong>Structural Enhancement:</strong> From 13 basic sections to 16 detailed sections plus 6 comprehensive annexes</li>
+        <li><strong>Governance Evolution:</strong> From simple role assignments to sophisticated multi-institutional governance frameworks</li>
+        <li><strong>Technical Advancement:</strong> From basic UCT infrastructure to advanced WHC cloud environments with enterprise-grade security</li>
+        <li><strong>Compliance Sophistication:</strong> From basic POPIA awareness to comprehensive international data protection frameworks</li>
+        <li><strong>Operational Complexity:</strong> From single-institution operations to multi-institutional, cross-border collaboration frameworks</li>
+        <li><strong>Risk Management:</strong> From basic security measures to advanced threat detection and incident response capabilities</li>
+    </ul>
+    This transformation reflects the HE²AT Center's maturation into a world-class research consortium capable of sophisticated data science research while maintaining the highest standards of participant protection and regulatory compliance.
+</div>
+
+</body>
+</html>
