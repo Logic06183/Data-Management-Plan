@@ -8,11 +8,16 @@
 
 ### 🎯 **Three HTML Files (Ready for Word Import)**
 
-1. **`HE2AT_DMP_v2.0_COMPLETE_TrackChanges.html`** ⭐ **MAIN DOCUMENT**
-   - Complete Data Management Plan with full track changes
-   - Shows entire v1.0→v2.0 transformation
+1. **`HE2AT_DMP_v2.0_COMPLETE_FULL_TrackChanges.html`** ⭐ **COMPLETE 65+ PAGE DOCUMENT**
+   - FULL Data Management Plan (2,693 lines, 65+ pages equivalent)
+   - Complete track changes throughout entire document (69 tracked changes)
+   - Shows comprehensive v1.0→v2.0 transformation with all sections, tables, appendices
    - Ready to import into Microsoft Word
    - **Action**: Open in Word, save as .docx for HREC
+
+1b. **`HE2AT_DMP_v2.0_COMPLETE_FULL_TrackChanges.docx`** 📄 **WORD VERSION**
+   - Pre-converted Word document version
+   - **Action**: Open directly in Word for HREC submission
 
 2. **`HE2AT_DMP_v2.0_Changes_Summary.html`** 📋 **CHANGES TABLE**
    - HREC-formatted three-column changes summary

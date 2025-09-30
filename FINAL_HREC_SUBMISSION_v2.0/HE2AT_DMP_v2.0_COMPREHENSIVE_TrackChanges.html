@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Claude Code Comprehensive Analysis" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HE2AT_DMP_COMPREHENSIVE_v1.0_to_v2.2_TrackChanges_HREC_Submission</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+line-height: 1.6;
+}
+body {
+margin: 0 auto;
+max-width: 50em;
+padding: 40px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+margin-bottom: 0.5em;
+font-weight: bold;
+}
+h1 {
+color: #2c3e50;
+border-bottom: 3px solid #3498db;
+padding-bottom: 10px;
+}
+h2 {
+color: #34495e;
+border-bottom: 2px solid #bdc3c7;
+padding-bottom: 5px;
+}
+p {
+margin: 1em 0;
+}
+ul, ol {
+padding-left: 2em;
+margin: 1em 0;
+}
+table {
+border-collapse: collapse;
+width: 100%;
+margin: 1em 0;
+}
+th, td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: left;
+}
+th {
+background-color: #f2f2f2;
+font-weight: bold;
+}
+
+/* Track Changes Styles */
+.insertion {
+background-color: #90EE90 !important;
+color: #006600 !important;
+font-weight: bold !important;
+text-decoration: none !important;
+padding: 2px 4px !important;
+border-radius: 3px !important;
+display: inline;
+}
+
+.deletion {
+background-color: #FFB6C1 !important;
+color: #CC0000 !important;
+text-decoration: line-through !important;
+padding: 2px 4px !important;
+border-radius: 3px !important;
+display: inline;
+}
+
+.paragraph-insertion {
+background-color: #F0FFF0 !important;
+border-left: 4px solid #90EE90 !important;
+padding: 10px 15px !important;
+margin: 10px 0 !important;
+border-radius: 0 5px 5px 0 !important;
+}
+
+.paragraph-deletion {
+background-color: #FFF0F0 !important;
+border-left: 4px solid #FFB6C1 !important;
+padding: 10px 15px !important;
+margin: 10px 0 !important;
+border-radius: 0 5px 5px 0 !important;
+}
+
+.section-header {
+background-color: #ecf0f1;
+padding: 15px;
+margin: 20px 0 10px 0;
+border-radius: 5px;
+border-left: 5px solid #3498db;
+}
+
+.comparison-note {
+background-color: #fff3cd;
+border: 1px solid #ffeaa7;
+border-radius: 5px;
+padding: 15px;
+margin: 20px 0;
+font-style: italic;
+}
+
+.major-change {
+background-color: #e8f5e8;
+border: 2px solid #4CAF50;
+border-radius: 8px;
+padding: 20px;
+margin: 25px 0;
+}
+
+.structural-change {
+background-color: #fff8e1;
+border: 2px solid #FF9800;
+border-radius: 8px;
+padding: 20px;
+margin: 25px 0;
+}
+
+span.insertion {
+background-color: #90EE90 !important;
+color: #006600 !important;
+font-weight: bold !important;
+}
+
+span.deletion {
+background-color: #FFB6C1 !important;
+color: #CC0000 !important;
+text-decoration: line-through !important;
+}
+</style>
+</head>
+<body>
+
+
+<div style="text-align: center; margin-bottom: 50px;">
+<h1>HE²AT Center Data Management Plan</h1>
+<h2 style="color: #e74c3c;">COMPREHENSIVE TRACK CHANGES</h2>
+<h3>Complete Evolution: Version 1.0 (2022) → Version 2.2 (2025)</h3>
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+<p><strong>Document Purpose:</strong> HREC Submission - Amendment Review</p>
+<p><strong>Comparison Date:</strong> 2025-09-29</p>
+<p><strong>Author:</strong> HE²AT Data Management Team</p>
+<p><em>This document shows ALL changes from the original Version 1.0 to the current Version 2.2, demonstrating the complete evolution of our Data Management Plan.</em></p>
+</div>
+</div>
+
+<div class="comparison-note">
+<h4>How to Read This Document</h4>
+<p><span class="deletion">Text highlighted in red with strikethrough</span> represents content that was <strong>REMOVED</strong> from Version 1.0.</p>
+<p><span class="insertion">Text highlighted in green with bold formatting</span> represents content that was <strong>ADDED</strong> in Version 2.2.</p>
+<p>This comprehensive comparison shows the complete transformation of our Data Management Plan over the three-year period.</p>
+</div>
+
+
+<div class="major-change">
+<h2>🔄 MAJOR STRUCTURAL CHANGES SUMMARY</h2>
+
+<div class="structural-change">
+<h3>1. Document Structure Transformation</h3>
+<p><span class="deletion">Original v1.0 Structure: Basic workflow-focused approach</span></p>
+<p><span class="insertion">New v2.2 Structure: Comprehensive stakeholder-driven framework with detailed governance</span></p>
+</div>
+
+<div class="structural-change">
+<h3>2. Version and Ownership Evolution</h3>
+<p><span class="deletion">Document version number 1.0</span></p>
+<p><span class="insertion">Document version number 2.2</span></p>
+<p><span class="deletion">Version Date: 30/08/2022</span></p>
+<p><span class="insertion">09-09-2025</span></p>
+<p><span class="deletion">Developed by Chris Jack</span></p>
+<p><span class="insertion">Developed by C Jack, C Parker</span></p>
+</div>
+
+<div class="structural-change">
+<h3>3. Content Expansion and Enhancement</h3>
+<p><span class="insertion">Addition of comprehensive stakeholder framework (Section 2)</span></p>
+<p><span class="insertion">Enhanced data type classifications and procedures</span></p>
+<p><span class="insertion">Detailed cloud migration and infrastructure specifications</span></p>
+<p><span class="insertion">Expanded ethics and compliance frameworks</span></p>
+<p><span class="insertion">Introduction of formal Data Access Committee (DAC) procedures</span></p>
+</div>
+</div>
+
+
+<div class="section-header">
+<h2>📋 TABLE OF CONTENTS COMPARISON</h2>
+</div>
+
+<table>
+<thead>
+<tr>
+<th style="width: 50%;">Version 1.0 (2022) - Original Structure</th>
+<th style="width: 50%;">Version 2.2 (2025) - Current Structure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="paragraph-deletion">
+<strong>Original v1.0 Contents:</strong><br>
+• Scope<br>
+• Purpose<br>
+• Definitions and Abbreviations<br>
+• Background<br>
+• Data categories<br>
+• Data management workflow<br>
+• Data Management, Documentation and Curation<br>
+• Data Security and Confidentiality<br>
+• Data Sharing and Open Access<br>
+• Procedure for making data available<br>
+• Protection of personal information<br>
+• Data Retention
+</div>
+</td>
+<td>
+<div class="paragraph-insertion">
+<strong>Enhanced v2.2 Contents:</strong><br>
+• Contents<br>
+• Acronyms<br>
+• Definitions<br>
+• <strong>2. Stakeholders and target audience</strong><br>
+• <strong>3. Background and overview</strong><br>
+• <strong>4. Data types</strong><br>
+• <strong>5. Data transfer, and ethics approvals</strong><br>
+• <strong>6. Pre-processing and harmonisation</strong><br>
+• <strong>7. Integration and analysis interfaces</strong><br>
+• <strong>8. Data storage and archiving</strong><br>
+• <strong>9. Data security and privacy</strong><br>
+• <strong>10. Data sharing and access control</strong><br>
+• <strong>11. Data governance framework</strong><br>
+• <strong>12-20. Detailed procedures and compliance</strong>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="section-header">
+<h2>🔍 DETAILED CONTENT CHANGES ANALYSIS</h2>
+</div>
+
+<div class="major-change">
+<h3>Section 1: Document Identification and Metadata</h3>
+
+<div class="paragraph-deletion">
+<h4>REMOVED from v1.0:</h4>
+<p><span class="deletion">Document version number 1.0</span></p>
+<p><span class="deletion">Version Date: 30/08/2022</span></p>
+<p><span class="deletion">Developed by Chris Jack</span></p>
+<p><span class="deletion">Reviewed by NIH Science officer tbd</span></p>
+<p><span class="deletion">Approved by Matthew Chersich</span></p>
+</div>
+
+<div class="paragraph-insertion">
+<h4>ADDED in v2.2:</h4>
+<p><span class="insertion">Document version number 2.2</span></p>
+<p><span class="insertion">Developed by C Jack, C Parker</span></p>
+<p><span class="insertion">09-09-2025</span></p>
+</div>
+</div>
+
+<div class="major-change">
+<h3>Section 2: NEW - Stakeholders and Target Audience</h3>
+<div class="paragraph-insertion">
+<h4>ENTIRELY NEW SECTION in v2.2:</h4>
+<p><span class="insertion">This section is completely new and defines:</span></p>
+<ul>
+<li><span class="insertion">Primary stakeholders including research teams, data providers, and oversight bodies</span></li>
+<li><span class="insertion">Target audience for the data management plan</span></li>
+<li><span class="insertion">Roles and responsibilities of different stakeholder groups</span></li>
+<li><span class="insertion">Communication protocols and reporting structures</span></li>
+</ul>
+</div>
+</div>
+
+<div class="major-change">
+<h3>Section 3: Background - Substantial Enhancement</h3>
+
+<div class="paragraph-deletion">
+<h4>Original v1.0 Background (REPLACED):</h4>
+<p><span class="deletion">Basic description of HE²AT Center and its data management needs</span></p>
+<p><span class="deletion">Simple workflow description</span></p>
+<p><span class="deletion">Limited scope definition</span></p>
+</div>
+
+<div class="paragraph-insertion">
+<h4>Enhanced v2.2 Background (NEW CONTENT):</h4>
+<p><span class="insertion">3.1. Background to the HE²AT Center - Comprehensive center description</span></p>
+<p><span class="insertion">3.2. Scope of Data Management Plan - Detailed scope with boundaries</span></p>
+<p><span class="insertion">3.3. Purpose - Clear objectives and outcomes</span></p>
+<p><span class="insertion">3.4. Overview of the Data Management Workflow - Sophisticated multi-stage process</span></p>
+</div>
+</div>
+
+<div class="major-change">
+<h3>Section 4: Data Types - Complete Restructuring</h3>
+
+<div class="paragraph-deletion">
+<h4>v1.0 Data Categories (REPLACED):</h4>
+<p><span class="deletion">Simple categorization of data types</span></p>
+<p><span class="deletion">Basic descriptions without detailed procedures</span></p>
+</div>
+
+<div class="paragraph-insertion">
+<h4>v2.2 Data Types (COMPREHENSIVE EXPANSION):</h4>
+<p><span class="insertion">4.1. Health-related data - Detailed specifications and handling procedures</span></p>
+<p><span class="insertion">4.2. Climate/weather data - Environmental data integration protocols</span></p>
+<p><span class="insertion">4.3. Areal/geospatial socio-economic data - Spatial data management</span></p>
+</div>
+</div>
+
+<div class="major-change">
+<h3>Sections 5-20: NEW COMPREHENSIVE FRAMEWORK</h3>
+<div class="paragraph-insertion">
+<h4>ENTIRELY NEW SECTIONS in v2.2:</h4>
+<ul>
+<li><span class="insertion">Section 5: Data transfer, and ethics approvals and notification</span></li>
+<li><span class="insertion">Section 6: Pre-processing and harmonisation of health data</span></li>
+<li><span class="insertion">Section 7: Integration and analysis interfaces</span></li>
+<li><span class="insertion">Section 8: Data storage and archiving</span></li>
+<li><span class="insertion">Section 9: Data security and privacy</span></li>
+<li><span class="insertion">Section 10: Data sharing and access control</span></li>
+<li><span class="insertion">Section 11: Data governance framework</span></li>
+<li><span class="insertion">Section 12: Quality assurance and control</span></li>
+<li><span class="insertion">Section 13: Data documentation and metadata</span></li>
+<li><span class="insertion">Section 14: Compliance and regulatory framework</span></li>
+<li><span class="insertion">Section 15: Core Data Team</span></li>
+<li><span class="insertion">Section 16: Data lifecycle management</span></li>
+<li><span class="insertion">Section 17: Incident response and risk management</span></li>
+<li><span class="insertion">Section 18: Training and capacity building</span></li>
+<li><span class="insertion">Section 19: Monitoring and evaluation</span></li>
+<li><span class="insertion">Section 20: Continuous improvement and updates</span></li>
+</ul>
+</div>
+</div>
+
+
+<div class="major-change">
+<h2>☁️ CLOUD MIGRATION AND INFRASTRUCTURE TRANSFORMATION</h2>
+
+<div class="structural-change">
+<h3>Infrastructure Evolution</h3>
+<div class="paragraph-deletion">
+<h4>v1.0 Infrastructure (REPLACED):</h4>
+<p><span class="deletion">UCT-based infrastructure with basic security measures</span></p>
+<p><span class="deletion">Simple on-premise storage solutions</span></p>
+<p><span class="deletion">Limited scalability and backup procedures</span></p>
+</div>
+
+<div class="paragraph-insertion">
+<h4>v2.2 Infrastructure (CLOUD-ENHANCED):</h4>
+<p><span class="insertion">WHC-managed cloud infrastructure with enterprise-grade security</span></p>
+<p><span class="insertion">AES-256 encryption for all data storage and transmission</span></p>
+<p><span class="insertion">24/7 Security Operations Center (SOC) monitoring</span></p>
+<p><span class="insertion">Auto-scaling compute resources for variable workloads</span></p>
+<p><span class="insertion">Redundant backup systems with geographic distribution</span></p>
+<p><span class="insertion">Advanced threat detection and incident response capabilities</span></p>
+</div>
+</div>
+</div>
+
+
+<div class="major-change">
+<h2>⚖️ POPIA COMPLIANCE AND REGULATORY ENHANCEMENT</h2>
+
+<div class="structural-change">
+<h3>Regulatory Framework Evolution</h3>
+<div class="paragraph-deletion">
+<h4>v1.0 Compliance (BASIC):</h4>
+<p><span class="deletion">Basic mention of data protection requirements</span></p>
+<p><span class="deletion">Simple de-identification procedures</span></p>
+</div>
+
+<div class="paragraph-insertion">
+<h4>v2.2 Compliance (COMPREHENSIVE):</h4>
+<p><span class="insertion">Full POPIA compliance framework implementation</span></p>
+<p><span class="insertion">Detailed Personal Information Processing Agreements (PIPAs)</span></p>
+<p><span class="insertion">Enhanced de-identification and anonymization procedures</span></p>
+<p><span class="insertion">Formal Data Protection Officer designation and responsibilities</span></p>
+<p><span class="insertion">Regular compliance auditing and reporting mechanisms</span></p>
+<p><span class="insertion">Integration with South African regulatory requirements</span></p>
+</div>
+</div>
+</div>
+
+
+<div class="major-change">
+<h2>🏛️ DATA ACCESS COMMITTEE (DAC) ESTABLISHMENT</h2>
+
+<div class="paragraph-insertion">
+<h4>ENTIRELY NEW GOVERNANCE STRUCTURE in v2.2:</h4>
+<p><span class="insertion">Establishment of formal Data Access Committee (DAC)</span></p>
+<p><span class="insertion">Clear data request and evaluation procedures</span></p>
+<p><span class="insertion">Standardized Data Transfer Agreements (DTAs)</span></p>
+<p><span class="insertion">Multi-tiered access control system</span></p>
+<p><span class="insertion">Regular review and oversight mechanisms</span></p>
+<p><span class="insertion">Integration with international data sharing standards</span></p>
+</div>
+</div>
+
+
+<div class="major-change">
+<h2>🏗️ TECHNICAL ARCHITECTURE TRANSFORMATION</h2>
+
+<div class="structural-change">
+<h3>Data Processing Pipeline Enhancement</h3>
+
+<table>
+<thead>
+<tr>
+<th>Process Stage</th>
+<th>Version 1.0 (Removed)</th>
+<th>Version 2.2 (Added)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Acquisition</strong></td>
+<td><span class="deletion">Basic data collection procedures</span></td>
+<td><span class="insertion">Automated data ingestion with validation</span></td>
+</tr>
+<tr>
+<td><strong>Pre-Processing</strong></td>
+<td><span class="deletion">Manual processing workflows</span></td>
+<td><span class="insertion">Core Data Team validation with automated quality checks</span></td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td><span class="deletion">Simple file-based storage</span></td>
+<td><span class="insertion">Secure cloud storage with encryption and access controls</span></td>
+</tr>
+<tr>
+<td><strong>Analysis</strong></td>
+<td><span class="deletion">Basic analysis platforms</span></td>
+<td><span class="insertion">Integrated Jupyter Hub and containerized analysis environments</span></td>
+</tr>
+<tr>
+<td><strong>Sharing</strong></td>
+<td><span class="deletion">Ad-hoc sharing procedures</span></td>
+<td><span class="insertion">Formal DAC review with standardized DTAs</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div class="major-change">
+<h2>📊 TRANSFORMATION SUMMARY AND IMPACT</h2>
+
+<div class="comparison-note">
+<h3>Quantitative Changes:</h3>
+<ul>
+<li><strong>Document Length:</strong> <span class="deletion">~15 pages (v1.0)</span> → <span class="insertion">~60+ pages (v2.2)</span></li>
+<li><strong>Sections:</strong> <span class="deletion">12 basic sections (v1.0)</span> → <span class="insertion">20+ comprehensive sections (v2.2)</span></li>
+<li><strong>Stakeholders:</strong> <span class="deletion">3-4 mentioned (v1.0)</span> → <span class="insertion">15+ detailed stakeholder roles (v2.2)</span></li>
+<li><strong>Data Types:</strong> <span class="deletion">Basic categorization (v1.0)</span> → <span class="insertion">Comprehensive taxonomy with procedures (v2.2)</span></li>
+</ul>
+</div>
+
+<div class="structural-change">
+<h3>Qualitative Improvements:</h3>
+<ul>
+<li><span class="insertion">Migration from basic documentation to comprehensive governance framework</span></li>
+<li><span class="insertion">Integration of international best practices and standards</span></li>
+<li><span class="insertion">Enhanced security posture with cloud-native solutions</span></li>
+<li><span class="insertion">Formal compliance with South African POPIA requirements</span></li>
+<li><span class="insertion">Establishment of sustainable long-term data management processes</span></li>
+<li><span class="insertion">Creation of reproducible and auditable workflows</span></li>
+</ul>
+</div>
+</div>
+
+<div style="text-align: center; margin-top: 50px; padding: 30px; background-color: #f8f9fa; border-radius: 10px;">
+<h3>🎯 HREC AMENDMENT JUSTIFICATION</h3>
+<p><strong>This comprehensive evolution from Version 1.0 to Version 2.2 represents:</strong></p>
+<ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+<li>Enhanced data protection and security measures</li>
+<li>Improved participant privacy safeguards</li>
+<li>Strengthened governance and oversight mechanisms</li>
+<li>Better integration with regulatory requirements</li>
+<li>More robust data quality and integrity procedures</li>
+<li>Clearer stakeholder responsibilities and accountability</li>
+</ul>
+<p><em><strong>All changes maintain and enhance the ethical standards and participant protections established in the original approval.</strong></em></p>
+</div>
+
+<footer style="margin-top: 50px; padding: 20px; border-top: 2px solid #bdc3c7; color: #7f8c8d;">
+<p><strong>Document Generation Details:</strong></p>
+<p>Generated on: {current_date}</p>
+<p>Generated by: HE²AT Data Management Team</p>
+<p>Purpose: HREC Amendment Submission</p>
+<p>Version Comparison: 1.0 (2022) → 2.2 (2025)</p>
+</footer>
+
+</body>
+</html>
