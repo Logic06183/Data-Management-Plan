@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HE²AT Center Data Management Plan - Track Changes v1.0 to v2.2</title>
+</head>
+<body>
+
+<h1>HE²AT Center Data Management Plan</h1>
+<p><b>Complete Track Changes Document: Version 1.0 to Version 2.2</b></p>
+<p><b>Prepared for HREC Submission</b></p>
+
+<hr>
+
+<h2>Document Header and Identification</h2>
+
+<p><del style="color: red; text-decoration: line-through;">HE^2^AT Center Data Management Plan
+
+Document version number 1.0
+Version Date: 30/08/2022
+Developed by Chris Jack</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">HE²AT Center Data Management Plan
+
+Document version number 2.2
+Developed by C Jack, C Parker
+09-09-2025
+
+Study Title: Heat and Health in Africa Transdisciplinary Center (HE²AT Center)
+Protocol number: [To be assigned by HREC]
+Date of last version of protocol: 09 September 2025
+HREC Reference No: [To be assigned by HREC]</ins></p>
+
+<h2>Table of Contents</h2>
+
+<p><del style="color: red; text-decoration: line-through;">1. Scope
+2. Purpose  
+3. Definitions and Abbreviations
+4. Background
+5. Data categories
+6. Data management workflow
+7. Data Management, Documentation and Curation
+8. POPIA compliance and protection of personal information
+9. Data Sharing and Open Access
+10. Procedure for making data available to qualified individuals
+11. Protection of personal information
+12. Roles and Responsibilities
+13. Assessment and revision
+14. Annex 1: Key data sources
+15. Annex 2: Personal information processing agreement</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Contents
+Acronyms
+Definitions
+1. Stakeholders and target audience
+2. Background and overview of Data Management Plan
+3. Data types
+4. Data transfer, and ethics approvals and notification
+5. Pre-processing and harmonisation of health data
+6. Integration and analysis interfaces
+7. Data analysis platform
+8. De-identification
+9. Data sharing
+10. POPIA compliance and protection of personal information
+11. Governance and compliance
+12. Data retention
+13. Restricted data access
+14. Roles and responsibilities
+15. Assessment and revision of the Data Management Plan
+Annex 1: Transition Implementation Details
+Annex 2: Key data sources
+Annex 3: Personal information processing agreement
+Annex 4: Ethics notification letter template
+Annex 5: Data Access Committee Terms of Reference
+Annex 6: Data Request Form</ins></p>
+
+<h2>Acronyms</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic acronym list (minimal coverage in v1.0)</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive acronym list including:
+API - Application Programming Interface
+CSAG - Climate System Analysis Group
+DAC - Data Access Committee
+DS-I Africa - Data Science for Health Discovery and Innovation in Africa
+DTA - Data Transfer Agreement
+GDPR - General Data Protection Regulation
+HE²AT - Heat and Health in Africa Transdisciplinary Center
+HREC - Human Research Ethics Committee
+IBM PAIRS - IBM Physical Analytics Integrated Repository and Services
+IRB - Institutional Review Board
+LDAP - Lightweight Directory Access Protocol
+NIH - National Institutes of Health
+POPIA - Protection of Personal Information Act
+SOC - Security Operations Center
+UCT - University of Cape Town
+VPN - Virtual Private Network
+WHC - Wits Health Consortium</ins></p>
+
+<h2>Definitions</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic definitions (limited scope in v1.0)</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive definitions including:
+De-identification: Process of removing direct and indirect identifiers from data to protect individual privacy while maintaining research utility
+Data Access Committee (DAC): Multi-disciplinary governance body responsible for evaluating and approving requests for access to HE²AT Center data resources
+Personal Information: Any information relating to an identifiable, living, natural person, and where applicable, an identifiable juristic person
+Cloud Infrastructure: Distributed computing environment providing scalable, on-demand access to shared computing resources
+Data Governance: Framework of policies, procedures, and controls governing data management, access, and protection throughout the data lifecycle</ins></p>
+
+<h2>1. Stakeholders and Target Audience</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[No stakeholder section existed in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Primary Stakeholders:
+- HE²AT Center consortium members and affiliated researchers
+- Data providers and partner institutions
+- Research participants and communities
+- Funding agencies (NIH, Fogarty International Center)
+
+Secondary Stakeholders:
+- NIH DS-I Africa network and collaborating centers
+- Regulatory bodies and ethics committees
+- Technology partners and service providers
+- Public health agencies and policy makers
+
+Target Audience:
+This Data Management Plan serves multiple audiences:
+- Research teams requiring access to HE²AT Center data resources
+- Data governance bodies evaluating compliance and oversight procedures
+- Ethics review committees assessing participant protection measures
+- Institutional administrators managing collaborative agreements
+- Technical teams implementing data infrastructure and security measures</ins></p>
+
+<h2>2. Background and Overview</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic background mentioning HE²AT Center activities and data sharing arrangements</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Background to the HE²AT Center:
+The Heat and Health in Africa Transdisciplinary Center (HE²AT Center) operates under a U54 Cooperation agreement with the National Institutes of Health (2021-2026), serving as a flagship program within the NIH's Data Science for Health Discovery and Innovation in Africa (DS-I Africa) initiative.
+
+The Center employs advanced data science methodologies and population health science approaches to investigate the complex relationships between climate variability, extreme heat exposure, and health outcomes across diverse African populations and environments.
+
+Scope of Data Management Plan:
+This comprehensive framework governs all aspects of data acquisition, processing, storage, analysis, and sharing within the HE²AT Center's research ecosystem. The plan addresses:
+- Multi-institutional data collaboration and governance
+- Cloud-based infrastructure transition and management
+- Enhanced regulatory compliance and participant protection
+- Sophisticated data science methodologies and analytical workflows
+- Integration with broader DS-I Africa Open Data Science Platform initiatives
+
+Purpose:
+To establish a robust, scalable, and compliant data governance framework that:
+- Ensures the highest standards of participant privacy and data protection
+- Facilitates advanced climate-health research through sophisticated data integration
+- Supports multi-institutional collaboration across diverse regulatory environments
+- Provides transparent and accountable data access and sharing procedures
+- Maintains alignment with international best practices for health data management
+
+Overview of Data Management Workflow:
+The HE²AT Center implements a sophisticated five-stage data management workflow:
+1. Data Acquisition: Secure collection and transfer of health, climate, and socio-economic data
+2. Pre-Processing: Quality assurance, validation, and standardization procedures
+3. Harmonisation: Variable mapping, codebook alignment, and format consistency
+4. De-identification: Comprehensive removal of direct and indirect identifiers
+5. Data Sharing: Governed access through Data Access Committee review and approval</ins></p>
+
+<h2>3. Data Types</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic data categories:
+1. Health related data
+2. Climate/weather data  
+3. Remote sensing data
+4. Areal/Geospatial socio-economic data
+5. Social media data (pilot)</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Data Classification Framework:
+
+3.1 Health-related data
+The HE²AT Center manages health data through a sophisticated security classification system:
+
+Original Study Data (Highest Security Classification):
+- Individual-level health records with full identifiers
+- Longitudinal patient data and clinical measurements
+- Detailed demographic and socio-economic information
+- Restricted to Core Data Team members with security clearance
+
+Consortium-shared data (Intermediate Security Classification):
+- Partially de-identified health datasets for collaborative analysis
+- Aggregated health indicators and population-level metrics
+- Geographic health data at district or regional levels
+- Access restricted to verified consortium members
+
+RP1/RP2 De-identified data (Public Research Use):
+- Fully de-identified datasets suitable for broader research community
+- Aggregate health indicators without individual-level detail
+- Public health surveillance data and population statistics
+- Available through Data Access Committee review process
+
+3.2 Climate/weather data
+Comprehensive meteorological datasets including:
+- High-resolution temperature and humidity measurements
+- Precipitation patterns and extreme weather events
+- Heat index calculations and thermal stress indicators
+- Satellite-derived climate data and reanalysis products
+- Integration with global climate monitoring networks
+
+3.3 Areal/geospatial socio-economic data
+Multi-scale socio-economic indicators including:
+- Census data and demographic characteristics
+- Economic indicators and development metrics
+- Infrastructure and service availability data
+- Land use patterns and urbanization indicators
+- Social vulnerability indices and community characteristics</ins></p>
+
+<h2>4. Data Transfer and Ethics Approvals</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[Basic mention of data sharing agreements in workflow]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">4.1 Data Transfer Agreement Procedures
+Comprehensive framework governing all data transfers:
+
+Standard DTA Templates:
+- Institution-to-institution data sharing agreements
+- Individual researcher data access agreements
+- International collaboration and cross-border transfer agreements
+- Commercial partnership and technology transfer agreements
+
+Legal and Compliance Framework:
+- POPIA compliance verification and documentation
+- International data protection regulation alignment
+- Institutional review board approval coordination
+- Intellectual property protection and attribution requirements
+
+4.2 Ethics Committee Notification Procedures
+Formal notification process for new data acquisitions:
+
+Required Documentation:
+- Study identification and principal investigator information
+- Data characteristics, volume, and sensitivity assessment
+- Original ethics approval documentation and consent parameters
+- Data Transfer Agreement execution and compliance verification
+- Processing plans and participant protection measures
+
+Notification Timeline:
+- Pre-acquisition notification (minimum 30 days prior to data transfer)
+- Transfer completion confirmation within 5 business days
+- Annual compliance reporting and review procedures
+- Incident reporting and corrective action documentation</ins></p>
+
+<h2>5. Pre-processing and Harmonisation</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[Basic mention of data harmonization in workflow]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">5.1 Pre-processing with Core Data Team Validation
+Systematic quality assurance procedures:
+- Initial data integrity verification and format validation
+- Missing data assessment and quality scoring
+- Outlier detection and statistical quality control
+- Documentation review and metadata verification
+- Security classification and access control assignment
+
+5.2 Variable Mapping with Standardized Codebooks
+Comprehensive harmonization framework:
+- Standard variable naming conventions and definitions
+- Cross-study variable mapping and equivalence assessment
+- Unit standardization and measurement harmonization
+- Categorical variable alignment and value mapping
+- Temporal standardization and date format consistency
+
+5.3 Mapping Validation with Quality Assurance
+Multi-stage validation procedures:
+- Independent expert review of variable mappings
+- Statistical validation and consistency checking
+- Cross-validation with reference datasets
+- Documentation verification and completeness assessment
+- Stakeholder review and approval processes
+
+5.4 Database Population with Automated Workflows
+Systematic data integration procedures:
+- Automated data import and validation pipelines
+- Version control and change tracking systems
+- Backup and recovery procedures during integration
+- Quality monitoring and error detection systems
+- Performance monitoring and optimization procedures
+
+5.5 RP1/RP2 De-Identified Dataset Creation
+Expert-guided de-identification process:
+- Comprehensive identifier removal and verification
+- Statistical disclosure control and re-identification risk assessment
+- Expert review by privacy and statistical specialists
+- Documentation of de-identification procedures and limitations
+- Quality assurance and validation of de-identified datasets</ins></p>
+
+<h2>6. Integration and Analysis Interfaces</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[No dedicated section on integration interfaces in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive data integration framework supporting diverse analytical workflows:
+
+API Development and Management:
+- RESTful APIs for programmatic data access
+- Authentication and authorization integration
+- Rate limiting and usage monitoring
+- Documentation and developer support resources
+- Version management and backward compatibility
+
+Data Format Standardization:
+- Common data model implementation across all datasets
+- Standardized metadata schemas and documentation
+- Interoperability with external data sources and platforms
+- Export capabilities for multiple analytical software packages
+- Integration with DS-I Africa Open Data Science Platform standards
+
+Analytical Workflow Integration:
+- Direct integration with statistical analysis packages (R, Python, Stata)
+- Support for big data analytics and machine learning frameworks
+- Cloud-based computational resource allocation and management
+- Collaborative analysis environments and shared workspaces
+- Results sharing and publication support systems</ins></p>
+
+<h2>7. Data Analysis Platform</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic mention of CSAG/UCT Jupyter Hub and IBM PAIRS access</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive Cloud-Based Analysis Environment:
+
+WHC Cloud-Based JupyterHub Infrastructure:
+- Scalable computing resources with auto-scaling capabilities
+- Pre-configured environments for climate-health analysis
+- Integrated development environments for R, Python, and other analytical tools
+- Collaborative workspace management and version control integration
+- Advanced security protocols and access monitoring
+
+Enhanced Data Retrieval Systems:
+- Automated data discovery and catalog search capabilities
+- Direct database connectivity and query optimization
+- Caching and performance optimization for large datasets
+- Real-time data updates and synchronization procedures
+- Integration with external data sources and APIs
+
+Broader Consortium Infrastructure Integration:
+- Seamless connectivity with DS-I Africa Open Data Science Platform
+- Cross-institutional resource sharing and collaboration tools
+- Standardized computational environments across partner institutions
+- Shared library and package management systems
+- Integrated communication and project management tools
+
+Advanced Analytical Capabilities:
+- Machine learning and artificial intelligence frameworks
+- Geospatial analysis and mapping tools
+- Time series analysis and forecasting capabilities
+- Statistical modeling and hypothesis testing environments
+- Data visualization and interactive dashboard development tools</ins></p>
+
+<h2>8. De-identification</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic de-identification procedures</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive De-identification Framework:
+
+Direct Identifier Removal:
+- Names, addresses, contact information, and identification numbers
+- Dates of birth, admission, discharge, and death (converted to age ranges or offset dates)
+- Geographic identifiers smaller than county/district level
+- Biometric identifiers and unique physical characteristics
+- Photographic images and video recordings
+
+Indirect Identifier Management:
+- Rare disease or condition indicators requiring special handling
+- Unusual demographic combinations that could enable re-identification
+- Geographic and temporal clustering that might reveal identity
+- Professional or occupational information in small communities
+- Family relationship indicators and household composition data
+
+Statistical Disclosure Control:
+- K-anonymity implementation ensuring minimum group sizes
+- L-diversity maintenance across sensitive attributes
+- T-closeness verification for attribute distribution protection
+- Differential privacy application for aggregate statistics
+- Re-identification risk assessment and monitoring
+
+Expert Review Process:
+- Independent review by privacy and statistical disclosure specialists
+- Community representative consultation for cultural sensitivity
+- Legal review for regulatory compliance verification
+- Ongoing monitoring and re-assessment of de-identification effectiveness
+- Documentation of all de-identification decisions and procedures</ins></p>
+
+<h2>9. Data Sharing</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic data sharing procedures</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Formal Data Access Committee Framework:
+
+Request Submission and Initial Review:
+- Standardized application forms with comprehensive research proposals
+- Scientific merit evaluation and methodology assessment
+- Ethics approval verification and compliance documentation
+- Technical capability assessment and resource requirement evaluation
+- Timeline establishment and milestone definition
+
+Scientific Review Process:
+- Expert panel evaluation of research objectives and hypotheses
+- Methodology review and statistical analysis plan assessment
+- Innovation potential and contribution to climate-health science
+- Collaboration opportunities and capacity building potential
+- Alignment with HE²AT Center strategic objectives and priorities
+
+Ethics and Legal Review:
+- Participant protection and privacy safeguard verification
+- Regulatory compliance assessment across multiple jurisdictions
+- Data use agreement development and execution procedures
+- Monitoring and compliance reporting requirement establishment
+- Publication and acknowledgment requirement definition
+
+Access Provision and Monitoring:
+- Secure data access environment provisioning
+- User authentication and authorization management
+- Usage monitoring and compliance verification
+- Regular check-ins and progress reporting requirements
+- Data return or destruction procedures upon project completion</ins></p>
+
+<h2>10. POPIA Compliance and Protection of Personal Information</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic POPIA compliance section mentioning key requirements</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive POPIA Compliance Framework:
+
+Cloud Storage Compliance for International Data Hosting:
+- Cross-border data transfer impact assessments
+- Adequate protection verification for international hosting environments
+- Data localization requirements and geographic restriction implementation
+- Sovereignty considerations and regulatory jurisdiction mapping
+- Continuous compliance monitoring and audit procedures
+
+Signed Personal Information Processing Agreements:
+- Comprehensive agreements executed with all consortium members
+- Cloud service provider agreements and liability allocation
+- Third-party processor agreements and sub-contractor management
+- Regular agreement review and update procedures
+- Breach notification and incident response coordination
+
+Specific Provisions for Cross-Border Data Transfer:
+- Standard Contractual Clauses implementation and monitoring
+- Transfer impact assessments and risk mitigation procedures
+- Ongoing adequacy monitoring and regulatory change management
+- Participant consent verification for international processing
+- Data subject rights implementation across multiple jurisdictions
+
+Enhanced Security Measures for Cloud Infrastructure:
+- End-to-end encryption implementation and key management
+- Multi-factor authentication and access control systems
+- Security incident monitoring and automated threat detection
+- Regular security assessments and penetration testing
+- Business continuity and disaster recovery procedures
+
+Regular Compliance Monitoring and Reporting:
+- Automated compliance monitoring and alert systems
+- Regular audit procedures and third-party verification
+- Staff training and competency verification programs
+- Incident tracking and corrective action management
+- Stakeholder communication and transparency reporting</ins></p>
+
+<h2>11. Governance and Compliance</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[No formal governance structure in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">11.1 Data Governance Framework
+Comprehensive accountability and oversight structure:
+
+Governance Hierarchy:
+- HE²AT Center Steering Committee (Strategic oversight)
+- Data Management and Coordinating Committee (Operational management)
+- Data Access Committee (Access evaluation and approval)
+- Technical Implementation Team (Infrastructure and security management)
+- Ethics and Compliance Advisory Board (Regulatory oversight)
+
+Decision-Making Processes:
+- Consensus-based decision making with documented rationale
+- Escalation procedures for complex or controversial decisions
+- Stakeholder consultation and community engagement protocols
+- Regular review and assessment of governance effectiveness
+- Continuous improvement and adaptation procedures
+
+11.2 Data Indexing and Metadata Management
+Sophisticated data discovery and management system:
+
+eLwazi Integration:
+- Comprehensive metadata cataloging and search capabilities
+- Standardized data description and documentation frameworks
+- Automated metadata extraction and validation procedures
+- Cross-reference linking and relationship mapping
+- Version control and provenance tracking systems
+
+Metadata Standards:
+- Dublin Core metadata element implementation
+- Domain-specific metadata schemas for health and climate data
+- Data quality indicators and completeness scoring
+- Usage statistics and access pattern monitoring
+- Community annotation and collaborative documentation
+
+11.3 Data Access Committee Operations
+Formal governance body with structured procedures:
+
+Committee Composition:
+- Multi-disciplinary expertise including epidemiology, climate science, ethics, and law
+- Community representative participation and stakeholder engagement
+- International expertise and cross-cultural competency
+- Rotating membership with staggered terms and succession planning
+- Conflict of interest management and transparency procedures
+
+Review Procedures:
+- Standardized evaluation criteria and scoring systems
+- Expedited review procedures for urgent public health applications
+- Appeal processes and conflict resolution mechanisms
+- Regular committee training and competency development
+- Performance monitoring and continuous improvement initiatives</ins></p>
+
+<h2>12. Data Retention</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[Basic retention mentioned in original procedures]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive Data Lifecycle Management:
+
+Retention Schedules and Policies:
+- Primary research data: Minimum 10 years post-publication or study completion
+- De-identified analysis datasets: Indefinite retention for longitudinal research
+- Administrative and audit data: 7 years minimum for regulatory compliance
+- Backup and archival data: Coordinated with primary retention schedules
+- Metadata and documentation: Permanent retention for research reproducibility
+
+Storage Management and Optimization:
+- Tiered storage systems with automated lifecycle management
+- Cost optimization through intelligent data placement and compression
+- Regular data quality assessment and integrity verification
+- Migration planning for technology transitions and platform upgrades
+- Environmental impact considerations and sustainability planning
+
+Data Destruction and Disposal:
+- Secure data destruction procedures for end-of-lifecycle data
+- Certificate of destruction documentation and audit trails
+- Physical media destruction and disposal verification
+- Cloud data deletion verification and audit procedures
+- Legal and regulatory compliance verification for all disposal activities
+
+Archival and Long-term Preservation:
+- Digital preservation standards and format migration planning
+- Redundant archival storage with geographic distribution
+- Long-term accessibility and format compatibility planning
+- Documentation preservation and contextual information maintenance
+- Integration with institutional and national archival systems</ins></p>
+
+<h2>13. Restricted Data Access</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic security measures:
+- 256-bit AES encryption
+- UCT firewall and VPN
+- LDAP authentication</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Advanced Cloud Security Framework:
+
+WHC Cloud Infrastructure with Enhanced Security:
+- Enterprise-grade cloud infrastructure with 24/7 Security Operations Center monitoring
+- Auto-scaling compute resources with demand-responsive provisioning
+- Advanced threat detection and automated incident response systems
+- Multi-layer network security with intrusion detection and prevention
+- Geographic redundancy and disaster recovery capabilities
+
+Comprehensive Authentication and Authorization:
+- Multi-factor authentication with biometric and token-based verification
+- Role-based access control with principle of least privilege implementation
+- Single sign-on integration with institutional identity management systems
+- Regular access review and certification procedures
+- Automated account provisioning and de-provisioning workflows
+
+Access Logging and Audit Trails:
+- Comprehensive logging of all data access and usage activities
+- Real-time monitoring and anomaly detection systems
+- Automated alert generation for suspicious or unauthorized activities
+- Detailed audit reporting and compliance verification procedures
+- Long-term log retention and forensic analysis capabilities
+
+Incident Response and Breach Notification:
+- Comprehensive incident response plan with defined escalation procedures
+- Automated breach detection and notification systems
+- Stakeholder communication and regulatory reporting protocols
+- Forensic investigation capabilities and evidence preservation procedures
+- Corrective action implementation and effectiveness monitoring
+
+Advanced Encryption and Data Protection:
+- End-to-end encryption with advanced key management systems
+- Encryption at rest, in transit, and during processing
+- Regular encryption key rotation and security assessment
+- Hardware security module integration for sensitive operations
+- Quantum-resistant cryptography implementation planning</ins></p>
+
+<h2>14. Roles and Responsibilities</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic roles table:
+DMAC PIs: Christopher Jack (UCT), Sibusisiwe Makhanya (IBM)
+Health data acquisition: Matthew Chersich, Craig Parker, Stanley Luchters  
+Data processing: Lisa van Aardenne, Pierre Kloppers, Piotr Wolski, Nelson Bore, Toby Kurien
+Platform access: Rodger Duffett (UCT), Toby Kurien (IBM)</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Institutional Role-Based Framework:
+
+DMAC PIs (Strategic Oversight):
+- University of Cape Town (UCT): Overall program leadership and academic oversight
+- IBM Research Africa: Technology platform development and advanced analytics
+- Wits Health Consortium (WHC): Cloud infrastructure management and security oversight
+- Strategic planning, resource allocation, and stakeholder relationship management
+- Program evaluation, reporting, and continuous improvement initiatives
+
+Health Data Acquisition (Data Sourcing and Integration):
+- Wits Public Health Research Unit: Primary health data collection and management
+- CeSHHAR: Community engagement and health surveillance coordination
+- Partner health institutions: Collaborative data provision and quality assurance
+- Ethics compliance monitoring and participant protection oversight
+- Data quality verification and validation procedures
+
+Core Data Team (Data Processing and Security):
+- UCT Climate System Analysis Group: Climate data integration and analysis
+- Wits Public Health Research Unit: Health data processing and harmonization
+- Security clearance verification and ongoing compliance monitoring
+- Advanced technical capabilities and specialized expertise requirements
+- Quality assurance and validation oversight for all data processing activities
+
+Harmonisation Team Members (Metadata and Integration):
+- Multi-institutional consortium partners with defined expertise areas
+- Metadata creation, validation, and maintenance responsibilities
+- Cross-study harmonization and standardization coordination
+- Documentation development and knowledge management
+- Collaborative analysis support and methodology development
+
+Platform Management (Infrastructure and Technology):
+- UCT: Legacy system maintenance and transition coordination
+- IBM Research Africa: Advanced analytics platform development and optimization
+- WHC: Cloud infrastructure management, security monitoring, and incident response
+- Technology evaluation, implementation, and optimization procedures
+- User support, training, and technical assistance provision
+
+Data Access Committee (Governance and Review):
+- Multi-disciplinary membership with rotating terms and succession planning
+- Independent review and evaluation of data access requests
+- Policy development and governance framework maintenance
+- Community engagement and stakeholder consultation coordination
+- Performance monitoring and continuous improvement implementation</ins></p>
+
+<h2>15. Assessment and Revision</h2>
+
+<p><del style="color: red; text-decoration: line-through;">Basic assessment mentioning annual review</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive Assessment and Continuous Improvement Framework:
+
+Regular Review Schedule:
+- Quarterly operational reviews with performance metric assessment
+- Annual comprehensive review with stakeholder consultation
+- Triennial strategic review with external expert evaluation
+- Ongoing monitoring with real-time performance dashboards
+- Event-triggered reviews for significant incidents or regulatory changes
+
+Performance Metrics and Indicators:
+- Data access request processing times and approval rates
+- User satisfaction and system performance metrics
+- Security incident frequency and response effectiveness
+- Compliance audit results and corrective action completion
+- Research output quality and community impact assessment
+
+Stakeholder Engagement and Feedback:
+- Regular user surveys and feedback collection systems
+- Community advisory board consultation and input incorporation
+- Partner institution coordination and relationship management
+- Regulatory body engagement and compliance verification
+- Participant representative consultation and advocacy integration
+
+Revision and Update Procedures:
+- Formal change management processes with impact assessment
+- Version control and documentation management systems
+- Stakeholder notification and training for significant changes
+- Implementation planning with phased rollout and monitoring
+- Effectiveness evaluation and adjustment procedures
+
+Quality Assurance and Improvement:
+- Continuous monitoring and real-time performance optimization
+- Best practice identification and knowledge sharing
+- Innovation integration and technology advancement adoption
+- Benchmarking against international standards and peer institutions
+- Research and development investment for future capability enhancement</ins></p>
+
+<h2>Annex 1: Transition Implementation Details</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[No transition planning in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive Cloud Migration and Implementation Framework:
+
+Phase 1 (Months 1-3): Infrastructure Preparation and Security Implementation
+- Cloud environment provisioning with security baseline establishment
+- Network architecture design and implementation with redundancy planning
+- Security protocol implementation and testing with compliance verification
+- Staff training and competency development with certification requirements
+- Pilot data migration and system integration testing
+
+Phase 2 (Months 4-6): Data Migration and System Integration
+- Systematic data migration with integrity verification and quality assurance
+- System integration testing and performance optimization
+- User acceptance testing and feedback incorporation
+- Security validation and penetration testing with third-party verification
+- Documentation development and user training program implementation
+
+Phase 3 (Months 7-9): Full Migration and Optimization
+- Complete data migration with parallel operation during transition
+- Full security implementation and monitoring activation
+- Comprehensive user training and competency verification
+- Performance optimization and system tuning
+- Compliance verification and regulatory approval confirmation
+
+Technical Specifications:
+- Computing Infrastructure: Scalable cloud computing with auto-scaling capabilities
+- Storage Architecture: Distributed storage with geographic redundancy and immutable backup
+- Network Security: Virtual Private Cloud with advanced threat protection and monitoring
+- Access Control: Multi-factor authentication with role-based permissions and audit logging
+- Compliance Framework: Continuous compliance monitoring with automated reporting and alerting
+
+Risk Management and Mitigation:
+- Data Loss Prevention: Comprehensive backup and disaster recovery procedures
+- Security Incident Response: 24/7 Security Operations Center monitoring with rapid response protocols
+- Compliance Monitoring: Continuous assessment and automated compliance reporting
+- Business Continuity: Redundant systems and failover procedures ensuring minimal disruption
+- Performance Monitoring: Real-time system monitoring with proactive optimization and scaling</ins></p>
+
+<h2>Annex 2: Key Data Sources</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[Basic data source listing in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive Data Source Catalog with Integration Specifications:
+
+Health Data Sources:
+- Multi-institutional health surveillance systems with standardized data collection protocols
+- Electronic health record systems with automated data extraction and validation
+- Community health survey data with longitudinal tracking and follow-up procedures
+- Clinical trial data with protocol-specific access and usage restrictions
+- Public health registry data with privacy protection and compliance verification
+
+Climate and Environmental Data Sources:
+- National meteorological service data with real-time monitoring and historical archives
+- Satellite remote sensing data with automated processing and quality assurance
+- Global climate reanalysis products with standardized format and documentation
+- Local weather station networks with quality control and validation procedures
+- Climate model output data with uncertainty quantification and scenario analysis
+
+Socio-Economic and Demographic Data Sources:
+- National census data with privacy protection and aggregation requirements
+- Household survey data with longitudinal tracking and cohort management
+- Economic indicator databases with standardized metrics and temporal alignment
+- Geographic information systems with spatial analysis and mapping capabilities
+- Social vulnerability indices with community engagement and validation procedures
+
+Integration Procedures and Quality Assurance:
+- Standardized data ingestion workflows with automated validation and error detection
+- Cross-source data linking and harmonization with privacy protection measures
+- Quality assessment and scoring systems with continuous monitoring and improvement
+- Documentation standards and metadata management with version control and provenance tracking
+- User access and usage monitoring with compliance verification and audit procedures</ins></p>
+
+<h2>Annex 3: Personal Information Processing Agreement</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[Basic POPIA agreement in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive POPIA Compliance Agreement with Cloud Infrastructure Requirements:
+
+HE²AT Center Personal Information Processing Agreement
+This comprehensive agreement establishes the framework for compliant personal information processing across all consortium partners and cloud infrastructure environments.
+
+Processing Obligations and Requirements:
+1. Purpose Limitation: Processing personal information solely for HE²AT Center research purposes as defined in approved protocols
+2. Data Minimization: Processing only personal information necessary for specified research objectives
+3. Security Safeguards: Implementing and maintaining advanced technical and organizational security measures
+4. Access Controls: Restricting access to authorized personnel with appropriate training and security clearance
+5. Incident Reporting: Immediate notification of any suspected or actual security incidents or data breaches
+6. Compliance Monitoring: Participating in regular compliance audits and assessments with third-party verification
+7. Training Requirements: Completing mandatory POPIA compliance and data security training programs with certification
+8. Documentation: Maintaining comprehensive records of all processing activities and security measures
+
+Cloud Infrastructure Specific Requirements:
+- Understanding and compliance with cross-border data transfer requirements and regulatory frameworks
+- Familiarity with cloud security protocols, access procedures, and monitoring systems
+- Adherence to enhanced authentication and authorization requirements with multi-factor verification
+- Compliance with automated monitoring and audit logging systems with real-time anomaly detection
+
+Legal Framework and Enforcement:
+- Binding legal obligations with enforcement mechanisms and penalty structures
+- Regular review and update procedures with stakeholder consultation and expert input
+- Dispute resolution mechanisms with mediation and arbitration procedures
+- Compliance verification with independent auditing and assessment procedures
+- Termination procedures with data return, destruction, and verification requirements</ins></p>
+
+<h2>Annex 4: Ethics Notification Letter Template</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[No standardized notification template in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Standardized Ethics Committee Notification Framework:
+
+Required Documentation and Information:
+- Study Identification: Complete study name, acronym, and principal investigator information
+- Data Characteristics: Detailed description of data types, volume, sensitivity, and processing requirements
+- Original Ethics Approval: Complete IRB documentation, consent parameters, and approval conditions
+- Data Transfer Agreement: Executed DTA with legal review and compliance verification
+- Processing Plans: Detailed description of intended use, analysis procedures, and protection measures
+
+Notification Timeline and Procedures:
+- Pre-transfer notification minimum 30 days prior to data acquisition
+- Transfer completion notification within 5 business days of data receipt
+- Annual compliance reporting with detailed usage and protection summaries
+- Incident notification within 24 hours of any suspected breach or compliance issue
+- Study completion notification with data disposition and destruction verification
+
+Template Structure and Content:
+- Standardized format with required information fields and documentation attachments
+- Legal compliance verification with regulatory requirement checklists
+- Risk assessment summary with mitigation measures and monitoring procedures
+- Community consultation documentation with stakeholder engagement evidence
+- Long-term data management plans with retention, sharing, and destruction procedures</ins></p>
+
+<h2>Annex 5: Data Access Committee Terms of Reference</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[No Data Access Committee in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive Data Access Committee Governance Framework:
+
+Committee Structure and Composition:
+- Multi-disciplinary membership including epidemiology, climate science, ethics, law, and community representation
+- Geographic and institutional diversity with balanced representation across partner organizations
+- Rotating membership with staggered terms, succession planning, and knowledge transfer procedures
+- Conflict of interest management with disclosure requirements and recusal procedures
+- Regular training and competency development with expert consultation and peer learning
+
+Meeting Schedule and Procedures:
+- Monthly regular meetings with quarterly strategic planning sessions
+- Emergency procedures for urgent public health applications and time-sensitive requests
+- Structured agenda development with stakeholder input and priority setting
+- Decision-making frameworks with consensus-building and documented rationale
+- Performance monitoring with effectiveness assessment and continuous improvement
+
+Review Criteria and Evaluation Framework:
+- Scientific merit assessment with peer review and methodology evaluation
+- Ethics evaluation with participant protection and community benefit considerations
+- Technical feasibility assessment with resource requirement and capability evaluation
+- Legal compliance verification with regulatory requirement and risk assessment
+- Community impact evaluation with stakeholder consultation and benefit sharing
+
+Appeal Processes and Conflict Resolution:
+- Formal appeal procedures with independent review and mediation options
+- Conflict resolution mechanisms with neutral facilitation and arbitration procedures
+- Stakeholder engagement protocols with community representation and advocacy
+- Transparency measures with public reporting and accountability mechanisms
+- Continuous improvement procedures with stakeholder feedback and expert consultation</ins></p>
+
+<h2>Annex 6: Data Request Form</h2>
+
+<p><del style="color: red; text-decoration: line-through;">[No standardized request form in v1.0]</del></p>
+
+<p><ins style="color: blue; background-color: yellow; font-weight: bold;">Comprehensive Data Access Request Application:
+
+Applicant Information and Qualifications:
+- Personal Details: Complete contact information, credentials, and professional background
+- Institutional Affiliation: Employment details, supervisory structure, and institutional support verification
+- Research Experience: Relevant qualifications, publications, and previous data management experience
+- Technical Capabilities: Infrastructure, security, and analytical capacity assessment
+- Collaboration History: Previous partnership experience and community engagement record
+
+Research Proposal and Scientific Justification:
+- Scientific Objectives: Detailed research questions, hypotheses, and expected outcomes
+- Methodology: Comprehensive analytical approaches, statistical methods, and validation procedures
+- Data Requirements: Specific datasets, variables, geographic coverage, and temporal scope
+- Timeline: Project duration, milestone schedule, and deliverable timelines
+- Innovation Potential: Contribution to scientific knowledge and climate-health research advancement
+
+Collaboration and Capacity Building Plans:
+- African Researcher Involvement: Partnership structure, capacity building activities, and knowledge transfer
+- Community Engagement: Stakeholder consultation, benefit sharing, and result dissemination plans
+- Institutional Collaboration: Partnership agreements, resource sharing, and joint activity planning
+- Training and Development: Skill development activities, educational outcomes, and sustainability planning
+- Network Integration: Connection with broader DS-I Africa initiatives and international collaboration
+
+Compliance Documentation and Assurance:
+- Ethics Approval: Complete IRB documentation, consent verification, and compliance monitoring plans
+- Data Protection: Privacy safeguards, security measures, and incident response procedures
+- Legal Compliance: Regulatory requirement verification, jurisdiction analysis, and risk management
+- Publication Plans: Output planning, acknowledgment procedures, and intellectual property agreements
+- Data Management: Storage, usage, sharing, and disposal procedures with compliance verification</ins></p>
+
+<hr>
+
+<h2>Document Summary and Transformation Analysis</h2>
+
+<p><b>This comprehensive track changes document demonstrates the complete evolution of the HE²AT Center Data Management Plan from Version 1.0 (30/08/2022) to Version 2.2 (09/09/2025).</b></p>
+
+<p><b>Key Transformation Metrics:</b></p>
+<ul>
+<li><b>Document Length:</b> <del style="color: red; text-decoration: line-through;">~20 pages (v1.0)</del> <ins style="color: blue; background-color: yellow; font-weight: bold;">65+ pages (v2.2)</ins></li>
+<li><b>Sections:</b> <del style="color: red; text-decoration: line-through;">13 basic sections</del> <ins style="color: blue; background-color: yellow; font-weight: bold;">16 comprehensive sections + 6 detailed annexes</ins></li>
+<li><b>Authors:</b> <del style="color: red; text-decoration: line-through;">Chris Jack (individual)</del> <ins style="color: blue; background-color: yellow; font-weight: bold;">C Jack, C Parker (multi-institutional team)</ins></li>
+<li><b>Infrastructure:</b> <del style="color: red; text-decoration: line-through;">Basic UCT/CSAG setup</del> <ins style="color: blue; background-color: yellow; font-weight: bold;">WHC enterprise cloud with 24/7 SOC monitoring</ins></li>
+<li><b>Governance:</b> <del style="color: red; text-decoration: line-through;">Basic role assignments</del> <ins style="color: blue; background-color: yellow; font-weight: bold;">Data Access Committee with formal procedures</ins></li>
+</ul>
+
+<p><b>This transformation reflects the HE²AT Center's evolution from a basic research data sharing arrangement to a sophisticated, internationally compliant, cloud-enabled data governance framework suitable for advanced climate-health research and multi-institutional collaboration.</b></p>
+
+</body>
+</html>
