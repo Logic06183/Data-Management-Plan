@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEAT001 Protocol Changes Implementation - Version 1.0 to 2.2</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            color: black;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid black;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        
+        .header p {
+            margin: 5px 0;
+            font-size: 12pt;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            border: 1px solid black;
+            padding: 15px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            font-size: 14pt;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+        
+        .change-item {
+            margin-bottom: 20px;
+        }
+        
+        .old-text, .new-text {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid black;
+        }
+        
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .justification {
+            font-style: italic;
+            margin-top: 10px;
+            padding: 5px;
+            border-left: 3px solid black;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>HEAT001 Protocol Changes Implementation - Version 1.0 to 2.2</h1>
+    <p>DMP Infrastructure Transition and Enhanced Security Measures</p>
+    <p>For Protocol Amendment #2 - Cloud Migration Implementation</p>
+</div>
+
+<div class="section">
+    <div class="section-title">Instructions for Implementation</div>
+    <p>This document provides exact text replacements for updating HEAT001 protocol from v1.0 to v2.2. Enable track changes in Word before making these replacements. Find each "Old text" section in your protocol and replace entirely with the corresponding "New text".</p>
+</div>
+
+<div class="section">
+    <div class="section-title">Section 5.1 - Data Management, Documentation and Curation</div>
+    
+    <div class="change-item">
+        <div class="label">FIND AND REPLACE:</div>
+        
+        <div class="old-text">
+            <strong>Old text:</strong> Data will be managed and curated using UCT CSAG servers with on-premise storage and Jupyter Hub platform for analysis.
+        </div>
+        
+        <div class="new-text">
+            <strong>New text:</strong> Data will be managed and curated using UCT CSAG servers with on-premise storage and Jupyter Hub platform for analysis, enhanced by WHC-managed cloud infrastructure capabilities during the transition period. The cloud infrastructure provides additional computational resources, automated backup systems, and enhanced security measures while maintaining compatibility with existing UCT systems.
+        </div>
+        
+        <div class="justification">
+            <strong>Justification:</strong> To provide enhanced computational capabilities and improved data security through hybrid infrastructure approach during transition period while maintaining existing UCT capabilities.
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Section 5.2 - Data Security and Confidentiality</div>
+    
+    <div class="change-item">
+        <div class="label">FIND AND REPLACE:</div>
+        
+        <div class="old-text">
+            <strong>Old text:</strong> Data security will be maintained through standard university security protocols and access controls.
+        </div>
+        
+        <div class="new-text">
+            <strong>New text:</strong> Data security will be maintained through standard university security protocols and access controls, supplemented by cloud infrastructure implementing AES-256 encryption for data at rest and in transit, 24/7 Security Operations Center (SOC) monitoring, automated threat detection systems, and enhanced disaster recovery capabilities. According to the rules of the Protection of Personal Information Act 4 of 2013 (as amended), data collected through cloud systems will be stored on secure servers which may be hosted outside of South Africa with appropriate safeguards.
+        </div>
+        
+        <div class="justification">
+            <strong>Justification:</strong> To implement enhanced security measures exceeding minimum standards and ensure POPIA compliance for international data storage with appropriate safeguards.
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Section 5.3 - Network Firewall and Virtual Private Network</div>
+    
+    <div class="change-item">
+        <div class="label">FIND AND REPLACE:</div>
+        
+        <div class="old-text">
+            <strong>Old text:</strong> Network security will be maintained through UCT institutional firewalls and VPN access controls.
+        </div>
+        
+        <div class="new-text">
+            <strong>New text:</strong> Network security will be maintained through UCT institutional firewalls and VPN access controls, complemented by cloud-based network security measures including distributed firewall protection, encrypted VPN tunnels, and network segmentation protocols that isolate research data from other network traffic.
+        </div>
+        
+        <div class="justification">
+            <strong>Justification:</strong> To provide enhanced network security through multiple layers of protection and improved access management while maintaining existing UCT security infrastructure.
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Section 5.4 - Local Authentication and Authorization</div>
+    
+    <div class="change-item">
+        <div class="label">FIND AND REPLACE:</div>
+        
+        <div class="old-text">
+            <strong>Old text:</strong> User authentication will be managed through UCT Active Directory and role-based access controls.
+        </div>
+        
+        <div class="new-text">
+            <strong>New text:</strong> User authentication will be managed through UCT Active Directory and role-based access controls, integrated with cloud-based authentication systems providing multi-factor authentication, single sign-on capabilities, and granular permission management. Only the research team will have access to this data through verified authentication protocols.
+        </div>
+        
+        <div class="justification">
+            <strong>Justification:</strong> To strengthen user authentication and provide enhanced access control mechanisms while maintaining integration with existing UCT directory services.
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Section 5.5 - Procedure for Making Data Available</div>
+    
+    <div class="change-item">
+        <div class="label">FIND AND REPLACE:</div>
+        
+        <div class="old-text">
+            <strong>Old text:</strong> Data will be made available to authorized researchers through UCT-managed access procedures following Data Access Committee approval.
+        </div>
+        
+        <div class="new-text">
+            <strong>New text:</strong> Data will be made available to authorized researchers through UCT-managed access procedures following Data Access Committee approval for all projects (internal consortium and external researchers). Enhanced cloud-based data sharing platforms provide secure data transfer, automated access logging, and real-time monitoring of data usage. Data will be anonymized using participant IDs and shared through encrypted channels with comprehensive audit trails.
+        </div>
+        
+        <div class="justification">
+            <strong>Justification:</strong> To implement universal DAC review requirements and improve data sharing efficiency while maintaining security and providing enhanced monitoring capabilities with strengthened anonymization and audit procedures.
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Section 5.6 - Data Analysis Platforms</div>
+    
+    <div class="change-item">
+        <div class="label">FIND AND REPLACE:</div>
+        
+        <div class="old-text">
+            <strong>Old text:</strong> Data analysis will be enabled through the CSAG/UCT Jupyter Hub platform.
+        </div>
+        
+        <div class="new-text">
+            <strong>New text:</strong> Data analysis will be enabled through the CSAG/UCT Jupyter Hub platform, enhanced with cloud-based computational resources providing auto-scaling capabilities, containerized analysis environments, GPU acceleration for complex analyses, and integrated backup and version control systems.
+        </div>
+        
+        <div class="justification">
+            <strong>Justification:</strong> To provide enhanced computational capabilities for complex analyses while maintaining the existing Jupyter Hub platform that researchers are familiar with.
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Section 5.7 - Data Storage and Archiving</div>
+    
+    <div class="change-item">
+        <div class="label">FIND AND REPLACE:</div>
+        
+        <div class="old-text">
+            <strong>Old text:</strong> Data will be stored on UCT CSAG servers with standard backup procedures.
+        </div>
+        
+        <div class="new-text">
+            <strong>New text:</strong> Data will be stored on UCT CSAG servers with standard backup procedures, supplemented by cloud storage infrastructure providing automated daily backups with 30-day retention, geo-redundant storage, and disaster recovery capabilities with AES-256 encryption at rest.
+        </div>
+        
+        <div class="justification">
+            <strong>Justification:</strong> To provide enhanced data protection through redundant storage systems and improved disaster recovery capabilities while maintaining existing UCT storage systems.
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Section 5.8 - Data Governance and Compliance</div>
+    
+    <div class="change-item">
+        <div class="label">FIND AND REPLACE:</div>
+        
+        <div class="old-text">
+            <strong>Old text:</strong> Data governance will follow UCT policies and applicable South African regulations.
+        </div>
+        
+        <div class="new-text">
+            <strong>New text:</strong> Data governance will follow UCT policies and applicable South African regulations, enhanced by automated compliance reporting systems, real-time monitoring of data access patterns, and comprehensive audit trails. All cloud infrastructure maintains compliance with POPIA requirements and international data protection standards.
+        </div>
+        
+        <div class="justification">
+            <strong>Justification:</strong> To strengthen compliance monitoring and provide enhanced governance capabilities during the transition period.
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Implementation Summary</div>
+    
+    <table>
+        <tr>
+            <th>Change Category</th>
+            <th>Key Enhancement</th>
+            <th>Compliance Impact</th>
+        </tr>
+        <tr>
+            <td>Infrastructure</td>
+            <td>UCT + WHC cloud hybrid during transition</td>
+            <td>Enhanced security with maintained compliance</td>
+        </tr>
+        <tr>
+            <td>Security</td>
+            <td>AES-256 encryption + 24/7 SOC monitoring</td>
+            <td>Exceeds POPIA minimum requirements</td>
+        </tr>
+        <tr>
+            <td>Data Access</td>
+            <td>Universal DAC review for all projects</td>
+            <td>Ensures equitable and tracked data sharing</td>
+        </tr>
+        <tr>
+            <td>Analysis Platform</td>
+            <td>Enhanced computational resources + GPU</td>
+            <td>Maintains existing platform familiarity</td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>Automated daily backups + geo-redundancy</td>
+            <td>Enhanced disaster recovery capabilities</td>
+        </tr>
+        <tr>
+            <td>Network Security</td>
+            <td>Multi-layer firewall protection</td>
+            <td>Strengthened network isolation protocols</td>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>Multi-factor authentication + SSO</td>
+            <td>Enhanced access control verification</td>
+        </tr>
+        <tr>
+            <td>Compliance</td>
+            <td>Automated compliance reporting</td>
+            <td>Real-time monitoring and audit trails</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <div class="section-title">Protocol Amendment Implementation</div>
+    
+    <p>Upon receiving research ethics committee approval for this protocol amendment, the site will implement the protocol modifications in a phased approach over twelve months during Year 5 of the project, ensuring continuity of existing operations while gradually introducing enhanced capabilities. This represents a temporary transition period with the goal of complete cloud migration by the end of Year 5.</p>
+    
+    <p>A copy of the protocol amendment approval along with any correspondence will be retained in the site regulatory files for this study. All enhanced security measures and compliance protocols will be operational from the beginning of the transition period.</p>
+    
+    <p><strong>Key Implementation Points:</strong></p>
+    <ul>
+        <li>Maintains all existing UCT infrastructure and capabilities</li>
+        <li>Adds enhanced cloud-based security and computational resources</li>
+        <li>Implements universal DAC review for equitable data access</li>
+        <li>Strengthens POPIA compliance for international data storage</li>
+        <li>Provides enhanced disaster recovery and backup capabilities</li>
+        <li>Enables advanced computational analyses with GPU acceleration</li>
+    </ul>
+</div>
+
+</body>
+</html>

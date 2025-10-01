@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HEAT002 Protocol Changes Implementation - Version 1.0 to 2.2</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            color: black;
+            background-color: white;
+            margin: 40px;
+            max-width: 800px;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Times New Roman', serif;
+            color: black;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 16pt;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        
+        h4 {
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        
+        p, ul, ol {
+            font-size: 12pt;
+            margin: 10px 0;
+        }
+        
+        .section-header {
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .find-replace {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        
+        .old-text {
+            margin: 8px 0;
+        }
+        
+        .new-text {
+            margin: 8px 0;
+        }
+        
+        .justification {
+            margin: 8px 0;
+            font-style: italic;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>HEAT002 Protocol Changes Implementation - Version 1.0 to 2.2</h1>
+
+<p><strong>Study Focus:</strong> Early Warning System Development for Heat-Health Risk Assessment</p>
+<p><strong>Implementation Guide:</strong> Enhanced Cloud Infrastructure and Machine Learning Capabilities</p>
+<p><strong>Target Document:</strong> HEAT002 Protocol Version 1.0</p>
+
+<h2>Overview of Changes</h2>
+
+<p>This implementation guide provides exact text replacements to upgrade HEAT002 protocol from version 1.0 to version 2.2, incorporating enhanced cloud infrastructure, machine learning capabilities, and Early Warning System development requirements. All changes maintain POPIA compliance while enhancing computational capabilities essential for sophisticated heat-health predictive modeling.</p>
+
+<h2>Key Enhancement Areas for HEAT002</h2>
+
+<ul>
+<li>Enhanced computational infrastructure for machine learning model development</li>
+<li>Real-time data processing capabilities for Early Warning System operations</li>
+<li>Advanced analytics platforms with GPU acceleration</li>
+<li>Multi-source data integration for comprehensive urban heat monitoring</li>
+<li>Enhanced security measures for sensitive health data processing</li>
+<li>Scalable cloud infrastructure supporting variable computational demands</li>
+<li>Automated backup and disaster recovery systems</li>
+</ul>
+
+<h2>Protocol Text Replacements</h2>
+
+<div class="section-header"><strong>Section 5.1 - Data Infrastructure</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> Data storage will utilise UCT on-premise infrastructure with standard backup procedures.</div>
+<div class="new-text"><strong>New text:</strong> Data storage will utilise both UCT on-premise infrastructure and WHC-managed cloud infrastructure with AES-256 encryption, providing enhanced scalability and disaster recovery capabilities whilst maintaining POPIA compliance. The cloud infrastructure provides enhanced computational resources essential for machine learning model development and real-time Early Warning System operations.</div>
+<div class="justification"><strong>Justification:</strong> Enhanced infrastructure is essential for HEAT002's Early Warning System development, providing the computational scalability required for real-time data processing, machine learning model training, and predictive analytics while maintaining robust data protection.</div>
+</div>
+
+<div class="section-header"><strong>Section 5.2 - Health Data Management</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> The Original Study Data is currently held under strong access control on servers hosted at UCT.</div>
+<div class="new-text"><strong>New text:</strong> The Original Study Data is currently held under strong access control on servers hosted at UCT, but from the start of Year 5, the data will shift to be stored on WHC-managed cloud infrastructure with AES-256 encryption, providing enhanced scalability and disaster recovery capabilities whilst maintaining POPIA compliance. This enhanced infrastructure supports real-time health data processing essential for Early Warning System development.</div>
+<div class="justification"><strong>Justification:</strong> Cloud infrastructure provides the computational power and real-time processing capabilities essential for developing predictive models that link heat exposure to health outcomes in the Early Warning System.</div>
+</div>
+
+<div class="section-header"><strong>Section 5.3 - Climate Data Integration</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> The data will be stored on IBM Research Africa and CSAG/UCT systems.</div>
+<div class="new-text"><strong>New text:</strong> The data will be stored on IBM Research Africa and CSAG/UCT systems. Relevant datasets, or subsets of datasets, will also be stored on the WHC-managed cloud services to allow for the association/linkage with the health datasets and to support real-time climate data processing for the Early Warning System.</div>
+<div class="justification"><strong>Justification:</strong> Real-time climate data integration is critical for Early Warning System functionality, requiring enhanced cloud-based processing capabilities for immediate heat hazard assessment and alert generation.</div>
+</div>
+
+<div class="section-header"><strong>Section 5.4 - Socio-economic Data Enhancement</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> This data will be stored on the CSAG/UCT systems.</div>
+<div class="new-text"><strong>New text:</strong> This data will be stored on the CSAG/UCT systems, while a copy will be stored on the WHC-managed cloud services to enable enhanced geospatial analysis and integration with urban heat monitoring systems for Early Warning System development.</div>
+<div class="justification"><strong>Justification:</strong> Enhanced geospatial analysis capabilities are essential for identifying vulnerable populations and areas for targeted Early Warning System alerts, requiring cloud-based computational resources for complex urban heat modeling.</div>
+</div>
+
+<div class="section-header"><strong>Section 6.1 - Data Processing Platform</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> Data indexing and processing (harmonization, homogenization, normalization) will be facilitated through the CSAG/UCT platform.</div>
+<div class="new-text"><strong>New text:</strong> Data indexing and processing (harmonization, homogenization, normalization) will be facilitated through both the CSAG/UCT platform and WHC-managed cloud infrastructure with enhanced processing capabilities and automated backup systems. The cloud infrastructure provides GPU acceleration for complex machine learning algorithms and real-time data processing essential for Early Warning System development.</div>
+<div class="justification"><strong>Justification:</strong> Enhanced processing capabilities with GPU acceleration are essential for developing sophisticated machine learning models that can process multiple data streams (health, climate, socio-economic) in real-time for Early Warning System functionality.</div>
+</div>
+
+<div class="section-header"><strong>Section 6.2 - Database Management</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> Data management will be facilitated through the CSAG/UCT platform with standard database services.</div>
+<div class="new-text"><strong>New text:</strong> Data management will be facilitated through both the CSAG/UCT platform and WHC-managed cloud infrastructure with enhanced security and automated backup systems. Database population utilises cloud-native database services, providing automated backup and recovery systems with enhanced data integrity and disaster recovery capabilities essential for continuous Early Warning System operations.</div>
+<div class="justification"><strong>Justification:</strong> Continuous Early Warning System operations require robust data management with automated backup and recovery systems to ensure uninterrupted service delivery for heat-health alerts and predictive modeling.</div>
+</div>
+
+<div class="section-header"><strong>Section 7.1 - Security Measures</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> De-identification procedures will be conducted on UCT infrastructure.</div>
+<div class="new-text"><strong>New text:</strong> De-identification procedures will be conducted on both UCT infrastructure and WHC-managed cloud infrastructure with enhanced security monitoring and automated compliance reporting to ensure robust protection of participant privacy during machine learning model development.</div>
+<div class="justification"><strong>Justification:</strong> Enhanced de-identification procedures with automated monitoring are essential when processing health data through machine learning algorithms for Early Warning System development, ensuring participant privacy protection throughout the analytical pipeline.</div>
+</div>
+
+<div class="section-header"><strong>Section 7.2 - Network Security</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> The CSAG compute infrastructure benefits from UCT's comprehensive security policies.</div>
+<div class="new-text"><strong>New text:</strong> The CSAG compute infrastructure benefits from UCT's comprehensive security policies, and from the start of Year 5, from WHC-managed cloud security architecture with 24/7 Security Operations Centre (SOC) monitoring and advanced threat detection systems for improved security posture and compliance. Network security utilises UCT's Cisco firewall and cloud-native firewall services providing enhanced protection for Early Warning System operations.</div>
+<div class="justification"><strong>Justification:</strong> Enhanced security monitoring is critical for protecting Early Warning System infrastructure from cyber threats, ensuring continuous operation of public health alert systems and protection of sensitive health data used in predictive modeling.</div>
+</div>
+
+<div class="section-header"><strong>Section 7.3 - Authentication and Access Control</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> Beyond UCT's broader security measures, the CSAG/UCT platform employs additional authentication and authorisation protocols.</div>
+<div class="new-text"><strong>New text:</strong> Beyond UCT's broader security measures, the CSAG/UCT platform employs additional authentication and authorisation protocols alongside cloud-specific access controls and automated compliance reporting for streamlined governance oversight during the transition period. Multi-factor authentication and role-based access controls ensure secure access to Early Warning System development environments.</div>
+<div class="justification"><strong>Justification:</strong> Enhanced authentication protocols are essential for securing access to machine learning development environments and Early Warning System infrastructure, protecting sensitive health data and ensuring only authorized personnel can modify predictive models.</div>
+</div>
+
+<div class="section-header"><strong>Section 8.1 - Data Access Procedures</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> All projects, regardless of whether they involve internal HE2AT Center Consortium members or external researchers, must go through the DAC for data access approval. This ensures equitable data sharing and maintains comprehensive tracking of all projects using the data.</div>
+<div class="new-text"><strong>New text:</strong> All projects, regardless of whether they involve internal HE2AT Center Consortium members or external researchers, must go through the DAC for data access approval. This ensures equitable data sharing and maintains comprehensive tracking of all projects using the data. Additional legal and compliance review will be conducted by UCT legal counsel or WHC legal representative to ensure all changes maintain legal compliance and align with institutional obligations before final approval. Enhanced cloud-based data sharing platforms provide secure collaborative environments for Early Warning System development with real-time access monitoring and automated audit trails.</div>
+<div class="justification"><strong>Justification:</strong> Enhanced data access procedures support collaborative Early Warning System development while maintaining strict governance oversight, enabling secure sharing of development environments and predictive models with authorized research partners and public health agencies.</div>
+</div>
+
+<div class="section-header"><strong>Section 9.1 - NEW SECTION - Machine Learning and Analytics Platform</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> [Add as new section] Data analysis will be conducted using standard statistical software and computational resources.</div>
+<div class="new-text"><strong>New text:</strong> Data analysis will be conducted using enhanced computational resources specifically designed for Early Warning System development, including:
+
+• Machine Learning Platforms: Cloud-based environments with GPU acceleration for training complex predictive models linking heat exposure to health outcomes
+• Real-time Processing: Infrastructure supporting continuous data ingestion and processing for immediate alert generation
+• Scalable Computing: Auto-scaling computational resources to handle varying data loads during extreme heat events
+• Model Development Environment: Secure sandboxes for developing and testing machine learning algorithms before deployment in operational Early Warning System
+• Natural Language Processing: Capabilities for processing diverse data sources including social media and news feeds for enhanced situational awareness
+• Geospatial Analysis: Advanced mapping and spatial analysis tools for urban heat modeling and vulnerability assessment
+• Integration APIs: Secure interfaces for connecting with urban monitoring systems and public health alert mechanisms</div>
+<div class="justification"><strong>Justification:</strong> HEAT002's focus on Early Warning System development requires sophisticated computational capabilities including machine learning platforms, real-time processing, and advanced analytics to successfully develop predictive models and operational alert systems for heat-health risks in urban environments.</div>
+</div>
+
+<div class="section-header"><strong>Section 9.2 - NEW SECTION - Enhanced Cloud Security Measures</strong></div>
+
+<div class="find-replace">
+<div class="old-text"><strong>Old text:</strong> [Add as new section]</div>
+<div class="new-text"><strong>New text:</strong> Enhanced Cloud Security Measures for Early Warning System
+
+From the start of Year 5, enhanced cloud security measures specifically supporting Early Warning System development and operations include:
+
+• AES-256 Encryption: All data at rest and in transit, protecting health data used in machine learning models
+• 24/7 SOC Monitoring: Continuous security monitoring and threat detection for Early Warning System infrastructure
+• Role-based Access Controls: Multi-factor authentication and granular permissions for development team members
+• Automated Backup Systems: Enhanced disaster recovery capabilities ensuring Early Warning System continuity
+• Compliance Monitoring: Automated reporting for regulatory compliance across all data processing activities
+• GPU Security: Specialized security measures for machine learning computation resources
+• Real-time Monitoring: Enhanced monitoring for Early Warning System data processing and alert generation</div>
+<div class="justification"><strong>Justification:</strong> These comprehensive security measures provide specialized protection for Early Warning System infrastructure, ensuring continuous operation while maintaining the highest standards of data protection for health information used in predictive modeling and alert generation.</div>
+</div>
+
+<h2>Implementation Instructions</h2>
+
+<ol>
+<li>Open your HEAT002 protocol document in Microsoft Word</li>
+<li>Enable Track Changes (Review tab → Track Changes)</li>
+<li>Use Find & Replace (Ctrl+H) to locate each "Old text" entry exactly as shown</li>
+<li>Replace with the corresponding "New text" exactly as provided</li>
+<li>Add new sections 9.1 and 9.2 where appropriate in your document structure</li>
+<li>Review all changes to ensure they align with your protocol's existing numbering and format</li>
+<li>Use the justification text for your amendment documentation</li>
+</ol>
+
+<h2>Amendment Summary</h2>
+
+<p>These changes transform HEAT002 from a basic data management approach to a sophisticated cloud-enabled Early Warning System development platform. The enhancements provide:</p>
+
+<ul>
+<li>Computational infrastructure capable of real-time heat-health risk assessment</li>
+<li>Machine learning platforms for developing predictive models</li>
+<li>Enhanced security measures protecting sensitive health data during complex analytics</li>
+<li>Scalable resources supporting variable computational demands during extreme heat events</li>
+<li>Collaborative platforms enabling multi-institutional Early Warning System development</li>
+<li>Automated systems ensuring continuous operation and data protection</li>
+</ul>
+
+<p><strong>POPIA Compliance Note:</strong> All cloud storage will be subject to appropriate safeguards for international data transfer as required by the Protection of Personal Information Act 4 of 2013. Data collected through cloud systems will be stored on secure servers which may be hosted outside of South Africa, with appropriate contractual and technical safeguards in place.</p>
+
+<p><strong>Implementation Timeline:</strong> Upon receiving research ethics committee approval for this protocol amendment, the site will implement the protocol modifications in a phased approach over six months, beginning with cloud infrastructure setup and progressing through machine learning platform deployment, Early Warning System development environment configuration, and operational system testing.</p>
+
+</body>
+</html>
