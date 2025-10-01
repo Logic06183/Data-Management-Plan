@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEAT001 Protocol Track Changes Implementation Guide</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fafafa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24pt;
+            font-weight: bold;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 14pt;
+            opacity: 0.9;
+        }
+        
+        .instructions {
+            background-color: #e8f4fd;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .instructions h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 16pt;
+        }
+        
+        .section-container {
+            background-color: white;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 25px;
+            font-weight: bold;
+            font-size: 14pt;
+        }
+        
+        .section-content {
+            padding: 25px;
+        }
+        
+        .change-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .change-header {
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        
+        .text-block {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        .old-text {
+            background-color: #ffeaa7;
+            border-left: 4px solid #fdcb6e;
+        }
+        
+        .new-text {
+            background-color: #dff0d8;
+            border-left: 4px solid #5cb85c;
+        }
+        
+        .replace-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: block;
+            font-size: 11pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .copy-text {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: transparent;
+            user-select: all;
+            cursor: text;
+        }
+        
+        .justification {
+            background-color: #f1f3f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .justification strong {
+            color: #8e44ad;
+        }
+        
+        .highlight-compliance {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .highlight-compliance strong {
+            color: #856404;
+        }
+        
+        .page-reference {
+            background-color: #495057;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 10pt;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>HEAT001 Protocol Track Changes Implementation Guide</h1>
+    <p>DMP v1.0 → v2.2 Cloud Migration Changes for Protocol Amendment #2</p>
+</div>
+
+<div class="instructions">
+    <h2>📋 How to Use This Guide</h2>
+    <ol>
+        <li><strong>Navigate to the Protocol Section:</strong> Use the section references (e.g., "Section 5.1, page 12") to find the exact location in your protocol document</li>
+        <li><strong>Select and Copy Old Text:</strong> Highlight the text in the yellow "REPLACE THIS" boxes - this is exactly what appears in your current protocol</li>
+        <li><strong>Turn on Track Changes:</strong> Enable track changes in Word before making edits</li>
+        <li><strong>Replace with New Text:</strong> Delete the old text and paste the new text from the green "WITH THIS" boxes</li>
+        <li><strong>Verify Changes:</strong> Word will show deletions in red strikethrough and additions in blue underline</li>
+        <li><strong>Review Justification:</strong> Use the purple justification boxes for amendment documentation</li>
+    </ol>
+    
+    <div class="highlight-compliance">
+        <strong>⚠️ Important:</strong> These changes implement enhanced cloud infrastructure alongside existing UCT systems. All changes maintain POPIA compliance and strengthen data security measures.
+    </div>
+</div>
+
+<!-- Section 5.1 -->
+<div class="section-container">
+    <div class="section-header">
+        Section 5.1: Data Management, Documentation and Curation
+    </div>
+    <div class="section-content">
+        <div class="page-reference">Location: Section 5.1, page 12</div>
+        
+        <div class="change-block">
+            <div class="change-header">Change #1: Infrastructure Enhancement</div>
+            
+            <div class="text-block old-text">
+                <span class="replace-label">🔍 REPLACE THIS:</span>
+                <div class="copy-text">Data will be managed and curated using UCT CSAG servers with on-premise storage and Jupyter Hub platform for analysis.</div>
+            </div>
+            
+            <div class="text-block new-text">
+                <span class="replace-label">✅ WITH THIS:</span>
+                <div class="copy-text">Data will be managed and curated using UCT CSAG servers with on-premise storage and Jupyter Hub platform for analysis, enhanced by WHC-managed cloud infrastructure capabilities. The cloud infrastructure provides additional computational resources, automated backup systems, and enhanced security measures while maintaining compatibility with existing UCT systems.</div>
+            </div>
+            
+            <div class="justification">
+                <strong>Justification:</strong> To provide enhanced computational capabilities and improved data security through hybrid infrastructure approach while maintaining existing UCT capabilities.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section 5.2 -->
+<div class="section-container">
+    <div class="section-header">
+        Section 5.2: Data Security and Confidentiality
+    </div>
+    <div class="section-content">
+        <div class="page-reference">Location: Section 5.2, page 13</div>
+        
+        <div class="change-block">
+            <div class="change-header">Change #2: Enhanced Security Measures</div>
+            
+            <div class="text-block old-text">
+                <span class="replace-label">🔍 REPLACE THIS:</span>
+                <div class="copy-text">Data security will be maintained through standard university security protocols and access controls.</div>
+            </div>
+            
+            <div class="text-block new-text">
+                <span class="replace-label">✅ WITH THIS:</span>
+                <div class="copy-text">Data security will be maintained through standard university security protocols and access controls, supplemented by cloud infrastructure implementing AES-256 encryption for data at rest and in transit, 24/7 Security Operations Center (SOC) monitoring, and automated threat detection systems. According to the rules of the Protection of Personal Information Act 4 of 2013 (as amended), data collected through cloud systems will be stored on secure servers which may be hosted outside of South Africa with appropriate safeguards.</div>
+            </div>
+            
+            <div class="justification">
+                <strong>Justification:</strong> To implement enhanced security measures exceeding minimum standards and ensure POPIA compliance for international data storage with appropriate safeguards.
+            </div>
+        </div>
+
+        <div class="highlight-compliance">
+            <strong>🛡️ POPIA Compliance Note:</strong> This change specifically addresses cross-border data transfer requirements while maintaining full regulatory compliance through enhanced security measures.
+        </div>
+    </div>
+</div>
+
+<!-- Section 5.3 -->
+<div class="section-container">
+    <div class="section-header">
+        Section 5.3: Network Firewall and Virtual Private Network
+    </div>
+    <div class="section-content">
+        <div class="page-reference">Location: Section 5.3, page 14</div>
+        
+        <div class="change-block">
+            <div class="change-header">Change #3: Enhanced Network Security</div>
+            
+            <div class="text-block old-text">
+                <span class="replace-label">🔍 REPLACE THIS:</span>
+                <div class="copy-text">Network security will be maintained through UCT institutional firewalls and VPN access controls.</div>
+            </div>
+            
+            <div class="text-block new-text">
+                <span class="replace-label">✅ WITH THIS:</span>
+                <div class="copy-text">Network security will be maintained through UCT institutional firewalls and VPN access controls, complemented by cloud-based network security measures including distributed firewall protection, encrypted VPN tunnels, and network segmentation protocols that isolate research data from other network traffic.</div>
+            </div>
+            
+            <div class="justification">
+                <strong>Justification:</strong> To provide enhanced network security through multiple layers of protection and improved access management while maintaining existing UCT security infrastructure.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section 5.4 -->
+<div class="section-container">
+    <div class="section-header">
+        Section 5.4: Local Authentication and Authorization
+    </div>
+    <div class="section-content">
+        <div class="page-reference">Location: Section 5.4, page 15</div>
+        
+        <div class="change-block">
+            <div class="change-header">Change #4: Enhanced Authentication Systems</div>
+            
+            <div class="text-block old-text">
+                <span class="replace-label">🔍 REPLACE THIS:</span>
+                <div class="copy-text">User authentication will be managed through UCT Active Directory and role-based access controls.</div>
+            </div>
+            
+            <div class="text-block new-text">
+                <span class="replace-label">✅ WITH THIS:</span>
+                <div class="copy-text">User authentication will be managed through UCT Active Directory and role-based access controls, integrated with cloud-based authentication systems providing multi-factor authentication, single sign-on capabilities, and granular permission management. Only the research team will have access to this data through verified authentication protocols.</div>
+            </div>
+            
+            <div class="justification">
+                <strong>Justification:</strong> To strengthen user authentication and provide enhanced access control mechanisms while maintaining integration with existing UCT directory services.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section 5.5 -->
+<div class="section-container">
+    <div class="section-header">
+        Section 5.5: Procedure for Making Data Available
+    </div>
+    <div class="section-content">
+        <div class="page-reference">Location: Section 5.5, page 16</div>
+        
+        <div class="change-block">
+            <div class="change-header">Change #5: Enhanced Data Sharing Capabilities</div>
+            
+            <div class="text-block old-text">
+                <span class="replace-label">🔍 REPLACE THIS:</span>
+                <div class="copy-text">Data will be made available to authorized researchers through UCT-managed access procedures following Data Access Committee approval.</div>
+            </div>
+            
+            <div class="text-block new-text">
+                <span class="replace-label">✅ WITH THIS:</span>
+                <div class="copy-text">Data will be made available to authorized researchers through UCT-managed access procedures following Data Access Committee approval, enhanced by cloud-based data sharing platforms that provide secure data transfer, automated access logging, and real-time monitoring of data usage. Data will be anonymized using participant IDs and shared through encrypted channels with comprehensive audit trails.</div>
+            </div>
+            
+            <div class="justification">
+                <strong>Justification:</strong> To improve data sharing efficiency while maintaining security and providing enhanced monitoring capabilities, with strengthened anonymization and audit procedures.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Analysis Platform Enhancement -->
+<div class="section-container">
+    <div class="section-header">
+        Section 5.6: Data Analysis Platforms (if applicable)
+    </div>
+    <div class="section-content">
+        <div class="page-reference">Location: Section 5.6, page 17 (or equivalent data analysis section)</div>
+        
+        <div class="change-block">
+            <div class="change-header">Change #6: Enhanced Analysis Capabilities</div>
+            
+            <div class="text-block old-text">
+                <span class="replace-label">🔍 REPLACE THIS:</span>
+                <div class="copy-text">Data analysis will be enabled through the CSAG/UCT Jupyter Hub platform.</div>
+            </div>
+            
+            <div class="text-block new-text">
+                <span class="replace-label">✅ WITH THIS:</span>
+                <div class="copy-text">Data analysis will be enabled through the CSAG/UCT Jupyter Hub platform, enhanced with cloud-based computational resources providing auto-scaling capabilities, containerized analysis environments, and integrated backup and version control systems.</div>
+            </div>
+            
+            <div class="justification">
+                <strong>Justification:</strong> To provide enhanced computational capabilities for complex analyses while maintaining the existing Jupyter Hub platform that researchers are familiar with.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Data Storage Enhancement -->
+<div class="section-container">
+    <div class="section-header">
+        Section 5.7: Data Storage and Archiving (if applicable)
+    </div>
+    <div class="section-content">
+        <div class="page-reference">Location: Section 5.7, page 18 (or equivalent storage section)</div>
+        
+        <div class="change-block">
+            <div class="change-header">Change #7: Enhanced Storage Infrastructure</div>
+            
+            <div class="text-block old-text">
+                <span class="replace-label">🔍 REPLACE THIS:</span>
+                <div class="copy-text">Data will be stored on UCT CSAG servers with standard backup procedures.</div>
+            </div>
+            
+            <div class="text-block new-text">
+                <span class="replace-label">✅ WITH THIS:</span>
+                <div class="copy-text">Data will be stored on UCT CSAG servers with standard backup procedures, supplemented by cloud storage infrastructure providing automated daily backups with 30-day retention, geo-redundant storage, and disaster recovery capabilities with AES-256 encryption at rest.</div>
+            </div>
+            
+            <div class="justification">
+                <strong>Justification:</strong> To provide enhanced data protection through redundant storage systems and improved disaster recovery capabilities while maintaining existing UCT storage systems.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Implementation Summary -->
+<div class="section-container">
+    <div class="section-header">
+        🚀 Implementation Summary for HREC Submission
+    </div>
+    <div class="section-content">
+        <div class="highlight-compliance">
+            <h3 style="margin-top: 0; color: #856404;">Key Amendment Points</h3>
+            <ul>
+                <li><strong>Hybrid Infrastructure:</strong> Enhances existing UCT systems with cloud capabilities</li>
+                <li><strong>Enhanced Security:</strong> Implements AES-256 encryption and 24/7 monitoring</li>
+                <li><strong>POPIA Compliance:</strong> Addresses international data storage with appropriate safeguards</li>
+                <li><strong>Improved Access Controls:</strong> Multi-factor authentication and granular permissions</li>
+                <li><strong>Better Data Sharing:</strong> Secure platforms with comprehensive audit trails</li>
+                <li><strong>Enhanced Analytics:</strong> Auto-scaling computational resources</li>
+                <li><strong>Robust Backup:</strong> Automated daily backups with disaster recovery</li>
+            </ul>
+        </div>
+        
+        <div class="justification">
+            <strong>Amendment Implementation:</strong> Upon receiving research ethics committee approval for this protocol amendment, the site will implement the protocol modifications in a phased approach over six months, ensuring continuity of existing operations while gradually introducing enhanced capabilities. A copy of the protocol amendment approval along with any correspondence will be retained in the site regulatory files for this study.
+        </div>
+    </div>
+</div>
+
+<div class="instructions">
+    <h2>✅ Final Checklist</h2>
+    <ul>
+        <li>All section numbers and page references verified in your protocol</li>
+        <li>Track changes enabled in Word before making edits</li>
+        <li>Old text completely replaced with new text (not appended)</li>
+        <li>All changes properly justified in amendment documentation</li>
+        <li>POPIA compliance statements included where appropriate</li>
+        <li>Amendment letter references these specific changes</li>
+    </ul>
+    
+    <p><strong>Note:</strong> If your protocol uses different section numbers or organization, adjust the references accordingly but maintain the same content changes. The essential modifications involve enhancing existing infrastructure with cloud capabilities while maintaining all current protections and adding stronger security measures.</p>
+</div>
+
+</body>
+</html>
