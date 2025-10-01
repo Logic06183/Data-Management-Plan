@@ -1,0 +1,63 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Microsoft Office temporary files
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+*.tmp
+
+# Backup and temporary files
+*.bak
+*.backup
+*~
+*.swp
+*.swo
+
+# Archive files that shouldn't be tracked
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Email files (sensitive content)
+*.msg
+*.eml
+
+# Large media files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.emf
+
+# OneDrive sync files
+OneDrive_*
+
+# Personal and sensitive information
+*CV.pdf
+*cv.pdf
+*CV_*.pdf
+*Personal*.pdf
+*personal*.pdf
+
+# Log files
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary conversion files
+extracted_media/
+figure*_base64.txt
