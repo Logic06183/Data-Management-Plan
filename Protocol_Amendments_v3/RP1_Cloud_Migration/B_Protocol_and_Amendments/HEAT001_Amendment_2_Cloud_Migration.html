@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEAT001 Protocol Amendment #2</title>
+    <style>
+        body {
+            font-family: Times, "Times New Roman", serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            margin: 1in;
+            color: #000;
+        }
+        h1 {
+            font-size: 14pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .header-block {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        .header-block p {
+            margin: 2px 0;
+            font-weight: normal;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            vertical-align: top;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        .previous-text {
+            font-weight: bold;
+        }
+        .new-text {
+            font-weight: bold;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>PROTOCOL AMENDMENT #2</h1>
+
+<div class="header-block">
+    <p><strong>Study Title:</strong> Individual Participant Data meta-analysis to quantify the impact of high ambient temperatures on maternal and child health in Africa</p>
+    <p><strong>Protocol number:</strong> HEAT001</p>
+    <p><strong>Date of last version of protocol:</strong> Version 1.0 (July 2023)</p>
+    <p><strong>HREC Reference No:</strong> 220605</p>
+    <p><strong>Amendment Date:</strong> 01 October 2025</p>
+</div>
+
+<h2>1. Background and Context</h2>
+
+<p>The HEAT001 study aims to conduct an individual participant data meta-analysis to quantify the impact of high ambient temperatures on maternal and child health outcomes across Africa. This research addresses critical knowledge gaps in understanding climate-health relationships affecting vulnerable populations.</p>
+
+<p>This protocol amendment proposes targeted enhancements to the data analysis infrastructure described in Section 5 of the protocol. The modifications involve implementing enhanced cloud infrastructure capabilities alongside existing UCT infrastructure to improve data security, computational efficiency, and research collaboration capabilities while maintaining all existing ethical standards and participant protections.</p>
+
+<p>The key areas requiring modification are:</p>
+<ol>
+    <li>Integration of cloud-based data management and curation capabilities</li>
+    <li>Enhancement of data security measures through advanced encryption and monitoring</li>
+    <li>Implementation of cloud-based network security and virtual private networks</li>
+    <li>Addition of cloud-based authentication and authorization systems</li>
+    <li>Improvement of data availability procedures through enhanced cloud infrastructure</li>
+</ol>
+
+<h2>2. Detailed Changes</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th style="width: 25%;">Location of Revision</th>
+            <th style="width: 50%;">Description of Revision</th>
+            <th style="width: 25%;">Reason for Changes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Section 5.1, page 12<br>Data management, documentation and curation</td>
+            <td>
+                <span class="previous-text">Previous text:</span> Data will be managed and curated using UCT CSAG servers with on-premise storage and Jupyter Hub platform for analysis.<br><br>
+                <span class="new-text">New text:</span> Data will be managed and curated using UCT CSAG servers with on-premise storage and Jupyter Hub platform for analysis, enhanced by WHC-managed cloud infrastructure capabilities. The cloud infrastructure provides additional computational resources, automated backup systems, and enhanced security measures while maintaining compatibility with existing UCT systems.
+            </td>
+            <td>To provide enhanced computational capabilities and improved data security through hybrid infrastructure approach</td>
+        </tr>
+        <tr>
+            <td>Section 5.2, page 13<br>Data Security and Confidentiality</td>
+            <td>
+                <span class="previous-text">Previous text:</span> Data security will be maintained through standard university security protocols and access controls.<br><br>
+                <span class="new-text">New text:</span> Data security will be maintained through standard university security protocols and access controls, supplemented by cloud infrastructure implementing AES-256 encryption for data at rest and in transit, 24/7 Security Operations Center (SOC) monitoring, and automated threat detection systems. According to the rules of the Protection of Personal Information Act 4 of 2013 (as amended), data collected through cloud systems will be stored on secure servers which may be hosted outside of South Africa with appropriate safeguards.
+            </td>
+            <td>To implement enhanced security measures exceeding minimum standards and ensure POPIA compliance for international data storage</td>
+        </tr>
+        <tr>
+            <td>Section 5.3, page 14<br>Network firewall and Virtual Private Network</td>
+            <td>
+                <span class="previous-text">Previous text:</span> Network security will be maintained through UCT institutional firewalls and VPN access controls.<br><br>
+                <span class="new-text">New text:</span> Network security will be maintained through UCT institutional firewalls and VPN access controls, complemented by cloud-based network security measures including distributed firewall protection, encrypted VPN tunnels, and network segmentation protocols that isolate research data from other network traffic.
+            </td>
+            <td>To provide enhanced network security through multiple layers of protection and improved access management</td>
+        </tr>
+        <tr>
+            <td>Section 5.4, page 15<br>Local authentication and authorization</td>
+            <td>
+                <span class="previous-text">Previous text:</span> User authentication will be managed through UCT Active Directory and role-based access controls.<br><br>
+                <span class="new-text">New text:</span> User authentication will be managed through UCT Active Directory and role-based access controls, integrated with cloud-based authentication systems providing multi-factor authentication, single sign-on capabilities, and granular permission management. Only the research team will have access to this data through verified authentication protocols.
+            </td>
+            <td>To strengthen user authentication and provide enhanced access control mechanisms</td>
+        </tr>
+        <tr>
+            <td>Section 5.5, page 16<br>Procedure for making data available</td>
+            <td>
+                <span class="previous-text">Previous text:</span> Data will be made available to authorized researchers through UCT-managed access procedures following Data Access Committee approval.<br><br>
+                <span class="new-text">New text:</span> Data will be made available to authorized researchers through UCT-managed access procedures following Data Access Committee approval, enhanced by cloud-based data sharing platforms that provide secure data transfer, automated access logging, and real-time monitoring of data usage. Data will be anonymized using participant IDs and shared through encrypted channels with comprehensive audit trails.
+            </td>
+            <td>To improve data sharing efficiency while maintaining security and providing enhanced monitoring capabilities</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>3. Justification and Impact</h2>
+
+<p>The proposed modifications to Section 5 of the HEAT001 protocol represent a strategic enhancement of the research infrastructure rather than a fundamental change to the study design or ethical framework. These changes are justified by the following considerations:</p>
+
+<p><strong>Enhanced Data Security:</strong> The implementation of AES-256 encryption, 24/7 SOC monitoring, and automated threat detection significantly exceeds minimum security requirements and provides additional protection for participant data. This enhancement aligns with international best practices for health data management.</p>
+
+<p><strong>Improved Computational Capabilities:</strong> The hybrid cloud infrastructure provides scalable computational resources that will enable more sophisticated analyses and faster processing of large datasets, ultimately improving the quality and timeliness of research outputs.</p>
+
+<p><strong>Regulatory Compliance:</strong> All cloud infrastructure implementations maintain full compliance with POPIA requirements, including appropriate safeguards for data that may be hosted outside South Africa. The enhanced security measures exceed regulatory minimum requirements.</p>
+
+<p><strong>Research Collaboration:</strong> The improved data sharing capabilities and enhanced access management systems will facilitate secure collaboration with international research partners while maintaining strict access controls and audit capabilities.</p>
+
+<p><strong>Risk Mitigation:</strong> The implementation of automated backup systems, redundant storage, and enhanced monitoring reduces risks of data loss and unauthorized access, providing additional protection for participant information.</p>
+
+<p><strong>Implementation Strategy:</strong> Upon receiving research ethics committee approval for this protocol amendment, the site will implement the protocol modifications in a phased approach over six months, ensuring continuity of existing operations while gradually introducing enhanced capabilities. A copy of the protocol amendment approval along with any correspondence will be retained in the site regulatory files for this study.</p>
+
+<p>These modifications do not affect participant recruitment, consent procedures, data collection methods, or analysis objectives. The enhanced infrastructure capabilities support the existing research aims while providing improved security and efficiency. All ethical obligations and participant protections remain unchanged and are reinforced through the enhanced security measures.</p>
+
+</body>
+</html>
