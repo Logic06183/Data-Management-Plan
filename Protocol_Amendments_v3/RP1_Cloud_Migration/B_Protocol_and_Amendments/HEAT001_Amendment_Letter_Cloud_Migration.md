@@ -1,4 +1,4 @@
-**Letter of Amendment #3 dated 01 October 2025**
+**Letter of Amendment #2 dated 01 October 2025**
 
 **Study Title:** Developing data science solutions to mitigate the health impacts of climate change in Africa: the HE²AT Center
 
