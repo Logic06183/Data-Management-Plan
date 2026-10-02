@@ -1,0 +1,20 @@
+{
+  "name": "handoff",
+  "version": "0.1.0",
+  "description": "/handoff writes a structured note (goal, repo, commit, data paths, env vars, open decisions, next step) that the next session in the same repo offers to load",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "handoffDir": {
+      "type": "string",
+      "title": "Folder for handoff notes",
+      "description": "Where a Markdown copy of each handoff is written (point it at a synced folder to carry notes between machines). ~ is your home folder",
+      "default": "~/.claude/handoffs"
+    },
+    "contextNudgePercent": {
+      "type": "number",
+      "title": "Context nudge (%)",
+      "description": "Suggest /handoff once the context window passes this share",
+      "default": 70
+    }
+  }
+}

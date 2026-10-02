@@ -1,0 +1,3 @@
+# Paths data-guard skips when scanning a push (its own test fixtures hold fake IDs and tokens on purpose)
+claude-mods/*/tests/
+claude-mods/data-guard/.claude-plugin/plugin.json

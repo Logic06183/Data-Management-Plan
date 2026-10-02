@@ -1,0 +1,355 @@
+<title>Heat Stack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+  /* Layout: board centre stage; a warming-stripes rail on the left grows as lines clear; readouts on the right. Single dark look by choice. */
+  :root {
+    --bg: #0f1216;
+    --panel: #171b21;
+    --line: #262c35;
+    --fg: #e9e6df;
+    --muted: #8b929c;
+    --hot: #ef6a4c;
+    --cold: #4f8fd1;
+    --display: "Big Shoulders Display", "Arial Narrow", sans-serif-condensed, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  html, body { height: 100%; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--mono); padding-inline: 16px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding-block: 20px 28px; display: grid; gap: 16px; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 6vw, 52px); letter-spacing: .02em; margin: 0; line-height: 1; text-transform: uppercase; }
+  h1 span { color: var(--hot); }
+  .tag { color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+  .game { display: grid; grid-template-columns: 26px minmax(0, auto) minmax(150px, 210px); gap: 16px; align-items: start; justify-content: center; }
+  .rail { width: 26px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column-reverse; background: var(--panel); }
+  .rail i { display: block; height: 6px; flex: none; }
+  .board-wrap { position: relative; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); line-height: 0; }
+  canvas#board { display: block; width: min(300px, 62vw); height: auto; aspect-ratio: 1 / 2; image-rendering: pixelated; border-radius: 6px; }
+  .overlay { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; background: color-mix(in srgb, var(--bg) 78%, transparent); border-radius: 6px; line-height: 1.5; padding: 16px; }
+  .overlay h2 { font-family: var(--display); font-size: 34px; margin: 0 0 4px; letter-spacing: .03em; text-transform: uppercase; }
+  .overlay p { margin: 0 0 14px; color: var(--muted); font-size: 13px; }
+  button { font: 600 13px var(--mono); color: var(--bg); background: var(--fg); border: 0; border-radius: 4px; padding: 10px 16px; cursor: pointer; }
+  button:focus-visible { outline: 2px solid var(--hot); outline-offset: 2px; }
+  .side { display: grid; gap: 12px; min-width: 0; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px; display: grid; gap: 4px; }
+  .label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .big { font-family: var(--display); font-size: 34px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+  .anom { color: var(--hot); }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; font-variant-numeric: tabular-nums; }
+  .stats div { display: grid; gap: 2px; }
+  .stats b { font-size: 18px; font-weight: 600; }
+  canvas.mini { width: 88px; height: 56px; }
+  .keys { font-size: 12px; color: var(--muted); line-height: 1.7; }
+  .keys kbd { font: 600 11px var(--mono); color: var(--fg); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 3px; padding: 0 5px; }
+  .pad { display: none; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .pad button { background: var(--panel); color: var(--fg); border: 1px solid var(--line); padding: 14px 0; font-size: 16px; touch-action: manipulation; }
+  @media (max-width: 620px) {
+    .game { grid-template-columns: 18px minmax(0, auto); }
+    .rail { width: 18px; }
+    .side { grid-column: 1 / -1; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+    .keys { display: none; }
+    .pad { display: grid; }
+  }
+  @media (hover: none) { .pad { display: grid; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Heat <span>Stack</span></h1>
+    <span class="tag">Every 10 lines adds +0.1 °C and the pieces fall faster. Cleared lines fill the stripes.</span>
+  </header>
+
+  <div class="game">
+    <div class="rail" id="rail" aria-label="Warming stripes, one per cleared line"></div>
+
+    <div class="board-wrap">
+      <canvas id="board" width="300" height="600" aria-label="Game board"></canvas>
+      <div class="overlay" id="overlay">
+        <div>
+          <h2 id="ovTitle">Heat Stack</h2>
+          <p id="ovText">Clear lines while your code runs.<br>Arrows move · ↑ rotates · Space drops</p>
+          <button id="startBtn" type="button">Start</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="side">
+      <div class="card">
+        <span class="label">Anomaly</span>
+        <span class="big anom" id="anom">+0.0 °C</span>
+      </div>
+      <div class="card stats">
+        <div><span class="label">Score</span><b id="score">0</b></div>
+        <div><span class="label">Lines</span><b id="lines">0</b></div>
+        <div><span class="label">Best</span><b id="best">0</b></div>
+        <div><span class="label">Speed</span><b id="speed">1.0×</b></div>
+      </div>
+      <div class="card" style="grid-template-columns: 1fr 1fr; align-items: end;">
+        <div style="display:grid;gap:4px"><span class="label">Next</span><canvas class="mini" id="next" width="88" height="56"></canvas></div>
+        <div style="display:grid;gap:4px"><span class="label">Hold</span><canvas class="mini" id="hold" width="88" height="56"></canvas></div>
+      </div>
+      <div class="keys">
+        <kbd>←</kbd> <kbd>→</kbd> move · <kbd>↓</kbd> soft drop<br>
+        <kbd>↑</kbd> / <kbd>X</kbd> rotate · <kbd>Z</kbd> rotate back<br>
+        <kbd>Space</kbd> hard drop · <kbd>C</kbd> hold<br>
+        <kbd>P</kbd> pause · <kbd>R</kbd> restart
+      </div>
+    </aside>
+  </div>
+
+  <div class="pad" aria-label="Touch controls">
+    <button type="button" data-act="left" aria-label="Move left">◀</button>
+    <button type="button" data-act="rot" aria-label="Rotate">⟳</button>
+    <button type="button" data-act="right" aria-label="Move right">▶</button>
+    <button type="button" data-act="soft" aria-label="Soft drop">▼</button>
+    <button type="button" data-act="hard" aria-label="Hard drop">⤓</button>
+  </div>
+</div>
+
+<script>
+(() => {
+  const COLS = 10, ROWS = 20, CELL = 30;
+  // Warming-stripes palette, coldest to hottest; each piece takes one band.
+  const STRIPES = ['#08519c', '#3182bd', '#6baed6', '#c6dbef', '#fcbba1', '#fb6a4a', '#cb181d'];
+  const SHAPES = {
+    I: [[0,1],[1,1],[2,1],[3,1]], O: [[1,0],[2,0],[1,1],[2,1]], T: [[1,0],[0,1],[1,1],[2,1]],
+    S: [[1,0],[2,0],[0,1],[1,1]], Z: [[0,0],[1,0],[1,1],[2,1]], J: [[0,0],[0,1],[1,1],[2,1]], L: [[2,0],[0,1],[1,1],[2,1]],
+  };
+  const KINDS = Object.keys(SHAPES);
+  const COLOR = { I: STRIPES[2], O: STRIPES[4], T: STRIPES[6], S: STRIPES[1], Z: STRIPES[5], J: STRIPES[0], L: STRIPES[3] };
+  const LINE_SCORE = [0, 100, 300, 500, 800];
+
+  const $ = id => document.getElementById(id);
+  const ctx = $('board').getContext('2d');
+  const nextCtx = $('next').getContext('2d');
+  const holdCtx = $('hold').getContext('2d');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let best = 0;
+  try { best = Number(localStorage.getItem('heat-stack-best')) || 0; } catch {}
+  $('best').textContent = best;
+
+  let s = null;
+
+  function fresh() {
+    return { grid: Array.from({ length: ROWS }, () => Array(COLS).fill(null)), bag: [], piece: null, next: null,
+      hold: null, canHold: true, score: 0, lines: 0, stripes: [], dropMs: 0, running: false, over: false, flash: [] };
+  }
+
+  function draw7() {
+    if (!s.bag.length) s.bag = KINDS.slice().sort(() => Math.random() - 0.5);
+    return s.bag.pop();
+  }
+
+  function make(kind) {
+    return { kind, cells: SHAPES[kind].map(c => c.slice()), x: kind === 'O' ? 3 : 3, y: kind === 'I' ? -1 : 0 };
+  }
+
+  function fits(cells, x, y) {
+    return cells.every(([cx, cy]) => {
+      const gx = cx + x, gy = cy + y;
+      return gx >= 0 && gx < COLS && gy < ROWS && (gy < 0 || !s.grid[gy][gx]);
+    });
+  }
+
+  function rotate(cells, dir, kind) {
+    if (kind === 'O') return cells.map(c => c.slice());
+    const size = kind === 'I' ? 4 : 3;
+    return cells.map(([x, y]) => dir > 0 ? [size - 1 - y, x] : [y, size - 1 - x]);
+  }
+
+  function tryRotate(dir) {
+    const p = s.piece, r = rotate(p.cells, dir, p.kind);
+    for (const k of [0, -1, 1, -2, 2]) if (fits(r, p.x + k, p.y)) { p.cells = r; p.x += k; return; }
+    if (fits(r, p.x, p.y - 1)) { p.cells = r; p.y -= 1; }
+  }
+
+  function anomaly() { return Math.floor(s.lines / 10) / 10; }
+  function interval() { return Math.max(70, 800 * Math.pow(0.85, Math.floor(s.lines / 10))); }
+
+  function spawn() {
+    s.piece = make(s.next ?? draw7());
+    s.next = draw7();
+    s.canHold = true;
+    if (!fits(s.piece.cells, s.piece.x, s.piece.y)) end();
+  }
+
+  function lock() {
+    for (const [cx, cy] of s.piece.cells) {
+      const gy = cy + s.piece.y;
+      if (gy < 0) return end();
+      s.grid[gy][cx + s.piece.x] = COLOR[s.piece.kind];
+    }
+    const full = [];
+    s.grid.forEach((row, i) => { if (row.every(Boolean)) full.push(i); });
+    if (full.length) {
+      for (const i of full) { s.grid.splice(i, 1); s.grid.unshift(Array(COLS).fill(null)); }
+      const before = anomaly();
+      s.lines += full.length;
+      s.score += LINE_SCORE[full.length] * (1 + Math.floor(s.lines / 10));
+      for (let i = 0; i < full.length; i++) s.stripes.push(stripeFor(s.lines - full.length + i + 1));
+      if (!reduced) s.flash = full.map(() => 6);
+      if (anomaly() > before) bump();
+    }
+    spawn();
+    hud();
+  }
+
+  function stripeFor(n) {
+    // Lines 1-140 run cold to hot, then stay at the hottest band.
+    return STRIPES[Math.min(STRIPES.length - 1, Math.floor(n / 20))];
+  }
+
+  function bump() {
+    if (reduced) return;
+    const el = $('anom');
+    el.animate([{ transform: 'scale(1.25)' }, { transform: 'scale(1)' }], { duration: 400, easing: 'ease-out' });
+  }
+
+  function ghostY() {
+    let y = s.piece.y;
+    while (fits(s.piece.cells, s.piece.x, y + 1)) y++;
+    return y;
+  }
+
+  function move(dx) { if (fits(s.piece.cells, s.piece.x + dx, s.piece.y)) s.piece.x += dx; }
+  function soft() {
+    if (fits(s.piece.cells, s.piece.x, s.piece.y + 1)) { s.piece.y++; s.score += 1; } else lock();
+    s.dropMs = 0;
+  }
+  function hard() { const y = ghostY(); s.score += 2 * (y - s.piece.y); s.piece.y = y; lock(); s.dropMs = 0; }
+  function hold() {
+    if (!s.canHold) return;
+    const k = s.piece.kind;
+    if (s.hold) { s.piece = make(s.hold); } else { spawn(); }
+    s.hold = k; s.canHold = false;
+  }
+
+  function cell(c, x, y, color, size = CELL, alpha = 1) {
+    c.globalAlpha = alpha;
+    c.fillStyle = color;
+    c.fillRect(x * size + 1, y * size + 1, size - 2, size - 2);
+    c.globalAlpha = alpha * 0.22;
+    c.fillStyle = '#ffffff';
+    c.fillRect(x * size + 1, y * size + 1, size - 2, Math.max(2, size * 0.14));
+    c.globalAlpha = 1;
+  }
+
+  function render() {
+    ctx.fillStyle = '#171b21';
+    ctx.fillRect(0, 0, COLS * CELL, ROWS * CELL);
+    ctx.strokeStyle = '#1f242c';
+    ctx.lineWidth = 1;
+    for (let x = 1; x < COLS; x++) { ctx.beginPath(); ctx.moveTo(x * CELL + 0.5, 0); ctx.lineTo(x * CELL + 0.5, ROWS * CELL); ctx.stroke(); }
+    for (let y = 1; y < ROWS; y++) { ctx.beginPath(); ctx.moveTo(0, y * CELL + 0.5); ctx.lineTo(COLS * CELL, y * CELL + 0.5); ctx.stroke(); }
+    s.grid.forEach((row, y) => row.forEach((c, x) => { if (c) cell(ctx, x, y, c); }));
+    if (s.piece && !s.over) {
+      const gy = ghostY();
+      for (const [cx, cy] of s.piece.cells) if (cy + gy >= 0) cell(ctx, cx + s.piece.x, cy + gy, COLOR[s.piece.kind], CELL, 0.18);
+      for (const [cx, cy] of s.piece.cells) if (cy + s.piece.y >= 0) cell(ctx, cx + s.piece.x, cy + s.piece.y, COLOR[s.piece.kind]);
+    }
+    if (s.flash.length) {
+      ctx.fillStyle = 'rgba(239,106,76,0.18)';
+      ctx.fillRect(0, (ROWS - s.flash.length) * CELL, COLS * CELL, s.flash.length * CELL);
+      s.flash = s.flash.map(n => n - 1).filter(n => n > 0);
+    }
+    mini(nextCtx, s.next);
+    mini(holdCtx, s.hold, !s.canHold);
+  }
+
+  function mini(c, kind, dim) {
+    c.clearRect(0, 0, 88, 56);
+    if (!kind) return;
+    const cells = SHAPES[kind], size = 18;
+    const xs = cells.map(p => p[0]), ys = cells.map(p => p[1]);
+    const w = (Math.max(...xs) - Math.min(...xs) + 1) * size, h = (Math.max(...ys) - Math.min(...ys) + 1) * size;
+    c.save();
+    c.translate((88 - w) / 2 - Math.min(...xs) * size, (56 - h) / 2 - Math.min(...ys) * size);
+    for (const [x, y] of cells) cell(c, x, y, COLOR[kind], size, dim ? 0.35 : 1);
+    c.restore();
+  }
+
+  function hud() {
+    $('score').textContent = s.score.toLocaleString('en-GB');
+    $('lines').textContent = s.lines;
+    $('anom').textContent = `+${anomaly().toFixed(1)} °C`;
+    $('speed').textContent = `${(800 / interval()).toFixed(1)}×`;
+    const rail = $('rail');
+    const height = rail.clientHeight || 600;
+    const max = Math.floor(height / 6);
+    const shown = s.stripes.slice(-max);
+    if (rail.childElementCount !== shown.length || s.stripes.length > max) {
+      rail.replaceChildren(...shown.map(color => { const i = document.createElement('i'); i.style.background = color; return i; }));
+    }
+  }
+
+  function overlay(title, text, label) {
+    $('ovTitle').textContent = title;
+    $('ovText').innerHTML = text;
+    $('startBtn').textContent = label;
+    $('overlay').hidden = false;
+    $('startBtn').focus({ preventScroll: true });
+  }
+
+  function end() {
+    s.over = true; s.running = false;
+    if (s.score > best) { best = s.score; try { localStorage.setItem('heat-stack-best', String(best)); } catch {} $('best').textContent = best; }
+    overlay('Overheated', `Score ${s.score.toLocaleString('en-GB')} · ${s.lines} lines · +${anomaly().toFixed(1)} °C`, 'Play again');
+  }
+
+  function start() {
+    s = fresh(); spawn(); hud();
+    s.running = true;
+    $('overlay').hidden = true;
+  }
+
+  function togglePause() {
+    if (!s || s.over || !s.piece) return;
+    s.running = !s.running;
+    if (s.running) $('overlay').hidden = true; else overlay('Paused', 'Your stack will wait. So will the code.', 'Resume');
+  }
+
+  let last = 0;
+  function loop(t) {
+    const dt = Math.min(100, t - last); last = t;
+    if (s && s.running) {
+      s.dropMs += dt;
+      if (s.dropMs >= interval()) { s.dropMs = 0; if (fits(s.piece.cells, s.piece.x, s.piece.y + 1)) s.piece.y++; else lock(); }
+    }
+    if (s) render();
+    requestAnimationFrame(loop);
+  }
+
+  function act(a) {
+    if (!s || !s.running) return;
+    if (a === 'left') move(-1); else if (a === 'right') move(1);
+    else if (a === 'rot') tryRotate(1); else if (a === 'rotb') tryRotate(-1);
+    else if (a === 'soft') soft(); else if (a === 'hard') hard(); else if (a === 'hold') hold();
+    hud();
+  }
+
+  const KEYMAP = { ArrowLeft: 'left', ArrowRight: 'right', ArrowDown: 'soft', ArrowUp: 'rot', x: 'rot', X: 'rot', z: 'rotb', Z: 'rotb', ' ': 'hard', c: 'hold', C: 'hold', Shift: 'hold' };
+  document.addEventListener('keydown', e => {
+    if (e.key === 'p' || e.key === 'P' || e.key === 'Escape') { togglePause(); e.preventDefault(); return; }
+    if (e.key === 'r' || e.key === 'R') { start(); e.preventDefault(); return; }
+    if ((e.key === 'Enter' || e.key === ' ') && !$('overlay').hidden) { $('startBtn').click(); e.preventDefault(); return; }
+    const a = KEYMAP[e.key];
+    if (a) { act(a); e.preventDefault(); }
+  });
+  $('startBtn').addEventListener('click', () => { if (s && !s.over && s.piece && !s.running) togglePause(); else start(); });
+  document.querySelectorAll('.pad button').forEach(b => b.addEventListener('pointerdown', e => { e.preventDefault(); act(b.dataset.act); }));
+  document.addEventListener('visibilitychange', () => { if (document.hidden && s && s.running) togglePause(); });
+
+  // A sample stack so the page reads as a game before anyone presses Start.
+  s = fresh();
+  const demo = ['JJJ.OO.III', 'JTTTOOSSL.', 'ZZTLLSS.LL', '.ZZLIIIIL.'];
+  demo.forEach((row, i) => [...row].forEach((k, x) => { if (k !== '.') s.grid[ROWS - demo.length + i][x] = COLOR[k]; }));
+  s.next = 'T'; s.hold = 'I';
+  s.stripes = Array.from({ length: 60 }, (_, i) => stripeFor(i * 2));
+  hud();
+  s.stripes = [];
+  requestAnimationFrame(loop);
+})();
+</script>

@@ -1,0 +1,13 @@
+{
+  "name": "provenance",
+  "version": "0.1.0",
+  "description": "Records which commit, script, inputs and env vars produced each figure, table or results file; /provenance answers 'what made this?' and flags stale outputs",
+  "userConfig": {
+    "ledgerDir": {
+      "type": "string",
+      "title": "Ledger folder",
+      "description": "Where the per-repo provenance ledgers (JSON lines) are kept. ~ is your home folder",
+      "default": "~/.claude/provenance"
+    }
+  }
+}

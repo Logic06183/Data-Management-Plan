@@ -1,0 +1,26 @@
+{
+  "name": "data-guard",
+  "version": "0.1.0",
+  "description": "Blocks pushes, public repos and publishes that would carry participant data, IDs, secrets or local paths",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "denyTerms": {
+      "type": "string",
+      "title": "Deny-list terms",
+      "description": "Comma-separated words that must never leave the machine (colleague names, cohort names, site codes)",
+      "default": ""
+    },
+    "idPattern": {
+      "type": "string",
+      "title": "Study ID pattern",
+      "description": "Regular expression for participant or study IDs",
+      "default": "\\b(?:RP[12]|PACCI|HEAT00[12])[-_]?\\d{3,}\\b"
+    },
+    "homePath": {
+      "type": "string",
+      "title": "Home path to keep out of repos",
+      "description": "A local home path that should never be committed",
+      "default": "/Users/craig"
+    }
+  }
+}

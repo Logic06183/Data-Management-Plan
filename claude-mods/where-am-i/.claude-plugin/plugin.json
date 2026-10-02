@@ -1,0 +1,25 @@
+{
+  "name": "where-am-i",
+  "version": "0.1.0",
+  "description": "Status line: machine (Mac, UCT hub or cloud), repo and branch, gh login, hub/VPN reachability, context % and cost; stops commands for paths that only exist on another machine",
+  "userConfig": {
+    "hubHost": {
+      "type": "string",
+      "title": "UCT hub host",
+      "description": "Hostname or IP of the UCT hub; checked on port 22 to tell whether the VPN is up. Leave blank to skip",
+      "default": ""
+    },
+    "hubHostnamePattern": {
+      "type": "string",
+      "title": "Hub hostname pattern",
+      "description": "Regular expression matched against `hostname` to recognise that this session is running on the hub",
+      "default": "hub|csag|uct"
+    },
+    "refreshSeconds": {
+      "type": "number",
+      "title": "Refresh interval (seconds)",
+      "description": "How often the network checks rerun",
+      "default": 120
+    }
+  }
+}

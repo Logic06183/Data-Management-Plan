@@ -1,0 +1,19 @@
+{
+  "name": "waiting-room",
+  "version": "0.1.0",
+  "description": "/tetris opens Heat Stack in the browser; long or background runs suggest it, and the jobs-pane toast tells you when to come back",
+  "userConfig": {
+    "gameUrl": {
+      "type": "string",
+      "title": "Game URL",
+      "description": "The page /tetris opens",
+      "default": "https://claude.ai/artifact/Bnaj3drS2xUkfeYbKyfFUK"
+    },
+    "nudgeSeconds": {
+      "type": "number",
+      "title": "Suggest after (seconds)",
+      "description": "Suggest a game once a command has been running this long; 0 turns the suggestion off",
+      "default": 45
+    }
+  }
+}

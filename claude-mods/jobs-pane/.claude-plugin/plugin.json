@@ -1,0 +1,14 @@
+{
+  "name": "jobs-pane",
+  "version": "0.1.0",
+  "description": "Tracks background tasks, long commands, subagents and Databricks runs: a live pane, a band while jobs run, a toast when each one ends, and compact notification rows",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "longSeconds": {
+      "type": "number",
+      "title": "Long command threshold (seconds)",
+      "description": "Foreground commands that run longer than this are logged as jobs",
+      "default": 30
+    }
+  }
+}

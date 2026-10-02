@@ -1,0 +1,14 @@
+{
+  "name": "mermaid-map",
+  "version": "0.1.0",
+  "description": "/map draws a Mermaid diagram of what this session is doing conceptually (goal, data, steps, outputs, blockers) and opens it in the browser; /map auto keeps it live after every turn",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "mapDir": {
+      "type": "string",
+      "title": "Folder for map pages",
+      "description": "Where the HTML diagram pages are written. ~ is your home folder",
+      "default": "~/.claude/maps"
+    }
+  }
+}
